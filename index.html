@@ -11,13 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    
     <!-- Preloader -->
     <div class="preloader">
         <div class="preloader-inner">
             <span class="loader"></span>
         </div>
     </div>
-
+    
     <!-- Header -->
     <header class="header">
         <div class="header-container">
@@ -59,197 +62,256 @@
             </div>
         </div>
     </header>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-slider">
+                <div class="slide active">
+                    <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="slide-content">
+                        <h1>Refined Luxury</h1>
+                        <p>Crafting elegant experiences through design</p>
+                        <a href="about.html" class="btn-outline">Discover More</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80');"></div>
+                    <div class="slide-content">
+                        <h1>Sophisticated Design</h1>
+                        <p>Where creativity meets elegance</p>
+                        <a href="projects/interior.html" class="btn-outline">View Projects</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80');"></div>
+                    <div class="slide-content">
+                        <h1>Artistic Vision</h1>
+                        <p>Transforming spaces into experiences</p>
+                        <a href="contact.html" class="btn-outline">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0" aria-label="Slide 1"></span>
+                    <span class="dot" data-slide="1" aria-label="Slide 2"></span>
+                    <span class="dot" data-slide="2" aria-label="Slide 3"></span>
+                </div>
+                <button class="next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+        
+        <!-- Featured Projects -->
+        <section class="featured-projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <p>A selection of our most distinguished work</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card animate-on-scroll">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Interior Project" class="lazy-load" data-src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80">
+                        </div>
+                        <div class="project-info">
+                            <h3>Elegant Interior</h3>
+                            <p>Sophisticated living space design</p>
+                            <a href="projects/interior.html" class="btn-text">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card animate-on-scroll">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80" alt="Fashion Project" class="lazy-load" data-src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80">
+                        </div>
+                        <div class="project-info">
+                            <h3>Fashion Collection</h3>
+                            <p>Contemporary luxury apparel</p>
+                            <a href="projects/fashion.html" class="btn-text">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card animate-on-scroll">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2158&q=80" alt="Branding Project" class="lazy-load" data-src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2158&q=80">
+                        </div>
+                        <div class="project-info">
+                            <h3>Luxury Branding</h3>
+                            <p>Identity design for premium brands</p>
+                            <a href="profile/branding.html" class="btn-text">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all">
+                    <a href="projects.html" class="btn-primary">View All Projects</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Preview -->
+        <section class="about-preview">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text animate-on-scroll">
+                        <h2>Crafting Luxury Experiences</h2>
+                        <p>With a passion for refined aesthetics and meticulous attention to detail, I transform visions into sophisticated realities. My approach combines timeless elegance with contemporary innovation, creating designs that resonate with discerning audiences.</p>
+                        <p>Each project is a journey of collaboration, creativity, and precision, resulting in experiences that elevate and inspire.</p>
+                        <a href="about.html" class="btn-outline">Learn More About Me</a>
+                    </div>
+                    <div class="about-image animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Designer Portrait" class="lazy-load" data-src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Preview -->
+        <section class="services-preview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Expertise</h2>
+                    <p>Specialized services tailored to your vision</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Interior Design</h3>
+                        <p>Creating harmonious spaces that balance aesthetics and functionality with a touch of luxury.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3>Fashion Design</h3>
+                        <p>Crafting elegant apparel that embodies sophistication and contemporary style.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Consulting</h3>
+                        <p>Strategic guidance to elevate your brand and design projects to new heights.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Web Design</h3>
+                        <p>Digital experiences that capture the essence of luxury and sophistication.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Client Testimonials</h2>
+                    <p>Words from those who have experienced our work</p>
+                </div>
+                <div class="testimonial-slider">
+                    <div class="testimonial active">
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-slider">
-            <div class="slide active">
-                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
-                <div class="slide-content">
-                    <h1>Refined Luxury</h1>
-                    <p>Crafting elegant experiences through design</p>
-                    <a href="about.html" class="btn-outline">Discover More</a>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80');"></div>
-                <div class="slide-content">
-                    <h1>Sophisticated Design</h1>
-                    <p>Where creativity meets elegance</p>
-                    <a href="projects/interior.html" class="btn-outline">View Projects</a>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80');"></div>
-                <div class="slide-content">
-                    <h1>Artistic Vision</h1>
-                    <p>Transforming spaces into experiences</p>
-                    <a href="contact.html" class="btn-outline">Get in Touch</a>
-                </div>
-            </div>
-        </div>
-        <div class="slider-controls">
-            <button class="prev"><i class="fas fa-chevron-left"></i></button>
-            <div class="slider-dots">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-            </div>
-            <button class="next"><i class="fas fa-chevron-right"></i></button>
-        </div>
-    </section>
 
-    <!-- Featured Projects -->
-    <section class="featured-projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>A selection of our most distinguished work</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Interior Project">
-                    </div>
-                    <div class="project-info">
-                        <h3>Elegant Interior</h3>
-                        <p>Sophisticated living space design</p>
-                        <a href="projects/interior.html" class="btn-text">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80" alt="Fashion Project">
-                    </div>
-                    <div class="project-info">
-                        <h3>Fashion Collection</h3>
-                        <p>Contemporary luxury apparel</p>
-                        <a href="projects/fashion.html" class="btn-text">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2158&q=80" alt="Branding Project">
-                    </div>
-                    <div class="project-info">
-                        <h3>Luxury Branding</h3>
-                        <p>Identity design for premium brands</p>
-                        <a href="profile/branding.html" class="btn-text">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="view-all">
-                <a href="#" class="btn-primary">View All Projects</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Preview -->
-    <section class="about-preview">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Crafting Luxury Experiences</h2>
-                    <p>With a passion for refined aesthetics and meticulous attention to detail, I transform visions into sophisticated realities. My approach combines timeless elegance with contemporary innovation, creating designs that resonate with discerning audiences.</p>
-                    <p>Each project is a journey of collaboration, creativity, and precision, resulting in experiences that elevate and inspire.</p>
-                    <a href="about.html" class="btn-outline">Learn More About Me</a>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Designer Portrait">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Preview -->
-    <section class="services-preview">
-        <div class="container">
-            <div class="section-header">
-                <h2>Expertise</h2>
-                <p>Specialized services tailored to your vision</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
+<div class="quote">"An exceptional talent with an eye for detail that transforms spaces into works of art. The ability to understand and elevate my vision exceeded all expectations."</div>
+                        <div class="client">
+                            <div class="client-name">Alexandra Bennett</div>
+                            <div class="client-title">Interior Design Client</div>
+                        </div>
                     </div>
-                    <h3>Interior Design</h3>
-                    <p>Creating harmonious spaces that balance aesthetics and functionality with a touch of luxury.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tshirt"></i>
+                    <div class="testimonial">
+                        <div class="quote">"Working with this studio was a revelation. The branding strategy developed for our luxury line perfectly captured our essence while pushing boundaries."</div>
+                        <div class="client">
+                            <div class="client-name">Jonathan Pierce</div>
+                            <div class="client-title">CEO, Luxury Brand</div>
+                        </div>
                     </div>
-                    <h3>Fashion Design</h3>
-                    <p>Crafting elegant apparel that embodies sophistication and contemporary style.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Consulting</h3>
-                    <p>Strategic guidance to elevate your brand and design projects to new heights.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Web Design</h3>
-                    <p>Digital experiences that capture the essence of luxury and sophistication.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>Client Testimonials</h2>
-                <p>Words from those who have experienced our work</p>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <div class="quote">"An exceptional talent with an eye for detail that transforms spaces into works of art. The ability to understand and elevate my vision exceeded all expectations."</div>
-                    <div class="client">
-                        <div class="client-name">Alexandra Bennett</div>
-                        <div class="client-title">Interior Design Client</div>
+                    <div class="testimonial">
+                        <div class="quote">"The attention to detail and commitment to excellence is unparalleled. Our fashion collection was elevated to new heights through this collaborative partnership."</div>
+                        <div class="client">
+                            <div class="client-name">Sophia Laurent</div>
+                            <div class="client-title">Fashion Designer</div>
+                        </div>
                     </div>
                 </div>
-                <div class="testimonial">
-                    <div class="quote">"Working with this studio was a revelation. The branding strategy developed for our luxury line perfectly captured our essence while pushing boundaries."</div>
-                    <div class="client">
-                        <div class="client-name">Jonathan Pierce</div>
-                        <div class="client-title">CEO, Luxury Brand</div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="quote">"The attention to detail and commitment to excellence is unparalleled. Our fashion collection was elevated to new heights through this collaborative partnership."</div>
-                    <div class="client">
-                        <div class="client-name">Sophia Laurent</div>
-                        <div class="client-title">Fashion Designer</div>
-                    </div>
+                <div class="testimonial-dots">
+                    <span class="dot active" data-testimonial="0" aria-label="Testimonial 1"></span>
+                    <span class="dot" data-testimonial="1" aria-label="Testimonial 2"></span>
+                    <span class="dot" data-testimonial="2" aria-label="Testimonial 3"></span>
                 </div>
             </div>
-            <div class="testimonial-dots">
-                <span class="dot active" data-testimonial="0"></span>
-                <span class="dot" data-testimonial="1"></span>
-                <span class="dot" data-testimonial="2"></span>
+        </section>
+        
+        <!-- Instagram Feed -->
+        <section class="instagram-feed">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Instagram</h2>
+                    <p>Follow our journey through design</p>
+                </div>
+                <div class="instagram-grid">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="instagram-item">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instagram post" class="lazy-load" data-src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                        <div class="instagram-overlay">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="instagram-item">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instagram post" class="lazy-load" data-src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                        <div class="instagram-overlay">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="instagram-item">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instagram post" class="lazy-load" data-src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                        <div class="instagram-overlay">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="instagram-item">
+                        <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instagram post" class="lazy-load" data-src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                        <div class="instagram-overlay">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="instagram-item">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instagram post" class="lazy-load" data-src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                        <div class="instagram-overlay">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="instagram-item">
+                        <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Instagram post" class="lazy-load" data-src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                        <div class="instagram-overlay">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="instagram-follow">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                        <i class="fab fa-instagram"></i> Follow on Instagram
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Preview -->
-    <section class="contact-preview">
-        <div class="container">
-            <div class="contact-content">
-                <h2>Let's Create Something Extraordinary</h2>
-                <p>Ready to elevate your project with sophisticated design? Get in touch to discuss your vision.</p>
-                <a href="contact.html" class="btn-primary">Contact Me</a>
+        </section>
+        
+        <!-- Contact Preview -->
+        <section class="contact-preview">
+            <div class="container">
+                <div class="contact-content animate-on-scroll">
+                    <h2>Let's Create Something Extraordinary</h2>
+                    <p>Ready to elevate your project with sophisticated design? Get in touch to discuss your vision.</p>
+                    <a href="contact.html" class="btn-primary">Contact Me</a>
+                </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -260,4 +322,66 @@
                 <div class="footer-nav">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://behance.net" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="current-year">2023</span> Luxury Portfolio. All rights reserved.
+                </div>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        // Update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

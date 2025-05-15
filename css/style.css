@@ -838,7 +838,17 @@ section {
     font-size: 14px;
 }
 
-
+/* Media Queries for Footer */
+@media screen and (max-width: 768px) {
+    .footer-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-nav ul li {
+        margin: 5px 0;
+    }
+}
 
 
 /* Media Queries for Responsive Design */

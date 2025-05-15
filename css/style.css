@@ -189,13 +189,14 @@ img {
     z-index: 1000;
     transition: var(--transition);
     padding: 20px 0;
-    background-color: transparent; /* Changed to transparent */
-    box-shadow: none; /* Removed box shadow */
+    background-color: transparent !important; /* Force transparency with !important */
+    box-shadow: none !important; /* Remove box shadow with !important */
 }
 
+/* Only add background when scrolled */
 .header.scrolled {
-    background-color: var(--light-color);
-    box-shadow: var(--box-shadow);
+    background-color: var(--light-color) !important; /* Add background only when scrolled */
+    box-shadow: var(--box-shadow) !important;
     padding: 15px 0;
 }
 
@@ -207,25 +208,28 @@ img {
     margin: 0 auto;
 }
 
-/* Add this for better text visibility on transparent background */
+/* Make navigation text visible against any background */
 .nav-links a {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to make text readable */
+    color: #fff; /* White text for visibility */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Stronger shadow for better contrast */
+    font-weight: bold; /* Make text bolder */
 }
 
-/* When scrolled, remove the text shadow */
+/* When scrolled, adjust text for light background */
 .header.scrolled .nav-links a {
+    color: var(--dark-color); /* Dark text on light background when scrolled */
     text-shadow: none;
 }
 
+/* Logo visibility */
 .logo a {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    color: var(--light-color);
-    letter-spacing: 2px;
+    color: #fff; /* White text for logo */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Shadow for better visibility */
 }
 
 .header.scrolled .logo a {
-    color: var(--secondary-color);
+    color: var(--dark-color); /* Dark text when scrolled */
+    text-shadow: none;
 }
 
 .main-nav {
@@ -1011,3 +1015,9 @@ section {
     }
 }
 
+/* Debugging - force transparency */
+.header:not(.scrolled) {
+    background-color: transparent !important;
+    background: none !important;
+    box-shadow: none !important;
+}

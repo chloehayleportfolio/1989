@@ -565,7 +565,7 @@ section {
 
 /* Add small gap between hero and featured sections */
 .featured-projects, .featured-section {
-    margin-top: 20px; /* Adjust this value to control the gap size */
+    margin-top: 0px; /* Adjust this value to control the gap size */
     padding-top: 40px;
 }
 

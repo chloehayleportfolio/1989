@@ -349,6 +349,8 @@ img {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .hero-slider {
@@ -394,8 +396,8 @@ img {
     max-width: 600px;
     color: var(--light-color);
     z-index: 1;
+    padding-top: 80px; /* Add this to adjust content positioning */
 }
-
 .slide-content h1 {
     opacity: 0;
     transform: translateY(20px);
@@ -560,6 +562,13 @@ section {
 .view-all {
     text-align: center;
 }
+
+/* Add small gap between hero and featured sections */
+.featured-projects, .featured-section {
+    margin-top: 20px; /* Adjust this value to control the gap size */
+    padding-top: 40px;
+}
+
 
 /* About Preview */
 .about-preview {

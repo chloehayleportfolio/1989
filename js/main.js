@@ -369,20 +369,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Add parallax effect to hero section
-    const heroSection = document.querySelector('.hero');
-    if (heroSection) {
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY;
-            if (scrollPosition < window.innerHeight) {
-                const parallaxOffset = scrollPosition * 0.4;
-                const activeSlide = document.querySelector('.slide.active .slide-bg');
-                if (activeSlide) {
-                    activeSlide.style.transform = `scale(1) translateY(${parallaxOffset}px)`;
-                }
-            }
-        });
-    }
+  
     
     // Add hover effect for project cards
     const projectCards = document.querySelectorAll('.project-card');

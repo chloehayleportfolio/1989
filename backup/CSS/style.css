@@ -192,7 +192,7 @@ img {
 }
 
 .header.scrolled {
-    background-color: var(--light-color);
+    background-color: rgba(255, 255, 255, 0.35); /* Semi-transparent white background (35% opacity) */
     box-shadow: var(--box-shadow);
     padding: 15px 0;
 }
@@ -491,6 +491,12 @@ section {
 /* Featured Projects */
 .featured-projects {
     background-color: var(--light-gray);
+}
+
+/* Updated rule for the Featured Projects title with both letter spacing and color */
+.featured-projects .section-header h2 {
+    letter-spacing: 7px;
+    color: #b2a89c; /* Change the font color to the specified hex code */
 }
 
 .projects-grid {

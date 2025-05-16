@@ -707,7 +707,7 @@ section {
 /* Service icon styling */
 .service-card .service-icon i {
     color: #bdae9c;
-    font-size: 4rem; /* Increase icon size - adjust as needed */
+    font-size: 2rem; /* Increase icon size - adjust as needed */
     margin-bottom: 20px; /* Add some space below the icon */
 }
 

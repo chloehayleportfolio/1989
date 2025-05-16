@@ -683,12 +683,16 @@ section {
 }
 
 .service-card {
-    background-color: #ffffff; /* Dark brown to match project cards */
-    color: #3b3624; /* Light text for better readability */
+    background-color: #ffffff; /* White background for cards */
     padding: 40px 30px;
     text-align: center;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
+}
+
+/* Service card paragraphs */
+.service-card p {
+    color: #3b3624; /* Dark text for readability on white */
 }
 
 /* Service card headings */
@@ -700,7 +704,7 @@ section {
     transform: translateY(-10px);
 }
 
-/* Service icon size */
+/* Service icon styling */
 .service-card .service-icon i {
     color: #bdae9c;
     font-size: 4rem; /* Increase icon size - adjust as needed */
@@ -891,6 +895,49 @@ section {
         margin: 5px 0;
     }
 }
+
+/* Back to top button styling */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #443923; /* Dark brown background */
+    color: #bdae9c; /* Taupe/beige color for icon */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    border: 1px solid #bdae9c; /* Elegant border */
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #3b3624; /* Slightly different shade on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top i {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover i {
+    transform: translateY(-3px);
+}
+
 
 @media screen and (max-width: 480px) {
     h1 {

@@ -153,72 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initSlider();
     }
     
-    // Testimonial Slider
-    const testimonials = document.querySelectorAll('.testimonial');
-    const testimonialDots = document.querySelectorAll('.testimonial-dots .dot');
-    let currentTestimonial = 0;
-    let testimonialInterval;
     
-    // Initialize the testimonial slider
-    function initTestimonialSlider() {
-        if (testimonials.length === 0) return;
-                
-        // Set the first testimonial as active
-        testimonials[0].classList.add('active');
-        testimonialDots[0].classList.add('active');
-                
-        // Start the automatic slideshow
-        startTestimonialInterval();
-    }
-    
-    // Start automatic testimonial slideshow
-    function startTestimonialInterval() {
-        testimonialInterval = setInterval(nextTestimonial, 5000);
-    }
-    
-    // Reset the testimonial interval when manually changing
-    function resetTestimonialInterval() {
-        clearInterval(testimonialInterval);
-        startTestimonialInterval();
-    }
-    
-    // Go to a specific testimonial
-    function goToTestimonial(index) {
-        // Remove active class from all testimonials and dots
-        testimonials.forEach(testimonial => testimonial.classList.remove('active'));
-        testimonialDots.forEach(dot => dot.classList.remove('active'));
-                
-        // Add active class to the current testimonial and dot
-        testimonials[index].classList.add('active');
-        testimonialDots[index].classList.add('active');
-                
-        // Update the current testimonial index
-        currentTestimonial = index;
-                
-        // Reset the interval
-        resetTestimonialInterval();
-    }
-    
-    // Go to the next testimonial
-    function nextTestimonial() {
-        let nextIndex = currentTestimonial + 1;
-        if (nextIndex >= testimonials.length) {
-            nextIndex = 0;
-        }
-        goToTestimonial(nextIndex);
-    }
-    
-    // Add event listeners for testimonial dots
-    testimonialDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            goToTestimonial(index);
-        });
-    });
-    
-    // Initialize the testimonial slider if it exists on the page
-    if (testimonials.length > 0) {
-        initTestimonialSlider();
-    }
     
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -314,60 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 20);
     });
     
-    // Form validation for contact form
-    const contactForm = document.querySelector('.contact-form');
-        
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            let isValid = true;
-            const requiredFields = this.querySelectorAll('[required]');
-                        
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.classList.add('error');
-                } else {
-                    field.classList.remove('error');
-                }
-            });
-                        
-            // Email validation
-            const emailField = this.querySelector('input[type="email"]');
-            if (emailField && emailField.value.trim()) {
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailPattern.test(emailField.value)) {
-                    isValid = false;
-                    emailField.classList.add('error');
-                }
-            }
-                        
-            if (!isValid) {
-                e.preventDefault();
-                // Show error message
-                const errorMessage = document.querySelector('.form-error-message') ||
-                                     document.createElement('div');
-                errorMessage.className = 'form-error-message';
-                errorMessage.textContent = 'Please fill in all required fields correctly.';
-                errorMessage.style.color = '#ff3860';
-                errorMessage.style.marginTop = '10px';
-                                
-                if (!document.querySelector('.form-error-message')) {
-                    contactForm.appendChild(errorMessage);
-                }
-            }
-        });
-                
-        // Remove error class on input
-        contactForm.querySelectorAll('input, textarea').forEach(input => {
-            input.addEventListener('input', function() {
-                this.classList.remove('error');
-                const errorMessage = document.querySelector('.form-error-message');
-                if (errorMessage) {
-                    errorMessage.remove();
-                }
-            });
-        });
-    }
+    
     
   
     

@@ -683,8 +683,8 @@ section {
 }
 
 .service-card {
-    background-color: #443923; /* Dark brown to match project cards */
-    color: #e0d8d0; /* Light text for better readability */
+    background-color: #ffffff; /* Dark brown to match project cards */
+    color: #3b3624; /* Light text for better readability */
     padding: 40px 30px;
     text-align: center;
     box-shadow: var(--box-shadow);
@@ -703,7 +703,7 @@ section {
 /* Service icon size */
 .service-card .service-icon i {
     color: #bdae9c;
-    font-size: 3rem; /* Increase icon size - adjust as needed */
+    font-size: 5rem; /* Increase icon size - adjust as needed */
     margin-bottom: 20px; /* Add some space below the icon */
 }
 

@@ -532,12 +532,44 @@ section {
     background-color: var(--light-gray);
 }
 
+/* Featured Projects heading styling */
+.featured-projects .section-header h2 {
+    color: #b2a89c;
+    letter-spacing: 7px;
+}
+
+/* Featured Projects subtitle styling */
+.featured-projects .section-header p {
+    color: #b2a89c;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
     margin-bottom: 50px;
 }
+
+/* Project card styling updates */
+.project-card {
+    background-color: #443923; /* Dark brown background */
+}
+
+/* Project card headers */
+.project-card h3 {
+    color: #b2a89c; /* Taupe/beige color for project titles */
+}
+
+/* Project card paragraphs */
+.project-card p {
+    color: #e0d8d0; /* Light color for better readability on dark background */
+}
+
+/* View Project button text */
+.project-card .btn-text {
+    color: #b2a89c; /* Taupe/beige color for button text */
+}
+
 
 .project-card {
     background-color: var(--light-color);

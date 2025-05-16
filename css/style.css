@@ -232,6 +232,27 @@ img {
     text-shadow: none;
 }
 
+/* Logo styling */
+.logo-image {
+    height: 40px; /* Adjust height as needed */
+    width: auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Adjust logo size when header is scrolled */
+.header.scrolled .logo-image {
+    height: 30px; /* Slightly smaller when scrolled */
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .logo-image {
+        height: 30px; /* Smaller on mobile */
+    }
+}
+
+
 .main-nav {
     display: flex;
 }

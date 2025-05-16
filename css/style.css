@@ -268,7 +268,7 @@ img {
 }
 
 .nav-list li a {
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--light-color);
@@ -311,7 +311,7 @@ img {
     top: 100%;
     left: 0;
     width: 220px;
-    background-color: var(--light-color);
+    background-color: #fcfaf1; /* Changed from var(--light-color) to #fcfaf1 */
     box-shadow: var(--box-shadow);
     padding: 15px 0;
     opacity: 0;
@@ -337,6 +337,7 @@ img {
     padding: 8px 0;
     color: var(--secondary-color) !important;
     border-bottom: 1px solid var(--medium-gray);
+    font-size: 12px; /* Added font size */
 }
 
 .dropdown li:last-child a {

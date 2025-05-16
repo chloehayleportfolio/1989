@@ -740,6 +740,13 @@ section {
     color: var(--dark-color);
 }
 
+/* Footer logo styling */
+.footer-logo-image {
+    height: 60px; /* Adjust height as needed */
+    width: auto;
+    display: block;
+}
+
 .footer-social {
     margin-bottom: 40px;
 }
@@ -806,6 +813,12 @@ section {
     
     .footer-nav ul li {
         margin: 5px 0;
+    }
+    
+    /* For mobile devices - footer logo */
+    .footer-logo-image {
+        height: 50px; /* Slightly smaller on mobile */
+        margin: 0 auto; /* Center on mobile if needed */
     }
 }
 

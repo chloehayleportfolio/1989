@@ -700,10 +700,13 @@ section {
     transform: translateY(-10px);
 }
 
-/* Change service icons color to #bdae9c */
+/* Service icon size */
 .service-card .service-icon i {
     color: #bdae9c;
+    font-size: 3rem; /* Increase icon size - adjust as needed */
+    margin-bottom: 20px; /* Add some space below the icon */
 }
+
 
 
 

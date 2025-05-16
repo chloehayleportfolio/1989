@@ -189,14 +189,14 @@ img {
     z-index: 1000;
     transition: var(--transition);
     padding: 20px 0;
-    background-color: transparent !important; /* Force transparency with !important */
-    box-shadow: none !important; /* Remove box shadow with !important */
+    background-color: transparent; /* Default to transparent */
+    box-shadow: none; /* No shadow by default */
 }
 
 /* Only add background when scrolled */
 .header.scrolled {
-    background-color: var(--light-color) !important; /* Add background only when scrolled */
-    box-shadow: var(--box-shadow) !important;
+    background-color: rgba(255, 255, 255, 0.35); /* Semi-transparent white background */
+    box-shadow: var(--box-shadow);
     padding: 15px 0;
 }
 
@@ -1015,7 +1015,7 @@ section {
     }
     
     .header.scrolled {
-        background-color: #1a1a1a;
+        background-color: rgba(26, 26, 26, 0.35); /* Semi-transparent dark background */
     }
     
     .header.scrolled .logo a,
@@ -1028,7 +1028,7 @@ section {
     }
 }
 
-/* Debugging - force transparency */
+/* Force header transparency when not scrolled */
 .header:not(.scrolled) {
     background-color: transparent !important;
     background: none !important;

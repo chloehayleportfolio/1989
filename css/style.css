@@ -234,7 +234,7 @@ img {
 
 /* Logo styling */
 .logo-image {
-    height: 40px; /* Adjust height as needed */
+    height: 80px; /* Adjust height as needed */
     width: auto;
     display: block;
     transition: all 0.3s ease;
@@ -242,13 +242,13 @@ img {
 
 /* Adjust logo size when header is scrolled */
 .header.scrolled .logo-image {
-    height: 30px; /* Slightly smaller when scrolled */
+    height: 60px; /* Slightly smaller when scrolled */
 }
 
 /* For mobile devices */
 @media (max-width: 768px) {
     .logo-image {
-        height: 30px; /* Smaller on mobile */
+        height: 60px; /* Smaller on mobile */
     }
 }
 

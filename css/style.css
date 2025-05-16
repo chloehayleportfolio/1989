@@ -662,6 +662,11 @@ section {
     transform: translateY(-10px);
 }
 
+/* Change service icons color to #bdae9c */
+.service-card .service-icon i {
+    color: #bdae9c;
+}
+
 
 /* New Footer Style */
 .footer {

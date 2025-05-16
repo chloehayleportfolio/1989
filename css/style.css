@@ -662,7 +662,7 @@ section {
 
 /* Services Preview */
 .services-preview {
-    background-color: var(--light-gray);
+    background-color: #3b3624; /* Deep olive/brown background */
 }
 
 /* Expertise heading styling */
@@ -683,11 +683,17 @@ section {
 }
 
 .service-card {
-    background-color: var(--light-color);
+    background-color: #443923; /* Dark brown to match project cards */
+    color: #e0d8d0; /* Light text for better readability */
     padding: 40px 30px;
     text-align: center;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
+}
+
+/* Service card headings */
+.service-card h3 {
+    color: #b2a89c; /* Taupe/beige color for service titles */
 }
 
 .service-card:hover {
@@ -698,6 +704,7 @@ section {
 .service-card .service-icon i {
     color: #bdae9c;
 }
+
 
 
 /* New Footer Style */

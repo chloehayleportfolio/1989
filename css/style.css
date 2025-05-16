@@ -633,6 +633,17 @@ section {
     background-color: var(--light-gray);
 }
 
+/* Expertise heading styling */
+.services-preview .section-header h2 {
+    color: #bdae9c;
+    letter-spacing: 7px;
+}
+
+/* Expertise subtitle styling */
+.services-preview .section-header p {
+    color: #bdae9c;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -649,20 +660,6 @@ section {
 
 .service-card:hover {
     transform: translateY(-10px);
-}
-/* Service Icon */
-.service-icon {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    margin-bottom: 15px;
-}
-
-.service-card p {
-    color: var(--dark-gray);
 }
 
 

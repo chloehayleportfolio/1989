@@ -661,6 +661,19 @@ section {
     z-index: -1;
 }
 
+/* Signature image styling */
+.about-signature-image {
+    margin-top: 30px; /* Space between button and signature */
+}
+
+.signature-img {
+    max-width: 200px; /* Adjust width as needed */
+    height: auto;
+    opacity: 0.9; /* Slightly transparent for elegance */
+}
+
+
+
 /* Services Preview */
 .services-preview {
     background-color: #3b3624; /* Deep olive/brown background */
@@ -766,7 +779,7 @@ section {
     margin: 0 10px;
     border-radius: 50%;
     transition: var(--transition);
-    color: var(--dark-color);
+    color: #74675c;
 }
 
 .social-links a:hover {
@@ -792,7 +805,7 @@ section {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--dark-color);
+    color: #74675c;
     transition: var(--transition);
 }
 
@@ -801,7 +814,7 @@ section {
 }
 
 .footer-copyright {
-    color: var(--dark-gray);
+    color: #74675c;
     font-size: 14px;
 }
 

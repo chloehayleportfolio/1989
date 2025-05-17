@@ -942,14 +942,14 @@ main {
 }
 
 /* Back to top button styling */
-.back-to-top {
+#back-to-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
     width: 50px;
     height: 50px;
-    background-color: #443923; /* Dark brown background */
-    color: #bdae9c; /* Taupe/beige color for icon */
+    background-color: rgba(252, 250, 241, 0.9); /* Light cream background with transparency */
+    color: #74675c; /* Taupe/brown color for icon */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -958,30 +958,33 @@ main {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 999;
-    border: 1px solid #bdae9c; /* Elegant border */
+    border: 1px solid #cec8c1; /* Subtle border */
+    cursor: pointer;
 }
 
-.back-to-top.active {
+#back-to-top.visible {
     opacity: 1;
     visibility: visible;
 }
 
-.back-to-top:hover {
-    background-color: #3b3624; /* Slightly different shade on hover */
+#back-to-top:hover {
+    background-color: #fcfaf1; /* Solid color on hover */
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    color: #443923; /* Darker brown on hover */
 }
 
-.back-to-top i {
+#back-to-top i {
     font-size: 1.2rem;
     transition: all 0.3s ease;
 }
 
-.back-to-top:hover i {
+#back-to-top:hover i {
     transform: translateY(-3px);
 }
+
 
 
 @media screen and (max-width: 480px) {

@@ -727,9 +727,26 @@ section {
 
 
 
+/* Make footer extend to bottom of page */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+}
+
+main {
+    flex: 1 0 auto; /* Allow main content to grow but not shrink */
+}
 
 /* New Footer Style */
 .footer {
+    flex-shrink: 0; /* Prevent footer from shrinking */
     background-color: #cec8c1;
     padding: 10px 0 10px;
     text-align: center;
@@ -783,7 +800,7 @@ section {
 }
 
 .social-links a:hover {
-    color:  #fcfaf1;
+    color: #fcfaf1;
     transform: translateY(-3px);
 }
 
@@ -835,6 +852,7 @@ section {
         margin: 0 auto; /* Center on mobile if needed */
     }
 }
+
 
 
 /* Media Queries for Responsive Design */

@@ -663,7 +663,7 @@ section {
 
 /* Signature image styling */
 .about-signature-image {
-    margin-top: 10px; /* Space between button and signature */
+    margin-top: -50px; /* Space between button and signature */
 }
 
 .signature-img {
@@ -827,7 +827,7 @@ main {
 }
 
 .footer-nav ul li a:hover {
-    color: var(--primary-color);
+    color: #fcfaf1;
 }
 
 .footer-copyright {
@@ -1069,3 +1069,7 @@ main {
     background: none !important;
     box-shadow: none !important;
 }
+
+
+
+

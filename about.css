@@ -1,226 +1,366 @@
-/* About Hero Section */
-.about-hero {
-    height: 60vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/about-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
+/* Variables (matching Sophie Paterson aesthetic) */
+:root {
+    --primary-color: #9a8a78;
+    --secondary-color: #333333;
+    --text-color: #555555;
+    --light-gray: #f8f8f8;
+    --medium-gray: #e5e5e5;
+    --dark-gray: #777777;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+/* Page Title */
+.page-title {
+    padding: 120px 0 60px;
     text-align: center;
-    position: relative;
+    background-color: #ffffff;
     margin-top: 80px; /* Adjust based on your header height */
 }
 
-.about-hero .section-header h1 {
-    color: #ffffff;
-    font-size: 4rem;
-    margin-bottom: 20px;
+.page-title h1 {
     font-family: var(--font-heading);
-    font-weight: 400;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
 }
 
-.about-hero .section-header p {
-    color: #ffffff;
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 20px auto 0;
-    font-family: var(--font-body);
-}
-
-.section-divider {
+.page-title h1:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 50px;
     height: 1px;
     background-color: var(--primary-color);
-    margin: 0 auto 20px;
 }
 
-/* About Content Section */
-.about-section {
-    padding: 100px 0;
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* About Intro Section */
+.about-intro {
+    padding: 80px 0;
     background-color: #ffffff;
 }
 
-.about-section .about-content {
-    display: flex;
-    align-items: flex-start;
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
+    align-items: center;
 }
 
-.about-section .about-image {
-    flex: 1;
-    position: relative;
-}
-
-.about-section .about-image img {
+.intro-image img {
     width: 100%;
     height: auto;
-    object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: block;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.about-section .about-image:after {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: -20px;
-    bottom: -20px;
-    border: 1px solid var(--primary-color);
-    z-index: -1;
+.intro-content {
+    padding-right: 20px;
 }
 
-.about-section .about-text {
-    flex: 1;
-}
-
-.about-section .about-text h2 {
+.intro-content h2 {
     font-family: var(--font-heading);
     font-size: 2.5rem;
-    font-weight: 400;
-    margin-bottom: 10px;
+    font-weight: 300;
     color: var(--secondary-color);
+    margin-bottom: 10px;
 }
 
-.about-section .about-text h3 {
+.intro-content h3 {
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--dark-gray);
-    margin-bottom: 25px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
 }
 
-.about-section .about-text p {
+.intro-text p {
     font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.8;
     color: var(--text-color);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-.expertise-section, .education-section {
+.signature {
     margin-top: 40px;
 }
 
-.expertise-section h3, .education-section h3 {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--dark-gray);
-    margin-bottom: 15px;
-}
-
-.expertise-list {
-    list-style: none;
-    padding: 0;
-}
-
-.expertise-list li {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--text-color);
-    padding: 10px 0;
-    border-bottom: 1px solid var(--medium-gray);
-}
-
-.expertise-list li:last-child {
-    border-bottom: none;
-}
-
-.education-section p {
-    margin-bottom: 10px;
+.signature-img {
+    max-width: 200px;
+    height: auto;
 }
 
 /* Philosophy Section */
 .philosophy-section {
     padding: 100px 0;
     background-color: var(--light-gray);
+}
+
+.philosophy-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.philosophy-text {
+    padding-right: 20px;
+}
+
+.philosophy-text h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.philosophy-text h2:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 50px;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
+.philosophy-text > p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+.philosophy-principles {
+    margin-top: 30px;
+}
+
+.principle {
+    margin-bottom: 30px;
+}
+
+.principle h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.principle p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.philosophy-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Expertise Section */
+.expertise-section {
+    padding: 100px 0;
+    background-color: #ffffff;
     text-align: center;
 }
 
-.philosophy-section .section-header {
-    margin-bottom: 60px;
-}
-
-.philosophy-section .section-header h2 {
-    color: var(--primary-color);
-    letter-spacing: 5px;
+.expertise-section h2 {
     font-family: var(--font-heading);
-    font-weight: 400;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
 }
 
-.philosophy-grid {
+.expertise-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
+.expertise-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
 }
 
-.philosophy-card {
-    background-color: #ffffff;
-    padding: 40px 30px;
-    border-radius: 2px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+.expertise-card {
+    padding: 30px;
+    background-color: var(--light-gray);
     transition: all 0.3s ease;
 }
 
-.philosophy-card:hover {
+.expertise-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-.philosophy-icon {
-    font-size: 2.5rem;
+.expertise-icon {
+    font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 20px;
 }
 
-.philosophy-card h3 {
+.expertise-card h3 {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 15px;
     color: var(--secondary-color);
+    margin-bottom: 15px;
 }
 
-.philosophy-card p {
+.expertise-card p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* Journey Section */
+.journey-section {
+    padding: 100px 0;
+    background-color: var(--light-gray);
+}
+
+.journey-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.journey-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.journey-text {
+    padding-left: 20px;
+}
+
+.journey-text h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.journey-text h2:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 50px;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
+.journey-text > p {
     font-family: var(--font-body);
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.8;
     color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+.journey-timeline {
+    margin-top: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 1px solid var(--primary-color);
+}
+
+.timeline-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.timeline-item p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 10px;
 }
 
 /* Process Section */
 .process-section {
     padding: 100px 0;
     background-color: #ffffff;
-}
-
-.process-section .section-header {
     text-align: center;
-    margin-bottom: 80px;
 }
 
-.process-section .section-header h2 {
-    color: var(--secondary-color);
+.process-section h2 {
     font-family: var(--font-heading);
-    font-weight: 400;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
 }
 
-.process-timeline {
+.process-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
+.process-steps {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     position: relative;
 }
 
-.process-timeline:before {
+.process-steps:before {
     content: '';
     position: absolute;
     top: 40px;
@@ -239,7 +379,7 @@
     padding: 0 15px;
 }
 
-.process-number {
+.step-number {
     width: 80px;
     height: 80px;
     background-color: var(--primary-color);
@@ -253,18 +393,18 @@
     margin: 0 auto 30px;
 }
 
-.process-step h3 {
+.step-content h3 {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 15px;
     color: var(--secondary-color);
+    margin-bottom: 15px;
 }
 
-.process-step p {
+.step-content p {
     font-family: var(--font-body);
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--text-color);
 }
 
@@ -273,28 +413,54 @@
     padding: 100px 0;
     background-color: var(--secondary-color);
     text-align: center;
-    color: #ffffff;
 }
 
-.cta-section h2 {
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
     font-family: var(--font-heading);
     font-size: 2.5rem;
     font-weight: 300;
-    margin-bottom: 40px;
     color: #ffffff;
+    margin-bottom: 40px;
 }
 
-/* Responsive Styles for About Page */
+.btn-primary {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #8a7a68;
+    transform: translateY(-3px);
+}
+
+/* Responsive Styles */
 @media screen and (max-width: 1024px) {
-    .about-hero .section-header h1 {
-        font-size: 3rem;
+    .intro-grid,
+    .philosophy-content,
+    .journey-content {
+        gap: 40px;
     }
     
-    .process-timeline {
+    .process-steps {
         flex-wrap: wrap;
     }
     
-    .process-timeline:before {
+    .process-steps:before {
         display: none;
     }
     
@@ -305,57 +471,64 @@
 }
 
 @media screen and (max-width: 768px) {
-    .about-section .about-content {
-        flex-direction: column;
+    .page-title {
+        padding: 100px 0 40px;
     }
     
-    .about-section .about-image {
-        margin-bottom: 40px;
+    .page-title h1 {
+        font-size: 2.5rem;
     }
     
-    .about-section .about-image:after {
-        right: 0;
-        bottom: -10px;
-    }
-    
-    .philosophy-grid {
+    .intro-grid,
+    .philosophy-content,
+    .journey-content {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 40px;
+    }
+    
+    .intro-content,
+    .philosophy-text,
+    .journey-text {
+        padding: 0;
+    }
+    
+    .expertise-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
     
     .process-step {
         flex: 0 0 100%;
     }
     
-    .about-hero {
-        height: 50vh;
-    }
-    
-    .about-hero .section-header h1 {
-        font-size: 2.5rem;
+    .about-intro,
+    .philosophy-section,
+    .expertise-section,
+    .journey-section,
+    .process-section,
+    .cta-section {
+        padding: 60px 0;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .about-hero {
-        height: 40vh;
-    }
-    
-    .about-hero .section-header h1 {
+    .page-title h1 {
         font-size: 2rem;
     }
     
-    .about-section, .philosophy-section, .process-section, .cta-section {
-        padding: 60px 0;
-    }
-    
-    .about-section .about-text h2 {
+    .intro-content h2,
+    .philosophy-text h2,
+    .journey-text h2,
+    .expertise-section h2,
+    .process-section h2,
+    .cta-content h2 {
         font-size: 2rem;
     }
     
-    .philosophy-section .section-header h2,
-    .process-section .section-header h2,
-    .cta-section h2 {
-        font-size: 1.8rem;
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-item {
+        padding-left: 15px;
     }
 }

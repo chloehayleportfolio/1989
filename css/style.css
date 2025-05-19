@@ -777,6 +777,9 @@ main {
     width: auto;
     display: block;
 }
+.footer-logo-image ul li a:hover {
+    color: #fcfaf1;
+}
 
 .footer-social {
     margin-bottom: 40px;

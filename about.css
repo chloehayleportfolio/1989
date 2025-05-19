@@ -12,7 +12,7 @@
 
 /* Page Title */
 .page-title {
-    padding: 120px 0 60px;
+    padding: 80px 0 40px;
     text-align: center;
     background-color: #ffffff;
     margin-top: 80px; /* Adjust based on your header height */
@@ -20,23 +20,11 @@
 
 .page-title h1 {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 300;
     color: var(--secondary-color);
     letter-spacing: 1px;
-    position: relative;
-    display: inline-block;
-}
-
-.page-title h1:after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 1px;
-    background-color: var(--primary-color);
+    text-transform: uppercase;
 }
 
 /* Container */
@@ -46,28 +34,63 @@
     padding: 0 30px;
 }
 
+/* Hero Banner */
+.about-hero {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.section-header h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
 /* About Intro Section */
 .about-intro {
-    padding: 80px 0;
+    padding: 0 0 100px;
     background-color: #ffffff;
-}
-
-.intro-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.intro-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .intro-content {
-    padding-right: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .intro-content h2 {
@@ -85,7 +108,11 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--primary-color);
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.intro-text {
+    margin-bottom: 40px;
 }
 
 .intro-text p {
@@ -101,7 +128,7 @@
 }
 
 .signature-img {
-    max-width: 200px;
+    max-width: 180px;
     height: auto;
 }
 
@@ -112,49 +139,27 @@
 }
 
 .philosophy-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.philosophy-text {
-    padding-right: 20px;
-}
-
-.philosophy-text h2 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--secondary-color);
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.philosophy-text h2:after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 50px;
-    height: 1px;
-    background-color: var(--primary-color);
-}
-
-.philosophy-text > p {
+.philosophy-intro {
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-color);
-    margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .philosophy-principles {
-    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
 
 .principle {
-    margin-bottom: 30px;
+    text-align: center;
 }
 
 .principle h3 {
@@ -162,60 +167,31 @@
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--secondary-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .principle p {
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.8;
     color: var(--text-color);
-}
-
-.philosophy-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Expertise Section */
 .expertise-section {
     padding: 100px 0;
     background-color: #ffffff;
-    text-align: center;
-}
-
-.expertise-section h2 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--secondary-color);
-    margin-bottom: 60px;
-    position: relative;
-    display: inline-block;
-}
-
-.expertise-section h2:after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 1px;
-    background-color: var(--primary-color);
 }
 
 .expertise-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-top: 60px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 
 .expertise-card {
-    padding: 30px;
+    text-align: center;
+    padding: 40px 20px;
     background-color: var(--light-gray);
     transition: all 0.3s ease;
 }
@@ -228,20 +204,20 @@
 .expertise-icon {
     font-size: 2rem;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .expertise-card h3 {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: var(--secondary-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .expertise-card p {
     font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.7;
     color: var(--text-color);
 }
@@ -253,59 +229,27 @@
 }
 
 .journey-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.journey-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.journey-text {
-    padding-left: 20px;
-}
-
-.journey-text h2 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--secondary-color);
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.journey-text h2:after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 50px;
-    height: 1px;
-    background-color: var(--primary-color);
-}
-
-.journey-text > p {
+.journey-intro {
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-color);
-    margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .journey-timeline {
-    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
 
 .timeline-item {
-    margin-bottom: 30px;
-    position: relative;
-    padding-left: 20px;
-    border-left: 1px solid var(--primary-color);
+    text-align: center;
 }
 
 .timeline-item h3 {
@@ -313,12 +257,25 @@
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--secondary-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.timeline-item h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 1px;
+    background-color: var(--primary-color);
 }
 
 .timeline-item p {
     font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.7;
     color: var(--text-color);
     margin-bottom: 10px;
@@ -328,28 +285,6 @@
 .process-section {
     padding: 100px 0;
     background-color: #ffffff;
-    text-align: center;
-}
-
-.process-section h2 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--secondary-color);
-    margin-bottom: 60px;
-    position: relative;
-    display: inline-block;
-}
-
-.process-section h2:after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 1px;
-    background-color: var(--primary-color);
 }
 
 .process-steps {
@@ -395,7 +330,7 @@
 
 .step-content h3 {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: var(--secondary-color);
     margin-bottom: 15px;
@@ -403,7 +338,7 @@
 
 .step-content p {
     font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.7;
     color: var(--text-color);
 }
@@ -450,10 +385,13 @@
 
 /* Responsive Styles */
 @media screen and (max-width: 1024px) {
-    .intro-grid,
-    .philosophy-content,
-    .journey-content {
-        gap: 40px;
+    .hero-image {
+        height: 500px;
+    }
+    
+    .philosophy-principles,
+    .journey-timeline {
+        gap: 30px;
     }
     
     .process-steps {
@@ -472,28 +410,25 @@
 
 @media screen and (max-width: 768px) {
     .page-title {
-        padding: 100px 0 40px;
+        padding: 60px 0 30px;
     }
     
     .page-title h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
-    .intro-grid,
-    .philosophy-content,
-    .journey-content {
+    .hero-image {
+        height: 400px;
+    }
+    
+    .philosophy-principles,
+    .journey-timeline {
         grid-template-columns: 1fr;
         gap: 40px;
     }
     
-    .intro-content,
-    .philosophy-text,
-    .journey-text {
-        padding: 0;
-    }
-    
     .expertise-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .process-step {
@@ -512,23 +447,24 @@
 
 @media screen and (max-width: 480px) {
     .page-title h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    .hero-image {
+        height: 300px;
     }
     
     .intro-content h2,
-    .philosophy-text h2,
-    .journey-text h2,
-    .expertise-section h2,
-    .process-section h2,
+    .section-header h2,
     .cta-content h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .expertise-grid {
         grid-template-columns: 1fr;
     }
     
-    .timeline-item {
-        padding-left: 15px;
+    .expertise-card {
+        padding: 30px 15px;
     }
 }

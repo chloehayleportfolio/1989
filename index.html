@@ -173,12 +173,17 @@
 </div>
 </div>
 <div class="about-image animate-on-scroll">
-<!-- FIXED: Changed from video file to image file -->
-<img src="images/About-Me.jpg" alt="Designer Portrait" class="lazy-load" data-src="images/About-Me.jpg">
+<!-- Updated to use MP4 video file -->
+<video autoplay muted loop playsinline class="lazy-load">
+<source src="videos/About-Me.mp4" type="video/mp4">
+<!-- Fallback image if video doesn't load -->
+<img src="images/About-Me.jpg" alt="Designer Portrait">
+</video>
 </div>
 </div>
 </div>
 </section>
+
 
 <!-- Services Preview -->
 <section class="services-preview">

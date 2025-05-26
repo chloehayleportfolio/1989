@@ -1,3 +1,24 @@
+/* Override any conflicting styles from main CSS */
+body.about-page {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure header doesn't interfere */
+.header {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Reset any global styles that might interfere */
+main#main-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+
+
+
 /* Variables (matching Sophie Paterson aesthetic) */
 :root {
     --primary-color: #9a8a78;
@@ -8,6 +29,11 @@
     --dark-gray: #777777;
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Montserrat', sans-serif;
+}
+
+/* Reset any conflicting styles */
+.about-hero * {
+    box-sizing: border-box;
 }
 
 /* Container */
@@ -26,6 +52,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 .hero-image {
@@ -54,33 +82,36 @@
     margin: 0 auto;
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
 }
 
 .hero-content h1 {
-    font-family: var(--font-heading);
-    font-size: 4.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 30px;
-    font-weight: 300;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    line-height: 1.1;
+    font-family: var(--font-heading) !important;
+    font-size: 4.5rem !important;
+    color: var(--secondary-color) !important;
+    margin-bottom: 30px !important;
+    font-weight: 300 !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+    line-height: 1.1 !important;
+    margin-top: 0 !important;
 }
 
 .hero-text .lead {
-    font-family: var(--font-body);
-    font-size: 1.3rem;
-    line-height: 1.6;
-    color: var(--text-color);
-    font-weight: 300;
-    margin: 0;
-    font-style: italic;
+    font-family: var(--font-body) !important;
+    font-size: 1.3rem !important;
+    line-height: 1.6 !important;
+    color: var(--text-color) !important;
+    font-weight: 300 !important;
+    margin: 0 !important;
+    font-style: italic !important;
 }
 
 /* Main About Content */
 .about-main {
     padding: 120px 0;
     background-color: #ffffff;
+    clear: both;
 }
 
 .about-content-wrapper {
@@ -90,22 +121,22 @@
 }
 
 .about-text-section h2 {
-    font-family: var(--font-heading);
-    font-size: 3.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-    font-weight: 300;
-    letter-spacing: 2px;
+    font-family: var(--font-heading) !important;
+    font-size: 3.5rem !important;
+    color: var(--secondary-color) !important;
+    margin-bottom: 10px !important;
+    font-weight: 300 !important;
+    letter-spacing: 2px !important;
 }
 
 .about-text-section h3 {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-bottom: 60px;
-    font-weight: 400;
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    color: var(--primary-color) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 4px !important;
+    margin-bottom: 60px !important;
+    font-weight: 400 !important;
 }
 
 .text-content {
@@ -113,16 +144,16 @@
 }
 
 .text-content p {
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-color);
-    font-weight: 300;
-    text-align: left;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
+    font-family: var(--font-body) !important;
+    font-size: 1.1rem !important;
+    line-height: 1.8 !important;
+    color: var(--text-color) !important;
+    font-weight: 300 !important;
+    text-align: left !important;
+    max-width: 700px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 25px !important;
 }
 
 .signature {
@@ -186,13 +217,13 @@
 }
 
 .philosophy-text h2 {
-    font-family: var(--font-heading);
-    font-size: 2.8rem;
-    color: var(--secondary-color);
-    margin-bottom: 60px;
-    font-weight: 300;
-    text-align: center;
-    letter-spacing: 1px;
+    font-family: var(--font-heading) !important;
+    font-size: 2.8rem !important;
+    color: var(--secondary-color) !important;
+    margin-bottom: 60px !important;
+    font-weight: 300 !important;
+    text-align: center !important;
+    letter-spacing: 1px !important;
 }
 
 .philosophy-content {
@@ -214,20 +245,20 @@
 }
 
 .principle h4 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-    font-weight: 400;
-    letter-spacing: 1px;
+    font-family: var(--font-heading) !important;
+    font-size: 1.5rem !important;
+    color: var(--secondary-color) !important;
+    margin-bottom: 20px !important;
+    font-weight: 400 !important;
+    letter-spacing: 1px !important;
 }
 
 .principle p {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--text-color);
-    font-weight: 300;
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    color: var(--text-color) !important;
+    font-weight: 300 !important;
 }
 
 /* Expertise Section */
@@ -237,13 +268,13 @@
 }
 
 .expertise-section h2 {
-    font-family: var(--font-heading);
-    font-size: 2.8rem;
-    color: var(--secondary-color);
-    margin-bottom: 80px;
-    font-weight: 300;
-    text-align: center;
-    letter-spacing: 1px;
+    font-family: var(--font-heading) !important;
+    font-size: 2.8rem !important;
+    color: var(--secondary-color) !important;
+    margin-bottom: 80px !important;
+    font-weight: 300 !important;
+    text-align: center !important;
+    letter-spacing: 1px !important;
 }
 
 .expertise-list {
@@ -265,22 +296,22 @@
 }
 
 .expertise-item h3 {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: var(--secondary-color);
-    margin-bottom: 15px;
-    letter-spacing: 1px;
+    font-family: var(--font-heading) !important;
+    font-size: 1.6rem !important;
+    font-weight: 400 !important;
+    color: var(--secondary-color) !important;
+    margin-bottom: 15px !important;
+    letter-spacing: 1px !important;
 }
 
 .expertise-item p {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--text-color);
-    font-weight: 300;
-    max-width: 600px;
-    margin: 0 auto;
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    color: var(--text-color) !important;
+    font-weight: 300 !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
 }
 
 /* CTA Section */
@@ -296,173 +327,154 @@
 }
 
 .cta-content h2 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: #ffffff;
-    margin-bottom: 50px;
-    letter-spacing: 1px;
+    font-family: var(--font-heading) !important;
+    font-size: 2.5rem !important;
+    font-weight: 300 !important;
+    color: #ffffff !important;
+    margin-bottom: 50px !important;
+    letter-spacing: 1px !important;
 }
 
 .btn-primary {
-    display: inline-block;
-    padding: 18px 45px;
-    background-color: var(--primary-color);
-    color: #ffffff;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 400;
+    display: inline-block !important;
+    padding: 18px 45px !important;
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.9rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    text-decoration: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-weight: 400 !important;
 }
 
 .btn-primary:hover {
-    background-color: #8a7a68;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #8a7a68 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
     .hero-content h1 {
-        font-size: 3.5rem;
+        font-size: 3.5rem !important;
     }
     
     .hero-content {
-        padding: 60px 40px;
-        max-width: 600px;
+        padding: 60px 40px !important;
+        max-width: 600px !important;
     }
     
     .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 250px 250px 250px;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 250px 250px 250px !important;
     }
     
     .gallery-item.large {
-        grid-row: span 1;
-        grid-column: span 2;
+        grid-row: span 1 !important;
+        grid-column: span 2 !important;
     }
 }
 
 @media screen and (max-width: 768px) {
     .about-hero {
-        height: 80vh;
-        min-height: 600px;
+        height: 80vh !important;
+        min-height: 600px !important;
     }
     
     .hero-content {
-        padding: 50px 30px;
-        margin: 0 20px;
-        max-width: 500px;
+        padding: 50px 30px !important;
+        margin: 0 20px !important;
+        max-width: 500px !important;
     }
     
     .hero-content h1 {
-        font-size: 3rem;
-        letter-spacing: 2px;
+        font-size: 3rem !important;
+        letter-spacing: 2px !important;
     }
     
     .hero-text .lead {
-        font-size: 1.1rem;
+        font-size: 1.1rem !important;
     }
     
     .about-text-section h2 {
-        font-size: 2.8rem;
+        font-size: 2.8rem !important;
     }
     
     .gallery-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 250px);
-        padding: 0 20px;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: repeat(3, 250px) !important;
+        padding: 0 20px !important;
     }
     
     .gallery-item.large {
-        grid-column: span 1;
-        grid-row: span 1;
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
     }
     
     .about-main,
     .philosophy-section,
     .expertise-section,
     .cta-section {
-        padding: 80px 0;
+        padding: 80px 0 !important;
     }
     
     .container {
-        padding: 0 20px;
+        padding: 0 20px !important;
     }
     
     .philosophy-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
     }
 }
 
 @media screen and (max-width: 480px) {
     .hero-content h1 {
-        font-size: 2.5rem;
-        letter-spacing: 1px;
+        font-size: 2.5rem !important;
+        letter-spacing: 1px !important;
     }
     
     .hero-content {
-        padding: 40px 25px;
-        margin: 0 15px;
+        padding: 40px 25px !important;
+        margin: 0 15px !important;
     }
     
     .hero-text .lead {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
     
     .about-text-section h2 {
-        font-size: 2.2rem;
+        font-size: 2.2rem !important;
     }
     
     .about-text-section h3 {
-        font-size: 0.9rem;
-        letter-spacing: 3px;
+        font-size: 0.9rem !important;
+        letter-spacing: 3px !important;
     }
     
     .philosophy-text h2,
     .expertise-section h2,
     .cta-content h2 {
-        font-size: 2.2rem;
+        font-size: 2.2rem !important;
     }
     
     .gallery-grid {
-        grid-template-rows: repeat(3, 200px);
-        gap: 15px;
+        grid-template-rows: repeat(3, 200px) !important;
+        gap: 15px !important;
     }
     
     .about-main,
     .philosophy-section,
     .expertise-section,
     .cta-section {
-        padding: 60px 0;
+        padding: 60px 0 !important;
     }
     
     .principle {
-        padding: 30px 20px;
+        padding: 30px 20px !important;
     }
-}
-
-/* Smooth animations */
-* {
-    scroll-behavior: smooth;
-}
-
-img {
-    transition: transform 0.6s ease;
-}
-
-/* Loading states */
-.lazy-load {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.lazy-load.loaded {
-    opacity: 1;
 }

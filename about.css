@@ -10,23 +10,6 @@
     --font-body: 'Montserrat', sans-serif;
 }
 
-/* Page Title */
-.page-title {
-    padding: 80px 0 40px;
-    text-align: center;
-    background-color: #ffffff;
-    margin-top: 80px; /* Adjust based on your header height */
-}
-
-.page-title h1 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--secondary-color);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
 /* Container */
 .container {
     max-width: 1200px;
@@ -34,16 +17,24 @@
     padding: 0 30px;
 }
 
-/* Hero Banner */
+/* Hero Section - Sophie Paterson Style */
 .about-hero {
-    width: 100%;
-    margin-bottom: 80px;
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
 }
 
 .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 600px;
-    overflow: hidden;
+    height: 100%;
+    z-index: 1;
 }
 
 .hero-image img {
@@ -53,299 +44,238 @@
     object-position: center;
 }
 
-/* Section Headers */
-.section-header {
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%);
+    padding: 80px 0;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero-text .lead {
+    font-family: var(--font-body);
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 600px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+/* Main About Content */
+.about-main {
+    padding: 120px 0;
+    background-color: #ffffff;
+}
+
+.about-content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
+}
+
+.about-text-section h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.about-text-section h3 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+.text-content {
     margin-bottom: 60px;
 }
 
-.section-header h2 {
-    font-family: var(--font-heading);
-    font-size: 2.2rem;
-    font-weight: 300;
-    color: var(--secondary-color);
-    letter-spacing: 1px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 15px;
-}
-
-.section-header h2:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 1px;
-    background-color: var(--primary-color);
-}
-
-/* About Intro Section */
-.about-intro {
-    padding: 0 0 100px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.intro-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.intro-content h2 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-
-.intro-content h3 {
+.text-content p {
     font-family: var(--font-body);
-    font-size: 0.9rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--primary-color);
-    margin-bottom: 40px;
-}
-
-.intro-text {
-    margin-bottom: 40px;
-}
-
-.intro-text p {
-    font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-color);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-align: left;
 }
 
 .signature {
+    display: flex;
+    justify-content: center;
     margin-top: 40px;
 }
 
 .signature-img {
-    max-width: 180px;
+    max-width: 200px;
     height: auto;
+    opacity: 0.8;
+}
+
+/* Gallery Section - Sophie Paterson Style */
+.about-gallery {
+    padding: 0;
+    margin: 100px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 15px;
+    height: 500px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-item.large {
+    grid-row: span 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.02);
 }
 
 /* Philosophy Section */
 .philosophy-section {
-    padding: 100px 0;
+    padding: 120px 0;
     background-color: var(--light-gray);
 }
 
-.philosophy-content {
-    max-width: 800px;
+.philosophy-grid {
+    max-width: 900px;
     margin: 0 auto;
 }
 
-.philosophy-intro {
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-color);
-    text-align: center;
+.philosophy-text h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--secondary-color);
     margin-bottom: 60px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
-.philosophy-principles {
+.philosophy-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 50px;
 }
 
 .principle {
     text-align: center;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
 }
 
-.principle h3 {
+.principle:hover {
+    transform: translateY(-5px);
+}
+
+.principle h4 {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 1.4rem;
     color: var(--secondary-color);
     margin-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
 .principle p {
     font-family: var(--font-body);
-    font-size: 0.95rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.7;
     color: var(--text-color);
+    font-weight: 300;
 }
 
-/* Expertise Section */
+/* Expertise Section - List Style */
 .expertise-section {
-    padding: 100px 0;
+    padding: 120px 0;
     background-color: #ffffff;
 }
 
-.expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.expertise-card {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: var(--light-gray);
-    transition: all 0.3s ease;
-}
-
-.expertise-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-}
-
-.expertise-icon {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 25px;
-}
-
-.expertise-card h3 {
+.expertise-section h2 {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
-    font-weight: 400;
+    font-size: 2.5rem;
     color: var(--secondary-color);
-    margin-bottom: 20px;
+    margin-bottom: 80px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
-.expertise-card p {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    line-height: 1.7;
-    color: var(--text-color);
-}
-
-/* Journey Section */
-.journey-section {
-    padding: 100px 0;
-    background-color: var(--light-gray);
-}
-
-.journey-content {
+.expertise-list {
     max-width: 800px;
     margin: 0 auto;
-}
-
-.journey-intro {
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-color);
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.journey-timeline {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 40px;
 }
 
-.timeline-item {
+.expertise-item {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--medium-gray);
     text-align: center;
 }
 
-.timeline-item h3 {
+.expertise-item:last-child {
+    border-bottom: none;
+}
+
+.expertise-item h3 {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.timeline-item h3:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 1px;
-    background-color: var(--primary-color);
-}
-
-.timeline-item p {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    line-height: 1.7;
-    color: var(--text-color);
-    margin-bottom: 10px;
-}
-
-/* Process Section */
-.process-section {
-    padding: 100px 0;
-    background-color: #ffffff;
-}
-
-.process-steps {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.process-steps:before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: var(--medium-gray);
-    z-index: 1;
-}
-
-.process-step {
-    position: relative;
-    z-index: 2;
-    flex: 1;
-    text-align: center;
-    padding: 0 15px;
-}
-
-.step-number {
-    width: 80px;
-    height: 80px;
-    background-color: var(--primary-color);
-    color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    margin: 0 auto 30px;
-}
-
-.step-content h3 {
-    font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 400;
     color: var(--secondary-color);
     margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
-.step-content p {
+.expertise-item p {
     font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.7;
     color: var(--text-color);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* CTA Section */
 .cta-section {
-    padding: 100px 0;
+    padding: 120px 0;
     background-color: var(--secondary-color);
     text-align: center;
 }
@@ -360,12 +290,13 @@
     font-size: 2.5rem;
     font-weight: 300;
     color: #ffffff;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
 }
 
 .btn-primary {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 18px 45px;
     background-color: var(--primary-color);
     color: #ffffff;
     font-family: var(--font-body);
@@ -376,95 +307,158 @@
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-weight: 400;
 }
 
 .btn-primary:hover {
     background-color: #8a7a68;
     transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 1024px) {
-    .hero-image {
-        height: 500px;
+    .hero-content h1 {
+        font-size: 3rem;
     }
     
-    .philosophy-principles,
-    .journey-timeline {
-        gap: 30px;
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        gap: 10px;
     }
     
-    .process-steps {
-        flex-wrap: wrap;
+    .gallery-item.large {
+        grid-column: span 2;
+        height: 400px;
     }
     
-    .process-steps:before {
-        display: none;
-    }
-    
-    .process-step {
-        flex: 0 0 50%;
-        margin-bottom: 50px;
+    .gallery-item {
+        height: 300px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .page-title {
-        padding: 60px 0 30px;
+    .about-hero {
+        height: 60vh;
+        min-height: 400px;
     }
     
-    .page-title h1 {
+    .hero-content {
+        padding: 60px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .hero-text .lead {
+        font-size: 1.1rem;
+    }
+    
+    .about-main,
+    .philosophy-section,
+    .expertise-section,
+    .cta-section {
+        padding: 80px 0;
+    }
+    
+    .about-text-section h2 {
+        font-size: 2.2rem;
+    }
+    
+    .text-content p {
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .gallery-item.large {
+        grid-column: span 1;
+        height: 300px;
+    }
+    
+    .gallery-item {
+        height: 250px;
+    }
+    
+    .philosophy-content {
+        gap: 30px;
+    }
+    
+    .principle {
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .about-hero {
+        margin-top: 70px;
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-text .lead {
+        font-size: 1rem;
+    }
+    
+    .about-text-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .about-text-section h3 {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+    
+    .philosophy-text h2,
+    .expertise-section h2,
+    .cta-content h2 {
         font-size: 2rem;
     }
     
-    .hero-image {
-        height: 400px;
+    .gallery-item,
+    .gallery-item.large {
+        height: 200px;
     }
     
-    .philosophy-principles,
-    .journey-timeline {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .expertise-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .process-step {
-        flex: 0 0 100%;
-    }
-    
-    .about-intro,
+    .about-main,
     .philosophy-section,
     .expertise-section,
-    .journey-section,
-    .process-section,
     .cta-section {
         padding: 60px 0;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .page-title h1 {
-        font-size: 1.8rem;
-    }
-    
-    .hero-image {
-        height: 300px;
-    }
-    
-    .intro-content h2,
-    .section-header h2,
-    .cta-content h2 {
-        font-size: 1.8rem;
-    }
-    
-    .expertise-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .expertise-card {
-        padding: 30px 15px;
-    }
+/* Smooth scrolling and transitions */
+* {
+    scroll-behavior: smooth;
+}
+
+img {
+    transition: transform 0.6s ease;
+}
+
+/* Loading states */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
 }

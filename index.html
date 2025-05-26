@@ -1,289 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chloe Hayle Portfolio</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chloe Hayle Portfolio</title>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Skip to content for accessibility -->
-    <a href="#main-content" class="skip-to-content">Skip to content</a>
-    
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="preloader-inner">
-            <span class="loader"></span>
-        </div>
-    </div>
-    
-    <!-- Header -->
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-    <a href="index.html">
-        <img src="images/CHLOE HAYLE LOGO.png" alt="Chloe Hayle Logo" class="logo-image">
-    </a>
-</div>
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li class="has-dropdown">
-                        <a href="#">All Projects <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="projects/interior.html">Interior</a></li>
-                            <li><a href="projects/sm-london.html">SM-London</a></li>
-                            <li><a href="projects/cerisse-interiors.html">Cerisse Interiors</a></li>
-                            <li><a href="projects/fashion.html">Fashion</a></li>
-                            <li><a href="projects/baby-nursery.html">Baby and Nursery</a></li>
-                            <li><a href="projects/academic-design.html">Academic Design</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="#">Profile <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="profile/consulting.html">Consulting</a></li>
-                            <li><a href="profile/branding.html">Branding</a></li>
-                            <li><a href="profile/web-design.html">Web Design</a></li>
-                            <li><a href="profile/storytelling.html">Storytelling</a></li>
-                            <li><a href="profile/package-design.html">Package Design</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-slider">
-                <div class="slide active">
-                    <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
-                    <div class="slide-content">
-                        <h1>REFINED LUXURY</h1>
-                        <p>Crafting elegant experiences through design</p>
-                        <a href="about.html" class="btn-outline">Discover More</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80');"></div>
-                    <div class="slide-content">
-                        <h1>SOPHISTICATED DESIGN</h1>
-                        <p>Where creativity meets elegance</p>
-                        <a href="projects/interior.html" class="btn-outline">View Projects</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80');"></div>
-                    <div class="slide-content">
-                        <h1>ARTISTIC VISION</h1>
-                        <p>Transforming spaces into experiences</p>
-                        <a href="contact.html" class="btn-outline">Get in Touch</a>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-controls">
-                <button class="prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
-                <div class="slider-dots">
-                    <span class="dot active" data-slide="0" aria-label="Slide 1"></span>
-                    <span class="dot" data-slide="1" aria-label="Slide 2"></span>
-                    <span class="dot" data-slide="2" aria-label="Slide 3"></span>
-                </div>
-                <button class="next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </section>
-        
-        <!-- Featured Projects -->
-        <section class="featured-projects">
-            <div class="container">
-                <div class="section-header">
-                    <h2>FEATURED PROJECTS</h2>
-                    <p>A selection of our most distinguished work</p>
-                </div>
-                <div class="projects-grid">
-                    <div class="project-card animate-on-scroll">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Interior Project" class="lazy-load" data-src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80">
-                        </div>
-                        <div class="project-info">
-                            <h3>Elegant Interior</h3>
-                            <p>Sophisticated living space design</p>
-                            <a href="projects/interior.html" class="btn-text">View Project <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-card animate-on-scroll">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80" alt="Fashion Project" class="lazy-load" data-src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80">
-                        </div>
-                        <div class="project-info">
-                            <h3>Fashion Collection</h3>
-                            <p>Contemporary luxury apparel</p>
-                            <a href="projects/fashion.html" class="btn-text">View Project <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-card animate-on-scroll">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2158&q=80" alt="Branding Project" class="lazy-load" data-src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2158&q=80">
-                        </div>
-                        <div class="project-info">
-                            <h3>Luxury Branding</h3>
-                            <p>Identity design for premium brands</p>
-                            <a href="profile/branding.html" class="btn-text">View Project <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="view-all">
-                    <a href="projects.html" class="btn-primary">View All Projects</a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- About Preview -->
-<section class="about-preview">
-    <div class="container">
-        <div class="about-content">
-            <div class="about-text animate-on-scroll">
-                <h2>Crafting Luxury Experiences</h2>
-                <p>With a passion for refined aesthetics and meticulous attention to detail, I transform visions into sophisticated realities. My approach combines timeless elegance with contemporary innovation, creating designs that resonate with discerning audiences.</p>
-                <p>Each project is a journey of collaboration, creativity, and precision, resulting in experiences that elevate and inspire.</p>
-                <a href="about.html" class="btn-outline">Learn More About Me</a>
-                
-                <div class="about-signature-image">
-    <img src="images/Black-Signature.png" alt="Chloe Hayle Signature" class="signature-img">
+<!-- Skip to content for accessibility -->
+<a href="#main-content" class="skip-to-content">Skip to content</a>
+
+<!-- Preloader -->
+<div class="preloader">
+<div class="preloader-inner">
+<span class="loader"></span>
 </div>
 </div>
 
+<!-- Header -->
+<header class="header">
+<div class="header-container">
+<div class="logo">
+<a href="index.html">
+<img src="images/CHLOE HAYLE LOGO.png" alt="Chloe Hayle Logo" class="logo-image">
+</a>
+</div>
+<nav class="main-nav">
+<ul class="nav-list">
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="about.html">About Me</a></li>
+<li class="has-dropdown">
+<a href="#">All Projects <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="projects/interior.html">Interior</a></li>
+<li><a href="projects/sm-london.html">SM-London</a></li>
+<li><a href="projects/cerisse-interiors.html">Cerisse Interiors</a></li>
+<li><a href="projects/fashion.html">Fashion</a></li>
+<li><a href="projects/baby-nursery.html">Baby and Nursery</a></li>
+<li><a href="projects/academic-design.html">Academic Design</a></li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a href="#">Profile <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="profile/consulting.html">Consulting</a></li>
+<li><a href="profile/branding.html">Branding</a></li>
+<li><a href="profile/web-design.html">Web Design</a></li>
+<li><a href="profile/storytelling.html">Storytelling</a></li>
+<li><a href="profile/package-design.html">Package Design</a></li>
+</ul>
+</li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<div class="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</header>
+
+<!-- Main Content -->
+<main id="main-content">
+<!-- Hero Section -->
+<section class="hero">
+<div class="hero-slider">
+<!-- Keep first slide as is -->
+<div class="slide active">
+<div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+<div class="slide-content">
+<h1>REFINED LUXURY</h1>
+<p>Crafting elegant experiences through design</p>
+<a href="about.html" class="btn-outline">Discover More</a>
+</div>
+</div>
+
+<!-- REPLACED SECOND SLIDE WITH VIDEO -->
+<div class="slide">
+<video class="slide-video" autoplay muted loop playsinline>
+<source src="videos/hero-video.mp4" type="video/mp4">
+</video>
+<div class="slide-content">
+<h1>SOPHISTICATED DESIGN</h1>
+<p>Where creativity meets elegance</p>
+<a href="projects/interior.html" class="btn-outline">View Projects</a>
+</div>
+</div>
+
+<!-- Keep third slide as is -->
+<div class="slide">
+<div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80');"></div>
+<div class="slide-content">
+<h1>ARTISTIC VISION</h1>
+<p>Transforming spaces into experiences</p>
+<a href="contact.html" class="btn-outline">Get in Touch</a>
+</div>
+</div>
+</div>
+
+<div class="slider-controls">
+<button class="prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+<div class="slider-dots">
+<span class="dot active" data-slide="0" aria-label="Slide 1"></span>
+<span class="dot" data-slide="1" aria-label="Slide 2"></span>
+<span class="dot" data-slide="2" aria-label="Slide 3"></span>
+</div>
+<button class="next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+</div>
+</section>
+
+<!-- Featured Projects -->
+<section class="featured-projects">
+<div class="container">
+<div class="section-header">
+<h2>FEATURED PROJECTS</h2>
+<p>A selection of our most distinguished work</p>
+</div>
+<div class="projects-grid">
+<div class="project-card animate-on-scroll">
+<div class="project-image">
+<img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Interior Project" class="lazy-load" data-src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80">
+</div>
+<div class="project-info">
+<h3>Elegant Interior</h3>
+<p>Sophisticated living space design</p>
+<a href="projects/interior.html" class="btn-text">View Project <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="project-card animate-on-scroll">
+<div class="project-image">
+<img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80" alt="Fashion Project" class="lazy-load" data-src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80">
+</div>
+<div class="project-info">
+<h3>Fashion Collection</h3>
+<p>Contemporary luxury apparel</p>
+<a href="projects/fashion.html" class="btn-text">View Project <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="project-card animate-on-scroll">
+<div class="project-image">
+<img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2158&q=80" alt="Branding Project" class="lazy-load" data-src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2158&q=80">
+</div>
+<div class="project-info">
+<h3>Luxury Branding</h3>
+<p>Identity design for premium brands</p>
+<a href="profile/branding.html" class="btn-text">View Project <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+</div>
+<div class="view-all">
+<a href="projects.html" class="btn-primary">View All Projects</a>
+</div>
+</div>
+</section>
+
+<!-- About Preview -->
+<section class="about-preview">
+<div class="container">
+<div class="about-content">
+<div class="about-text animate-on-scroll">
+<h2>Crafting Luxury Experiences</h2>
+<p>With a passion for refined aesthetics and meticulous attention to detail, I transform visions into sophisticated realities. My approach combines timeless elegance with contemporary innovation, creating designs that resonate with discerning audiences.</p>
+<p>Each project is a journey of collaboration, creativity, and precision, resulting in experiences that elevate and inspire.</p>
+<a href="about.html" class="btn-outline">Learn More About Me</a>
+<div class="about-signature-image">
+<img src="images/Black-Signature.png" alt="Chloe Hayle Signature" class="signature-img">
+</div>
+</div>
 <div class="about-image animate-on-scroll">
-    <img src="videos/About-Me.mp4" alt="Designer Portrait" class="lazy-load" data-src="images/About-Me.jpg">
+<!-- FIXED: Changed from video file to image file -->
+<img src="images/About-Me.jpg" alt="Designer Portrait" class="lazy-load" data-src="images/About-Me.jpg">
 </div>
 </div>
 </div>
 </section>
 
+<!-- Services Preview -->
+<section class="services-preview">
+<div class="container">
+<div class="section-header">
+<h2>EXPERTISE</h2>
+<p>Specialized services tailored to your vision</p>
+</div>
+<div class="services-grid">
+<div class="service-card animate-on-scroll">
+<div class="service-icon">
+<i class="fas fa-paint-brush"></i>
+</div>
+<h3>Interior Design</h3>
+<p>Creating harmonious spaces that balance aesthetics and functionality with a touch of luxury.</p>
+</div>
+<div class="service-card animate-on-scroll">
+<div class="service-icon">
+<i class="fas fa-tshirt"></i>
+</div>
+<h3>Fashion Design</h3>
+<p>Crafting elegant apparel that embodies sophistication and contemporary style.</p>
+</div>
+<div class="service-card animate-on-scroll">
+<div class="service-icon">
+<i class="fas fa-lightbulb"></i>
+</div>
+<h3>Consulting</h3>
+<p>Strategic guidance to elevate your brand and design projects to new heights.</p>
+</div>
+<div class="service-card animate-on-scroll">
+<div class="service-icon">
+<i class="fas fa-laptop-code"></i>
+</div>
+<h3>Web Design</h3>
+<p>Digital experiences that capture the essence of luxury and sophistication.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
 
-        
-        <!-- Services Preview -->
-        <section class="services-preview">
-            <div class="container">
-                <div class="section-header">
-                    <h2>EXPERTISE</h2>
-                    <p>Specialized services tailored to your vision</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <h3>Interior Design</h3>
-                        <p>Creating harmonious spaces that balance aesthetics and functionality with a touch of luxury.</p>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-tshirt"></i>
-                        </div>
-                        <h3>Fashion Design</h3>
-                        <p>Crafting elegant apparel that embodies sophistication and contemporary style.</p>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>Consulting</h3>
-                        <p>Strategic guidance to elevate your brand and design projects to new heights.</p>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3>Web Design</h3>
-                        <p>Digital experiences that capture the essence of luxury and sophistication.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        
-    
-   <!-- Footer -->
+<!-- Footer -->
 <footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <!-- Footer Logo -->
-            <div class="footer-logo">
-                <a href="index.html">
-                    <img src="images/CHLOE HAYLE FOOTER LOGO BROWN.png" alt="Chloe Hayle Logo" class="footer-logo-image">
-                </a>
-            </div>
-
-            
-            <!-- Footer Social Links -->
-            <div class="footer-social">
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            
-            <!-- Footer Navigation -->
-            <div class="footer-nav">
-                <ul>
-    
-                    <li><a href="about.html">About</a></li>
-                
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            
-            <!-- Footer Copyright -->
-            <div class="footer-copyright">
-                <p>&copy; 2025 Chloe Hayle. All rights reserved.</p>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<div class="footer-content">
+<!-- Footer Logo -->
+<div class="footer-logo">
+<a href="index.html">
+<img src="images/CHLOE HAYLE FOOTER LOGO BROWN.png" alt="Chloe Hayle Logo" class="footer-logo-image">
+</a>
+</div>
+<!-- Footer Social Links -->
+<div class="footer-social">
+<div class="social-links">
+<a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+<a href="#" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
+<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</div>
+<!-- Footer Navigation -->
+<div class="footer-nav">
+<ul>
+<li><a href="about.html">About</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<!-- Footer Copyright -->
+<div class="footer-copyright">
+<p>&copy; 2025 Chloe Hayle. All rights reserved.</p>
+</div>
+</div>
+</div>
 </footer>
 
-    
-    <!-- Back to Top Button -->
+<!-- Back to Top Button -->
 <button id="back-to-top" aria-label="Back to top">
-    <i class="fas fa-chevron-up"></i>
+<i class="fas fa-chevron-up"></i>
 </button>
 
 <!-- Scripts -->
 <script src="./js/main.js"></script>
 <script>
-    // Back to top button functionality
-    const backToTopButton = document.getElementById('back-to-top');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTopButton.classList.add('visible');
-        } else {
-            backToTopButton.classList.remove('visible');
-        }
-    });
-    
-    backToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+// Back to top button functionality
+const backToTopButton = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+if (window.scrollY > 300) {
+backToTopButton.classList.add('visible');
+} else {
+backToTopButton.classList.remove('visible');
+}
+});
+
+backToTopButton.addEventListener('click', () => {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
 </script>
 </body>
 </html>

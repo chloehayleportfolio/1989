@@ -82,6 +82,291 @@ img {
     padding: 0 15px;
 }
 
+/* ========================================
+   VIDEO SUPPORT - SITE-WIDE
+======================================== */
+
+/* Universal video styling */
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Video that replaces images in any context */
+.video-replace {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Video backgrounds for hero sections */
+.video-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Hero slider with video backgrounds - ENHANCED */
+.slide-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: transform 6s ease;
+    z-index: 0;
+    /* Hardware acceleration for smooth playback */
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.slide.active .slide-video {
+    transform: scale(1);
+}
+
+/* Ensure slide content appears above video */
+.slide .slide-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Video fallback handling for hero slider */
+.slide video + .slide-bg {
+    display: none;
+}
+
+.slide video:not([src]) + .slide-bg,
+.slide video[src=""] + .slide-bg {
+    display: block;
+}
+
+/* Ensure slider controls work properly with video */
+.slider-controls {
+    position: relative;
+    z-index: 10;
+}
+
+/* Video in project cards */
+.project-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image video {
+    transform: scale(1.05);
+}
+
+/* Video in about section */
+.about-image video {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Video in gallery grids */
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover video {
+    transform: scale(1.05);
+}
+
+/* Video overlay container */
+.video-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-overlay video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay .overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Inline video styling */
+.video-inline {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/* Video with custom controls */
+.video-custom-controls {
+    position: relative;
+}
+
+.video-custom-controls video {
+    width: 100%;
+    height: auto;
+}
+
+.video-custom-controls::-webkit-media-controls {
+    display: none !important;
+}
+
+.video-custom-controls::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+/* Lazy loading for videos */
+video.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+video.lazy-load.loaded {
+    opacity: 1;
+}
+
+/* Video performance optimizations */
+video[autoplay] {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+video {
+    /* Hardware acceleration for better performance */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    /* Optimize rendering */
+    will-change: auto;
+}
+
+/* Mobile video optimizations */
+@media screen and (max-width: 768px) {
+    .about-image video {
+        height: 300px;
+    }
+    
+    .project-image video {
+        height: 250px;
+    }
+    
+    /* Optimize hero video scaling for mobile */
+    .slide-video {
+        transform: scale(1.05);
+    }
+    
+    .slide.active .slide-video {
+        transform: scale(1);
+    }
+    
+    /* Reduce video quality on mobile for performance */
+    video {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+/* Video loading states */
+.video-loading {
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.video-loading::before {
+    content: 'Loading video...';
+    color: var(--dark-gray);
+    font-size: 14px;
+}
+
+/* Video error states */
+.video-error {
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    color: var(--dark-gray);
+}
+
+.video-error::before {
+    content: 'Video unavailable';
+    font-size: 14px;
+}
+
+/* Hero video loading states */
+.slide video:not([src]) {
+    background: var(--medium-gray);
+}
+
+/* Accessibility improvements for videos */
+video:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Dark mode video adjustments */
+@media (prefers-color-scheme: dark) {
+    .video-overlay .overlay-content {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    video {
+        animation: none;
+    }
+    
+    .project-image video,
+    .gallery-item video {
+        transition: none;
+    }
+    
+    .project-card:hover .project-image video,
+    .gallery-item:hover video {
+        transform: none;
+    }
+    
+    /* Disable hero video scaling animations */
+    .slide-video {
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    .slide.active .slide-video {
+        transform: none !important;
+    }
+}
+
+
 /* Buttons */
 .btn-primary, .btn-outline, .btn-text {
     display: inline-block;

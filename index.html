@@ -229,23 +229,43 @@
             background: var(--nav-hover);
         }
 
-        /* Hero Section */
+        /* Hero Section with Background Video */
         .hero {
             height: 100vh;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, var(--cream) 0%, #F5F0E8 100%);
             overflow: hidden;
             margin-top: 80px;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(250, 247, 240, 0.7) 0%, rgba(245, 240, 232, 0.8) 100%);
+            z-index: 2;
         }
 
         .hero-content {
             text-align: center;
             max-width: 800px;
             padding: 0 2rem;
-            z-index: 2;
+            z-index: 3;
+            position: relative;
         }
 
         .hero-title {
@@ -293,45 +313,44 @@
         }
 
         /* About Section */
-.about {
-    padding: 8rem 0;
-    background: var(--white);
-}
+        .about {
+            padding: 8rem 0;
+            background: var(--white);
+        }
 
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-}
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
 
-.about-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: var(--dark-brown);
-    margin-bottom: 2rem;
-    font-weight: 400;
-}
+        .about-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--dark-brown);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
 
-.about-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--light-brown);
-    margin-bottom: 2rem;
-}
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--light-brown);
+            margin-bottom: 2rem;
+        }
 
-.about-image {
-    position: relative;
-    overflow: hidden;
-    border-radius: 2px;
-}
-
+        .about-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+        }
 
         .about-image video {
             width: 100%;
@@ -484,6 +503,7 @@
         #back-to-top.visible {
             opacity: 1;
             visibility: visible;
+
         }
 
         #back-to-top:hover {
@@ -629,34 +649,6 @@
             z-index: 1001;
             transition: width 0.1s ease;
         }
-
-        /* Loading animation */
-        .loading {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--white);
-            z-index: 10000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 1;
-            transition: opacity 0.5s ease;
-        }
-
-        .loading.fade-out {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loading-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: var(--primary-gold);
-            letter-spacing: 2px;
-        }
     </style>
 </head>
 <body>
@@ -704,8 +696,12 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Video Background -->
     <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">Chloe Hayle</h1>
             <p class="hero-subtitle">Luxury Portfolio & Creative Excellence</p>
@@ -724,9 +720,9 @@
                 </div>
                 <div class="about-image">
                     <video autoplay muted loop playsinline>
-                        <source src="your-video.mp4" type="video/mp4">
+                        <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
                     </video>
-                    <img src="https://via.placeholder.com/600x500/D4AF37/FFFFFF?text=Chloe+Hayle" alt="About Chloe Hayle" class="video-fallback">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&h=1500&q=80" alt="About Chloe Hayle" class="video-fallback">
                 </div>
             </div>
         </div>
@@ -738,24 +734,45 @@
             <h2 class="section-title">Portfolio</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x300/8B6F47/FFFFFF?text=Project+1" alt="Project 1">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=750&q=80" alt="Luxury Interior Design">
                     <div class="portfolio-overlay">
-                        <h3>Luxury Project 1</h3>
-                        <p>Exceptional design and craftsmanship</p>
+                        <h3>Luxury Interior Design</h3>
+                        <p>Sophisticated residential spaces with timeless elegance</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x300/D4AF37/FFFFFF?text=Project+2" alt="Project 2">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=750&q=80" alt="Fashion Design">
                     <div class="portfolio-overlay">
-                        <h3>Creative Excellence 2</h3>
-                        <p>Innovation meets sophistication</p>
+                        <h3>Fashion & Style</h3>
+                        <p>Curated collections with refined aesthetic vision</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x300/2C1810/FFFFFF?text=Project+3" alt="Project 3">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=750&q=80" alt="Brand Design">
                     <div class="portfolio-overlay">
-                        <h3>Artistic Vision 3</h3>
-                        <p>Timeless beauty and elegance</p>
+                        <h3>Brand Identity</h3>
+                        <p>Distinctive branding solutions for luxury markets</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=750&q=80" alt="Web Design">
+                    <div class="portfolio-overlay">
+                        <h3>Digital Experiences</h3>
+                        <p>Elegant web design with user-centered approach</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=750&q=80" alt="Package Design">
+                    <div class="portfolio-overlay">
+                        <h3>Package Design</h3>
+                        <p>Premium packaging solutions that captivate</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=750&q=80" alt="Nursery Design">
+                    <div class="portfolio-overlay">
+                        <h3>Nursery & Baby</h3>
+                        <p>Thoughtful spaces for life's precious moments</p>
                     </div>
                 </div>
             </div>
@@ -781,26 +798,35 @@
 
     <script>
         // Video error handling for About section
-document.addEventListener('DOMContentLoaded', function() {
-    const aboutVideo = document.querySelector('.about-image video');
-    const fallbackImage = document.querySelector('.video-fallback');
-    
-    if (aboutVideo) {
-        aboutVideo.addEventListener('error', function() {
-            console.log('Video failed to load, showing fallback image');
-            aboutVideo.style.display = 'none';
-            if (fallbackImage) {
-                fallbackImage.style.display = 'block';
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutVideo = document.querySelector('.about-image video');
+            const fallbackImage = document.querySelector('.video-fallback');
+            
+            if (aboutVideo) {
+                aboutVideo.addEventListener('error', function() {
+                    console.log('Video failed to load, showing fallback image');
+                    aboutVideo.style.display = 'none';
+                    if (fallbackImage) {
+                        fallbackImage.style.display = 'block';
+                    }
+                });
+                
+                aboutVideo.addEventListener('loadeddata', function() {
+                    console.log('Video loaded successfully');
+                    aboutVideo.classList.add('loaded');
+                });
+            }
+
+            // Hero video error handling
+            const heroVideo = document.querySelector('.hero-video');
+            if (heroVideo) {
+                heroVideo.addEventListener('error', function() {
+                    console.log('Hero video failed to load');
+                    // Add fallback background
+                    document.querySelector('.hero').style.background = 'linear-gradient(135deg, var(--cream) 0%, #F5F0E8 100%)';
+                });
             }
         });
-        
-        aboutVideo.addEventListener('loadeddata', function() {
-            console.log('Video loaded successfully');
-            aboutVideo.classList.add('loaded');
-        });
-    }
-});
-
 
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
@@ -961,8 +987,11 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
             const hero = document.querySelector('.hero');
+            const heroVideo = document.querySelector('.hero-video');
             if (hero && window.innerWidth > 768) {
-                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                if (heroVideo) {
+                    heroVideo.style.transform = `translateY(${scrolled * 0.3}px)`;
+                }
             }
         });
 
@@ -1057,6 +1086,44 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.transform = 'scale(1)';
             document.body.style.transition = 'all 0.5s ease';
         });
+
+        // Video optimization for mobile
+        function optimizeVideosForMobile() {
+            if (window.innerWidth <= 768) {
+                const videos = document.querySelectorAll('video');
+                videos.forEach(video => {
+                    video.removeAttribute('autoplay');
+                    video.muted = true;
+                    video.controls = false;
+                    video.poster = video.closest('.hero') ? 
+                        'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800&q=80' :
+                        'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80';
+                });
+            }
+        }
+
+        // Call on load and resize
+        window.addEventListener('load', optimizeVideosForMobile);
+        window.addEventListener('resize', optimizeVideosForMobile);
+
+        // Lazy loading for images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
     </script>
 </body>
 </html>
+

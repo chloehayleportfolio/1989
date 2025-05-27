@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -32,8 +33,8 @@
             overflow-x: hidden;
         }
 
-        /* Navigation */
-        .navbar {
+        /* Updated Navigation */
+        .header {
             position: fixed;
             top: 0;
             width: 100%;
@@ -44,12 +45,12 @@
             transition: all 0.3s ease;
         }
 
-        .navbar.scrolled {
+        .header.scrolled {
             background: rgba(250, 247, 240, 0.98);
             box-shadow: 0 2px 20px rgba(44, 24, 16, 0.1);
         }
 
-        .nav-container {
+        .header-container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
@@ -67,13 +68,23 @@
             letter-spacing: 1px;
         }
 
-        .nav-menu {
+        .logo-image {
+            height: 40px;
+            width: auto;
+        }
+
+        .main-nav {
+            display: flex;
+        }
+
+        .nav-list {
             display: flex;
             list-style: none;
             gap: 3rem;
+            align-items: center;
         }
 
-        .nav-link {
+        .nav-list a {
             text-decoration: none;
             color: var(--dark-brown);
             font-weight: 400;
@@ -81,13 +92,16 @@
             letter-spacing: 0.5px;
             transition: color 0.3s ease;
             position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .nav-link:hover {
+        .nav-list a:hover {
             color: var(--primary-gold);
         }
 
-        .nav-link::after {
+        .nav-list a::after {
             content: '';
             position: absolute;
             bottom: -5px;
@@ -98,8 +112,78 @@
             transition: width 0.3s ease;
         }
 
-        .nav-link:hover::after {
+        .nav-list a:hover::after {
             width: 100%;
+        }
+
+        .nav-list a.active {
+            color: var(--primary-gold);
+        }
+
+        /* Dropdown Styles */
+        .has-dropdown {
+            position: relative;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 200px;
+            box-shadow: 0 10px 30px rgba(44, 24, 16, 0.1);
+            border-radius: 5px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            list-style: none;
+            padding: 1rem 0;
+            margin-top: 1rem;
+        }
+
+        .has-dropdown:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown li {
+            padding: 0;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: var(--dark-brown);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .dropdown a:hover {
+            background: var(--cream);
+            color: var(--primary-gold);
+            padding-left: 2rem;
+        }
+
+        .dropdown a::after {
+            display: none;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--dark-brown);
+            transition: all 0.3s ease;
         }
 
         /* Hero Section */
@@ -370,8 +454,12 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-menu {
-                gap: 1.5rem;
+            .main-nav {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
             }
 
             .about-grid {
@@ -390,22 +478,58 @@
             .section-title {
                 font-size: 2rem;
             }
+
+            .nav-list {
+                gap: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Chloe Hayle</a>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+    <header class="header" id="navbar">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/CHLOE HAYLE LOGO.png" alt="Chloe Hayle Logo" class="logo-image">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">All Projects <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="projects/interior.html">Interior</a></li>
+                            <li><a href="projects/sm-london.html">SM-London</a></li>
+                            <li><a href="projects/cerisse-interiors.html">Cerisse Interiors</a></li>
+                            <li><a href="projects/fashion.html">Fashion</a></li>
+                            <li><a href="projects/baby-nursery.html">Baby and Nursery</a></li>
+                            <li><a href="projects/academic-design.html">Academic Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-
+                    <li class="has-dropdown">
+                        <a href="#">Profile <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="profile/consulting.html">Consulting</a></li>
+                            <li><a href="profile/branding.html">Branding</a></li>
+                            <li><a href="profile/web-design.html">Web Design</a></li>
+                            <li><a href="profile/storytelling.html">Storytelling</a></li>
+                            <li><a href="profile/package-design.html">Package Design</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -574,7 +698,7 @@
             item.addEventListener('mouseenter', function() {
                 this.style.boxShadow = '0 20px 40px rgba(44, 24, 16, 0.2)';
             });
-            
+
             item.addEventListener('mouseleave', function() {
                 this.style.boxShadow = 'none';
             });
@@ -587,7 +711,7 @@
 
         // Mobile menu toggle (for future mobile optimization)
         function toggleMobileMenu() {
-            const navMenu = document.querySelector('.nav-menu');
+            const navMenu = document.querySelector('.nav-list');
             navMenu.classList.toggle('active');
         }
 
@@ -618,7 +742,6 @@
                 `;
                 document.body.appendChild(newCursor);
             }
-            
             const cursorElement = document.querySelector('.cursor');
             cursorElement.style.left = e.clientX - 10 + 'px';
             cursorElement.style.top = e.clientY - 10 + 'px';
@@ -633,7 +756,7 @@
                     cursor.style.background = 'rgba(212, 175, 55, 0.5)';
                 }
             });
-            
+
             element.addEventListener('mouseleave', function() {
                 const cursor = document.querySelector('.cursor');
                 if (cursor) {
@@ -652,7 +775,7 @@
 
         /* Mobile menu styles for future use */
         @media (max-width: 768px) {
-            .nav-menu {
+            .nav-list {
                 position: fixed;
                 top: 100%;
                 left: 0;
@@ -666,7 +789,7 @@
                 transition: transform 0.3s ease;
             }
 
-            .nav-menu.active {
+            .nav-list.active {
                 transform: translateX(0);
             }
 

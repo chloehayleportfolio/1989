@@ -1,270 +1,707 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio - Luxury Design Studio</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloe Hayle - Luxury Design Studio</title>
+    <meta name="description" content="Luxury design studio specializing in sophisticated interiors, branding, and digital experiences">
+    
+    <!-- Enhanced Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<!-- Navigation -->
-<nav class="navbar" id="navbar">
-<div class="nav-container">
-<div class="nav-logo">
-<a href="#home"><img src="images/chloe-hayle-logo.png" alt="Logo" class="logo-image"></a>
-</div>
-<ul class="nav-menu" id="nav-menu">
-<li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-<li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
-<li class="nav-item dropdown">
-<a href="#" class="nav-link dropdown-toggle">All Projects</a>
-<ul class="dropdown-menu">
-<li><a href="#interior">Interior</a></li>
-<li><a href="#sm-london">SM-London</a></li>
-<li><a href="#cerisse">Cerisse Interiors</a></li>
-<li><a href="#fashion">Fashion</a></li>
-<li><a href="#baby-nursery">Baby and Nursery</a></li>
-<li><a href="#academic">Academic Design</a></li>
-</ul>
-</li>
-<li class="nav-item dropdown">
-<a href="#" class="nav-link dropdown-toggle">Profile</a>
-<ul class="dropdown-menu">
-<li><a href="#consulting">Consulting</a></li>
-<li><a href="#branding">Branding</a></li>
-<li><a href="#web-design">Web Design</a></li>
-<li><a href="#storytelling">Storytelling</a></li>
-<li><a href="#package-design">Package Design</a></li>
-</ul>
-</li>
-<li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-</ul>
-<div class="hamburger" id="hamburger">
-<span class="bar"></span>
-<span class="bar"></span>
-<span class="bar"></span>
-</div>
-</div>
-</nav>
+<body class="loading">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator" id="scroll-indicator"></div>
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="images/chloe-hayle-logo.png" alt="Chloe Hayle">
+            </div>
+            <div class="loading-text">
+                <span>C</span><span>H</span><span>L</span><span>O</span><span>E</span>
+                <span class="space"></span>
+                <span>H</span><span>A</span><span>Y</span><span>L</span><span>E</span>
+            </div>
+        </div>
+    </div>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
-<div class="hero-content">
-<div class="hero-text">
-<h1 class="hero-title">Luxury Design Studio</h1>
-<p class="hero-subtitle">Creating extraordinary experiences through sophisticated design</p>
-<a href="#about" class="cta-button">Discover Our Work</a>
-</div>
-</div>
-<div class="hero-media">
-<!-- Enhanced hero background with CSS animation -->
-<div class="hero-video-placeholder">
-<div class="animated-gradient"></div>
-<div class="floating-elements">
-<div class="element element-1"></div>
-<div class="element element-2"></div>
-<div class="element element-3"></div>
-</div>
-</div>
-</div>
-</section>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" aria-label="Chloe Hayle Home">
+                    <img src="images/chloe-hayle-logo.png" alt="Chloe Hayle" class="logo-image">
+                </a>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="#home" class="nav-link" role="menuitem">Home</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#about" class="nav-link" role="menuitem">About</a>
+                </li>
+                <li class="nav-item dropdown" role="none">
+                    <a href="#" class="nav-link dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                        Projects
+                        <span class="dropdown-arrow"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="none"><a href="#interior" role="menuitem">Interior Design</a></li>
+                        <li role="none"><a href="#sm-london" role="menuitem">SM-London</a></li>
+                        <li role="none"><a href="#cerisse" role="menuitem">Cerisse Interiors</a></li>
+                        <li role="none"><a href="#fashion" role="menuitem">Fashion</a></li>
+                        <li role="none"><a href="#baby-nursery" role="menuitem">Baby & Nursery</a></li>
+                        <li role="none"><a href="#academic" role="menuitem">Academic Design</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" role="none">
+                    <a href="#" class="nav-link dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                        Services
+                        <span class="dropdown-arrow"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="none"><a href="#consulting" role="menuitem">Design Consulting</a></li>
+                        <li role="none"><a href="#branding" role="menuitem">Brand Identity</a></li>
+                        <li role="none"><a href="#web-design" role="menuitem">Digital Design</a></li>
+                        <li role="none"><a href="#storytelling" role="menuitem">Creative Direction</a></li>
+                        <li role="none"><a href="#package-design" role="menuitem">Package Design</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    Start a Project
+                </button>
+                <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<!-- About Section -->
-<section id="about" class="about">
-<div class="container">
-<div class="about-content">
-<div class="about-text">
-<h2 class="section-title">About Me</h2>
-<p class="about-description">With a passion for creating sophisticated and timeless designs, I specialize in luxury interiors, branding, and digital experiences that reflect elegance and refinement. Each project is approached with meticulous attention to detail and a commitment to excellence.</p>
-<p class="about-description">My work spans across various disciplines, from intimate residential spaces to comprehensive brand identities, always maintaining the highest standards of luxury and sophistication.</p>
-</div>
-<div class="about-image">
-<img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=800&fit=crop&crop=center" alt="Luxury Interior Design" class="parallax-element">
-</div>
-</div>
-</div>
-</section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-video-container">
+                <video autoplay muted loop playsinline class="hero-video" poster="images/hero-poster.jpg">
+                    <source src="videos/hero-video.mp4" type="video/mp4">
+                </video>
+                <!-- Fallback for when video is not available -->
+                <div class="hero-video-fallback">
+                    <div class="animated-gradient"></div>
+                    <div class="floating-elements">
+                        <div class="element element-1"></div>
+                        <div class="element element-2"></div>
+                        <div class="element element-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span>Luxury Design Studio</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Creating</span>
+                    <span class="title-line luxury-accent">Extraordinary</span>
+                    <span class="title-line">Experiences</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Where sophistication meets innovation in luxury design, 
+                    crafting bespoke experiences that transcend the ordinary
+                </p>
+                <div class="hero-actions">
+                    <a href="#about" class="cta-button primary">
+                        <span>Discover Our Work</span>
+                        <div class="button-shine"></div>
+                    </a>
+                    <a href="#contact" class="cta-button secondary">
+                        <span>Start a Project</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator-hero">
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
 
-<!-- Projects Preview -->
-<section class="projects-preview">
-<div class="container">
-<h2 class="section-title">Featured Projects</h2>
-<div class="projects-grid">
-<div class="project-card" data-category="interior">
-<div class="project-image">
-<img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=600&fit=crop&crop=center" alt="Luxury Interior Design">
-<div class="project-overlay">
-<span class="overlay-text">View Project</span>
-</div>
-</div>
-<div class="project-info">
-<h3>Luxury Interiors</h3>
-<p>Sophisticated residential spaces</p>
-</div>
-</div>
-<div class="project-card" data-category="fashion">
-<div class="project-image">
-<img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=500&h=600&fit=crop&crop=center" alt="Fashion Design">
-<div class="project-overlay">
-<span class="overlay-text">View Project</span>
-</div>
-</div>
-<div class="project-info">
-<h3>Fashion Collections</h3>
-<p>Elegant couture designs</p>
-</div>
-</div>
-<div class="project-card" data-category="branding">
-<div class="project-image">
-<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&h=600&fit=crop&crop=center" alt="Luxury Branding">
-<div class="project-overlay">
-<span class="overlay-text">View Project</span>
-</div>
-</div>
-<div class="project-info">
-<h3>Brand Identity</h3>
-<p>Luxury brand development</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">About</div>
+                <h2 class="section-title">
+                    Crafting Luxury Through 
+                    <span class="luxury-accent">Design Excellence</span>
+                </h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-intro">
+                        <p class="lead-text">
+                            With an unwavering commitment to excellence and a passion for 
+                            creating sophisticated environments, I specialize in luxury 
+                            design that speaks to the discerning eye.
+                        </p>
+                    </div>
+                    
+                    <div class="about-details">
+                        <p>
+                            Each project is approached with meticulous attention to detail, 
+                            combining timeless elegance with contemporary innovation. From 
+                            intimate residential spaces to comprehensive brand identities, 
+                            my work reflects the highest standards of luxury and refinement.
+                        </p>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">150+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">12</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">25+</div>
+                                <div class="stat-label">Awards Won</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="about-image-container">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=800&fit=crop&crop=center" 
+                             alt="Luxury Interior Design" 
+                             class="about-image parallax-element"
+                             loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="about-quote">
+                        <blockquote>
+                            "Design is not just what it looks like and feels like. 
+                            Design is how it works and how it makes you feel."
+                        </blockquote>
+                        <cite>— Chloe Hayle</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Additional Portfolio Gallery -->
-<section class="portfolio-gallery">
-<div class="container">
-<h2 class="section-title">Portfolio Highlights</h2>
-<div class="gallery-grid">
-<div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&h=500&fit=crop&crop=center" alt="Modern Interior">
-<div class="gallery-overlay">
-<h4>Modern Elegance</h4>
-<p>Interior Design</p>
-</div>
-</div>
-<div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=500&fit=crop&crop=center" alt="Fashion Design">
-<div class="gallery-overlay">
-<h4>Couture Collection</h4>
-<p>Fashion Design</p>
-</div>
-</div>
-<div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=500&fit=crop&crop=center" alt="Luxury Space">
-<div class="gallery-overlay">
-<h4>Luxury Living</h4>
-<p>Residential Design</p>
-</div>
-</div>
-<div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=500&fit=crop&crop=center" alt="Brand Design">
-<div class="gallery-overlay">
-<h4>Brand Identity</h4>
-<p>Visual Design</p>
-</div>
-</div>
-<div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=500&fit=crop&crop=center" alt="Interior Detail">
-<div class="gallery-overlay">
-<h4>Attention to Detail</h4>
-<p>Interior Styling</p>
-</div>
-</div>
-<div class="gallery-item">
-<img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=500&fit=crop&crop=center" alt="Design Process">
-<div class="gallery-overlay">
-<h4>Design Process</h4>
-<p>Creative Development</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+    <!-- Featured Projects Section -->
+    <section class="projects-preview">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Portfolio</div>
+                <h2 class="section-title">
+                    Featured <span class="luxury-accent">Projects</span>
+                </h2>
+                <p class="section-subtitle">
+                    A curated selection of our most distinguished work
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <article class="project-card featured" data-category="interior">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=1000&fit=crop&crop=center" 
+                             alt="Luxury Interior Design" 
+                             loading="lazy">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <span class="overlay-category">Interior Design</span>
+                                <span class="overlay-text">View Project</span>
+                                <div class="overlay-arrow">→</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Residential</div>
+                        <h3>Mayfair Penthouse</h3>
+                        <p>A sophisticated blend of contemporary luxury and timeless elegance in the heart of London</p>
+                        <div class="project-meta">
+                            <span class="project-year">2024</span>
+                            <span class="project-location">London, UK</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card" data-category="fashion">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=800&fit=crop&crop=center" 
+                             alt="Fashion Design" 
+                             loading="lazy">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <span class="overlay-category">Fashion</span>
+                                <span class="overlay-text">View Collection</span>
+                                <div class="overlay-arrow">→</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Couture</div>
+                        <h3>Ethereal Collection</h3>
+                        <p>Elegant couture pieces that embody grace and sophistication</p>
+                        <div class="project-meta">
+                            <span class="project-year">2024</span>
+                            <span class="project-location">Paris Fashion Week</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card" data-category="branding">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=800&fit=crop&crop=center" 
+                             alt="Luxury Branding" 
+                             loading="lazy">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <span class="overlay-category">Branding</span>
+                                <span class="overlay-text">View Brand</span>
+                                <div class="overlay-arrow">→</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Brand Identity</div>
+                        <h3>Lumière Luxury</h3>
+                        <p>Complete brand transformation for a prestigious luxury goods company</p>
+                        <div class="project-meta">
+                            <span class="project-year">2023</span>
+                            <span class="project-location">Global</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="section-cta">
+                <a href="#portfolio" class="cta-button outline">
+                    <span>View All Projects</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- Services Section -->
-<section class="services">
-<div class="container">
-<h2 class="section-title">Services</h2>
-<div class="services-grid">
-<div class="service-item">
-<div class="service-icon">
-<img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=100&h=100&fit=crop&crop=center" alt="Consulting">
-</div>
-<h3>Consulting</h3>
-<p>Strategic design consultation for luxury brands and high-end residential projects.</p>
-</div>
-<div class="service-item">
-<div class="service-icon">
-<img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=100&h=100&fit=crop&crop=center" alt="Branding">
-</div>
-<h3>Branding</h3>
-<p>Comprehensive brand identity development with sophisticated visual language.</p>
-</div>
-<div class="service-item">
-<div class="service-icon">
-<img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=100&h=100&fit=crop&crop=center" alt="Web Design">
-</div>
-<h3>Web Design</h3>
-<p>Elegant digital experiences that reflect luxury and refinement.</p>
-</div>
-<div class="service-item">
-<div class="service-icon">
-<img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=100&h=100&fit=crop&crop=center" alt="Storytelling">
-</div>
-<h3>Storytelling</h3>
-<p>Crafting compelling narratives that resonate with discerning audiences.</p>
-</div>
-</div>
-</div>
-</section>
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Services</div>
+                <h2 class="section-title">
+                    Luxury Design <span class="luxury-accent">Services</span>
+                </h2>
+                <p class="section-subtitle">
+                    Comprehensive design solutions tailored to your vision
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-number">01</div>
+                    <div class="service-icon">
+                                               <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=100&h=100&fit=crop&crop=center" 
+                             alt="Design Consulting" 
+                             loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Design Consulting</h3>
+                        <p>Strategic design consultation for luxury brands and high-end residential projects, ensuring every detail reflects sophistication.</p>
+                        <ul class="service-features">
+                            <li>Space Planning</li>
+                            <li>Material Selection</li>
+                            <li>Design Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-number">02</div>
+                    <div class="service-icon">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=100&h=100&fit=crop&crop=center" 
+                             alt="Brand Identity" 
+                             loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Brand Identity</h3>
+                        <p>Comprehensive brand development with sophisticated visual language that resonates with discerning audiences.</p>
+                        <ul class="service-features">
+                            <li>Logo Design</li>
+                            <li>Brand Guidelines</li>
+                            <li>Visual Identity</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-number">03</div>
+                    <div class="service-icon">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=100&h=100&fit=crop&crop=center" 
+                             alt="Digital Design" 
+                             loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Digital Design</h3>
+                        <p>Elegant digital experiences that reflect luxury and refinement across all touchpoints and platforms.</p>
+                        <ul class="service-features">
+                            <li>Website Design</li>
+                            <li>UI/UX Design</li>
+                            <li>Digital Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-number">04</div>
+                    <div class="service-icon">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=100&h=100&fit=crop&crop=center" 
+                             alt="Creative Direction" 
+                             loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Creative Direction</h3>
+                        <p>Crafting compelling narratives and visual stories that elevate brands and create lasting impressions.</p>
+                        <ul class="service-features">
+                            <li>Art Direction</li>
+                            <li>Photography</li>
+                            <li>Content Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact">
-<div class="container">
-<div class="contact-content">
-<div class="contact-info">
-<h2 class="section-title">Get In Touch</h2>
-<p>Let's discuss your next luxury project</p>
-<div class="contact-details">
-<div class="contact-item">
-<h4>Email</h4>
-<p>hello@luxurydesign.com</p>
-</div>
-<div class="contact-item">
-<h4>Phone</h4>
-<p>+1 (555) 123-4567</p>
-</div>
-<div class="contact-item">
-<h4>Location</h4>
-<p>New York, NY</p>
-</div>
-</div>
-</div>
-<form class="contact-form">
-<div class="form-group">
-<input type="text" placeholder="Name" required>
-</div>
-<div class="form-group">
-<input type="email" placeholder="Email" required>
-</div>
-<div class="form-group">
-<textarea placeholder="Message" rows="5" required></textarea>
-</div>
-<button type="submit" class="submit-btn">Send Message</button>
-</form>
-</div>
-</div>
-</section>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Testimonials</div>
+                <h2 class="section-title">
+                    What Our <span class="luxury-accent">Clients Say</span>
+                </h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-mark">"</div>
+                        <blockquote>
+                            "Chloe's attention to detail and sophisticated aesthetic transformed our space into something truly extraordinary. Her ability to understand our vision and elevate it beyond our expectations is remarkable."
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face" 
+                                 alt="Sarah Mitchell" 
+                                 loading="lazy">
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah Mitchell</div>
+                            <div class="author-title">CEO, Lumière Luxury</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-mark">"</div>
+                        <blockquote>
+                            "Working with Chloe was an absolute pleasure. Her design philosophy and execution are unparalleled in the luxury market. Every element was thoughtfully considered and beautifully executed."
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" 
+                                 alt="James Harrison" 
+                                 loading="lazy">
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">James Harrison</div>
+                            <div class="author-title">Private Client</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-mark">"</div>
+                        <blockquote>
+                            "The level of sophistication and elegance Chloe brings to every project is extraordinary. She has an innate ability to create spaces that are both beautiful and functional."
+                        </blockquote>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" 
+                                 alt="Emma Thompson" 
+                                 loading="lazy">
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Emma Thompson</div>
+                            <div class="author-title">Creative Director</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<p>&copy; 2024 Luxury Design Studio. All rights reserved.</p>
-</div>
-</footer>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <div class="section-badge light">Contact</div>
+                        <h2 class="section-title">
+                            Let's Create Something 
+                            <span class="luxury-accent">Extraordinary</span>
+                        </h2>
+                        <p class="section-subtitle">
+                            Ready to transform your vision into reality? 
+                            Let's discuss your next luxury project.
+                        </p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="contact-content-text">
+                                <h4>Email</h4>
+                                <p>hello@chloehayle.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.59531 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5865 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="contact-content-text">
+                                <h4>Phone</h4>
+                                <p>+44 (0) 20 7123 4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="contact-content-text">
+                                <h4>Studio</h4>
+                                <p>London & New York</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                                                              <path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7615 8.09207 10.9099 8.47033 10.1584C8.84859 9.40685 9.45418 8.79433 10.1978 8.40381C10.9414 8.01329 11.7901 7.86261 12.63 7.97C13.4789 8.0794 14.2649 8.44692 14.8717 9.02195C15.4785 9.59698 15.8771 10.3503 16 11.37Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M17.5 6.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8V8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Pinterest" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <path d="M8.5 14.5C9.24 15.36 10.38 16 12 16C15.31 16 18 13.31 18 10C18 6.69 15.31 4 12 4C8.69 4 6 6.69 6 10C6 11.66 6.83 13.11 8.13 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M12 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M10 9L12 7L14 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="form-header">
+                        <h3>Start Your Project</h3>
+                        <p>Tell us about your vision and we'll bring it to life</p>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                            <div class="form-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" required>
+                            <div class="form-error"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                        <div class="form-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-input">
+                        <div class="form-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="projectType" class="form-label">Project Type</label>
+                        <select id="projectType" name="projectType" class="form-select" required>
+                            <option value="">Select a service</option>
+                            <option value="interior-design">Interior Design</option>
+                            <option value="branding">Brand Identity</option>
+                            <option value="digital-design">Digital Design</option>
+                            <option value="consulting">Design Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="form-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget" class="form-label">Project Budget</label>
+                        <select id="budget" name="budget" class="form-select">
+                            <option value="">Select budget range</option>
+                            <option value="10k-25k">£10,000 - £25,000</option>
+                            <option value="25k-50k">£25,000 - £50,000</option>
+                            <option value="50k-100k">£50,000 - £100,000</option>
+                            <option value="100k+">£100,000+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Project Details</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Tell us about your vision, timeline, and any specific requirements..." required></textarea>
+                        <div class="form-error"></div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Subscribe to our newsletter for design insights and updates</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading">
+                            <svg class="spinner" width="20" height="20" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="31.416" stroke-dashoffset="31.416">
+                                    <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
+                                    <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+                                </circle>
+                            </svg>
+                        </span>
+                        <div class="button-shine"></div>
+                    </button>
+                    
+                    <div class="form-success" id="form-success">
+                        <div class="success-icon">✓</div>
+                        <h4>Message Sent Successfully!</h4>
+                        <p>Thank you for your interest. We'll get back to you within 24 hours.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<script src="js/main.js"></script>
-</body>
-</html>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="images/chloe-hayle-logo.png" alt="Chloe Hayle" class="footer-logo-image">
+                        </div>
+                        <p class="footer-description">
+                            Creating extraordinary luxury experiences through sophisticated design and meticulous attention to detail.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Instagram" class="footer-social-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7615 8.09207 10.9099 8.47033 10.1584C8.84859 9.40685 9.45418 8.79433 10.1978 8.40381C10.9414 8.01329 11.7901 7.86261 12.63 7.97C13.4789 8.0794 14.2649 8.44692 14.8717 9.02195C15.4785 9.59698 15.8771 10.3503 16 11.37Z" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M17.5 6.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="footer-social-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8V8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Pinterest" class="footer-social-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M8.5 14.5C9.24 15.36 10.38 16 12 16C15.31 16 18 13.31 18 10C18 6.69 15.31 4 12 4C8.69 4 6 6.69 6 10C6 11.66 6.83 13.11 8.13 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M12 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M10 9L12 7L14 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Services</h4>
+                            <ul>
+                                <li><a href="#interior">Interior Design</a></li>
+                                <li><a href="#branding">Brand Identity</a></li>
+                                <li><a href="#digital">Digital Design</a></li>
+                                <li><a href="#consulting">Consulting</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Projects</h4>
+                            <ul>
+                                <li><a href="#residential">Residential</a></li>
+                                <li><a href="#commercial">Commercial</a></li>
+                                <li><a href="#hospitality">Hospitality</a></li>
+                                <li><a href="#fashion">Fashion</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class

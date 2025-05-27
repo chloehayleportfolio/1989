@@ -13,13 +13,12 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
-    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="loading">
     <!-- Scroll Progress Indicator -->
     <div class="scroll-indicator" id="scroll-indicator"></div>
-    
+
     <!-- Loading Screen -->
     <div class="loading-screen" id="loading-screen">
         <div class="loading-content">
@@ -43,6 +42,14 @@
                 </a>
             </div>
             
+            <!-- Mobile Hamburger -->
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <!-- Navigation Menu -->
             <ul class="nav-menu" id="nav-menu" role="menubar">
                 <li class="nav-item" role="none">
                     <a href="#home" class="nav-link" role="menuitem">Home</a>
@@ -52,8 +59,7 @@
                 </li>
                 <li class="nav-item dropdown" role="none">
                     <a href="#" class="nav-link dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">
-                        Projects
-                        <span class="dropdown-arrow"></span>
+                        Projects<span class="dropdown-arrow"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li role="none"><a href="#interior" role="menuitem">Interior Design</a></li>
@@ -66,8 +72,7 @@
                 </li>
                 <li class="nav-item dropdown" role="none">
                     <a href="#" class="nav-link dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">
-                        Services
-                        <span class="dropdown-arrow"></span>
+                        Services<span class="dropdown-arrow"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li role="none"><a href="#consulting" role="menuitem">Design Consulting</a></li>
@@ -86,11 +91,6 @@
                 <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
                     Start a Project
                 </button>
-                <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
             </div>
         </div>
     </nav>
@@ -126,8 +126,7 @@
                     <span class="title-line">Experiences</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Where sophistication meets innovation in luxury design, 
-                    crafting bespoke experiences that transcend the ordinary
+                    Where sophistication meets innovation in luxury design, crafting bespoke experiences that transcend the ordinary
                 </p>
                 <div class="hero-actions">
                     <a href="#about" class="cta-button primary">
@@ -153,8 +152,7 @@
             <div class="section-header">
                 <div class="section-badge">About</div>
                 <h2 class="section-title">
-                    Crafting Luxury Through 
-                    <span class="luxury-accent">Design Excellence</span>
+                    Crafting Luxury Through<span class="luxury-accent">Design Excellence</span>
                 </h2>
             </div>
             
@@ -162,20 +160,13 @@
                 <div class="about-text">
                     <div class="about-intro">
                         <p class="lead-text">
-                            With an unwavering commitment to excellence and a passion for 
-                            creating sophisticated environments, I specialize in luxury 
-                            design that speaks to the discerning eye.
+                            With an unwavering commitment to excellence and a passion for creating sophisticated environments, I specialize in luxury design that speaks to the discerning eye.
                         </p>
                     </div>
-                    
                     <div class="about-details">
                         <p>
-                            Each project is approached with meticulous attention to detail, 
-                            combining timeless elegance with contemporary innovation. From 
-                            intimate residential spaces to comprehensive brand identities, 
-                            my work reflects the highest standards of luxury and refinement.
+                            Each project is approached with meticulous attention to detail, combining timeless elegance with contemporary innovation. From intimate residential spaces to comprehensive brand identities, my work reflects the highest standards of luxury and refinement.
                         </p>
-                        
                         <div class="about-stats">
                             <div class="stat-item">
                                 <div class="stat-number">150+</div>
@@ -195,16 +186,16 @@
                 
                 <div class="about-visual">
                     <div class="about-image-container">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=800&fit=crop&crop=center" 
-                             alt="Luxury Interior Design" 
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=800&fit=crop&crop=center"
+                             alt="Luxury Interior Design"
                              class="about-image parallax-element"
+                             data-src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=800&fit=crop&crop=center"
                              loading="lazy">
                         <div class="image-overlay"></div>
                     </div>
                     <div class="about-quote">
                         <blockquote>
-                            "Design is not just what it looks like and feels like. 
-                            Design is how it works and how it makes you feel."
+                            "Design is not just what it looks like and feels like. Design is how it works and how it makes you feel."
                         </blockquote>
                         <cite>— Chloe Hayle</cite>
                     </div>
@@ -218,19 +209,16 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">Portfolio</div>
-                <h2 class="section-title">
-                    Featured <span class="luxury-accent">Projects</span>
-                </h2>
-                <p class="section-subtitle">
-                    A curated selection of our most distinguished work
-                </p>
+                <h2 class="section-title">Featured <span class="luxury-accent">Projects</span></h2>
+                <p class="section-subtitle">A curated selection of our most distinguished work</p>
             </div>
             
             <div class="projects-grid">
                 <article class="project-card featured" data-category="interior">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=1000&fit=crop&crop=center" 
-                             alt="Luxury Interior Design" 
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=1000&fit=crop&crop=center"
+                             alt="Luxury Interior Design"
+                             data-src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=1000&fit=crop&crop=center"
                              loading="lazy">
                         <div class="project-overlay">
                             <div class="overlay-content">
@@ -253,8 +241,9 @@
                 
                 <article class="project-card" data-category="fashion">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=800&fit=crop&crop=center" 
-                             alt="Fashion Design" 
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=800&fit=crop&crop=center"
+                             alt="Fashion Design"
+                             data-src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=800&fit=crop&crop=center"
                              loading="lazy">
                         <div class="project-overlay">
                             <div class="overlay-content">
@@ -277,8 +266,9 @@
                 
                 <article class="project-card" data-category="branding">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=800&fit=crop&crop=center" 
-                             alt="Luxury Branding" 
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=800&fit=crop&crop=center"
+                             alt="Luxury Branding"
+                             data-src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=800&fit=crop&crop=center"
                              loading="lazy">
                         <div class="project-overlay">
                             <div class="overlay-content">
@@ -313,84 +303,86 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">Services</div>
-                <h2 class="section-title">
-                    Luxury Design <span class="luxury-accent">Services</span>
-                </h2>
-                <p class="section-subtitle">
-                    Comprehensive design solutions tailored to your vision
-                </p>
+                                <h2 class="section-title">Luxury Design <span class="luxury-accent">Services</span></h2>
+                <p class="section-subtitle">Comprehensive design solutions tailored to your vision</p>
             </div>
             
             <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-number">01</div>
+                <div class="service-card" data-service="interior">
                     <div class="service-icon">
-                                               <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=100&h=100&fit=crop&crop=center" 
-                             alt="Design Consulting" 
-                             loading="lazy">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
+                        </svg>
                     </div>
                     <div class="service-content">
-                        <h3>Design Consulting</h3>
-                        <p>Strategic design consultation for luxury brands and high-end residential projects, ensuring every detail reflects sophistication.</p>
+                        <h3>Interior Design</h3>
+                        <p>Sophisticated residential and commercial spaces that reflect your unique style and elevate your lifestyle.</p>
                         <ul class="service-features">
-                            <li>Space Planning</li>
-                            <li>Material Selection</li>
-                            <li>Design Strategy</li>
+                            <li>Space Planning & Layout</li>
+                            <li>Custom Furniture Design</li>
+                            <li>Luxury Material Selection</li>
+                            <li>Project Management</li>
                         </ul>
+                        <a href="#contact" class="service-link">Learn More →</a>
                     </div>
                 </div>
                 
-                <div class="service-item">
-                    <div class="service-number">02</div>
+                <div class="service-card" data-service="branding">
                     <div class="service-icon">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=100&h=100&fit=crop&crop=center" 
-                             alt="Brand Identity" 
-                             loading="lazy">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
                     </div>
                     <div class="service-content">
                         <h3>Brand Identity</h3>
-                        <p>Comprehensive brand development with sophisticated visual language that resonates with discerning audiences.</p>
+                        <p>Comprehensive brand development that captures your essence and communicates your values with distinction.</p>
                         <ul class="service-features">
-                            <li>Logo Design</li>
-                            <li>Brand Guidelines</li>
-                            <li>Visual Identity</li>
+                            <li>Logo & Visual Identity</li>
+                            <li>Brand Strategy</li>
+                            <li>Marketing Materials</li>
+                            <li>Digital Presence</li>
                         </ul>
+                        <a href="#contact" class="service-link">Learn More →</a>
                     </div>
                 </div>
                 
-                <div class="service-item">
-                    <div class="service-number">03</div>
+                <div class="service-card" data-service="digital">
                     <div class="service-icon">
-                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=100&h=100&fit=crop&crop=center" 
-                             alt="Digital Design" 
-                             loading="lazy">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
                     </div>
                     <div class="service-content">
                         <h3>Digital Design</h3>
-                        <p>Elegant digital experiences that reflect luxury and refinement across all touchpoints and platforms.</p>
+                        <p>Elegant digital experiences that seamlessly blend functionality with sophisticated aesthetics.</p>
                         <ul class="service-features">
-                            <li>Website Design</li>
-                            <li>UI/UX Design</li>
-                            <li>Digital Strategy</li>
+                            <li>Website Design & Development</li>
+                            <li>User Experience Design</li>
+                            <li>E-commerce Solutions</li>
+                            <li>Digital Marketing Assets</li>
                         </ul>
+                        <a href="#contact" class="service-link">Learn More →</a>
                     </div>
                 </div>
                 
-                <div class="service-item">
-                    <div class="service-number">04</div>
+                <div class="service-card" data-service="consulting">
                     <div class="service-icon">
-                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=100&h=100&fit=crop&crop=center" 
-                             alt="Creative Direction" 
-                             loading="lazy">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 12l2 2 4-4M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+                        </svg>
                     </div>
                     <div class="service-content">
-                        <h3>Creative Direction</h3>
-                        <p>Crafting compelling narratives and visual stories that elevate brands and create lasting impressions.</p>
+                        <h3>Design Consulting</h3>
+                        <p>Expert guidance and strategic insights to elevate your design projects and business objectives.</p>
                         <ul class="service-features">
-                            <li>Art Direction</li>
-                            <li>Photography</li>
-                            <li>Content Strategy</li>
+                            <li>Design Strategy</li>
+                            <li>Creative Direction</li>
+                            <li>Project Consultation</li>
+                            <li>Design Audits</li>
                         </ul>
+                        <a href="#contact" class="service-link">Learn More →</a>
                     </div>
                 </div>
             </div>
@@ -402,71 +394,87 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">Testimonials</div>
-                <h2 class="section-title">
-                    What Our <span class="luxury-accent">Clients Say</span>
-                </h2>
+                <h2 class="section-title">What Our <span class="luxury-accent">Clients Say</span></h2>
             </div>
             
-            <div class="testimonials-grid">
-                <div class="testimonial-item">
+            <div class="testimonials-slider" id="testimonials-slider">
+                <div class="testimonial-slide active">
                     <div class="testimonial-content">
-                        <div class="quote-mark">"</div>
-                        <blockquote>
-                            "Chloe's attention to detail and sophisticated aesthetic transformed our space into something truly extraordinary. Her ability to understand our vision and elevate it beyond our expectations is remarkable."
-                        </blockquote>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face" 
-                                 alt="Sarah Mitchell" 
-                                 loading="lazy">
+                        <div class="testimonial-quote">
+                            <blockquote>
+                                "Chloe's attention to detail and sophisticated aesthetic transformed our space into something truly extraordinary. Her ability to understand our vision and elevate it beyond our expectations is remarkable."
+                            </blockquote>
                         </div>
-                        <div class="author-info">
-                            <div class="author-name">Sarah Mitchell</div>
-                            <div class="author-title">CEO, Lumière Luxury</div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" 
+                                     alt="Sarah Mitchell" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">Sarah Mitchell</div>
+                                <div class="author-title">CEO, Luxe Properties</div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="testimonial-item">
+                <div class="testimonial-slide">
                     <div class="testimonial-content">
-                        <div class="quote-mark">"</div>
-                        <blockquote>
-                            "Working with Chloe was an absolute pleasure. Her design philosophy and execution are unparalleled in the luxury market. Every element was thoughtfully considered and beautifully executed."
-                        </blockquote>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" 
-                                 alt="James Harrison" 
-                                 loading="lazy">
+                        <div class="testimonial-quote">
+                            <blockquote>
+                                "Working with Chloe was an absolute pleasure. Her creative vision and professional approach resulted in a brand identity that perfectly captures our company's essence and values."
+                            </blockquote>
                         </div>
-                        <div class="author-info">
-                            <div class="author-name">James Harrison</div>
-                            <div class="author-title">Private Client</div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
+                                     alt="James Richardson" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">James Richardson</div>
+                                <div class="author-title">Founder, Artisan Collective</div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="testimonial-item">
+                <div class="testimonial-slide">
                     <div class="testimonial-content">
-                        <div class="quote-mark">"</div>
-                        <blockquote>
-                            "The level of sophistication and elegance Chloe brings to every project is extraordinary. She has an innate ability to create spaces that are both beautiful and functional."
-                        </blockquote>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" 
-                                 alt="Emma Thompson" 
-                                 loading="lazy">
+                        <div class="testimonial-quote">
+                            <blockquote>
+                                "The level of sophistication and elegance Chloe brings to every project is unmatched. She has an incredible ability to create spaces that are both beautiful and functional."
+                            </blockquote>
                         </div>
-                        <div class="author-info">
-                            <div class="author-name">Emma Thompson</div>
-                            <div class="author-title">Creative Director</div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" 
+                                     alt="Emma Thompson" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">Emma Thompson</div>
+                                <div class="author-title">Interior Design Enthusiast</div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="testimonials-navigation">
+                <button class="testimonial-nav prev" aria-label="Previous testimonial">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15,18 9,12 15,6"></polyline>
+                    </svg>
+                </button>
+                <div class="testimonial-dots">
+                    <button class="dot active" data-slide="0"></button>
+                    <button class="dot" data-slide="1"></button>
+                    <button class="dot" data-slide="2"></button>
+                </div>
+                <button class="testimonial-nav next" aria-label="Next testimonial">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
@@ -477,170 +485,228 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="section-header">
-                        <div class="section-badge light">Contact</div>
-                        <h2 class="section-title">
-                            Let's Create Something 
-                            <span class="luxury-accent">Extraordinary</span>
-                        </h2>
-                        <p class="section-subtitle">
-                            Ready to transform your vision into reality? 
-                            Let's discuss your next luxury project.
-                        </p>
+                        <div class="section-badge">Contact</div>
+                        <h2 class="section-title">Let's Create Something <span class="luxury-accent">Extraordinary</span></h2>
+                        <p class="section-subtitle">Ready to transform your vision into reality? Let's discuss your project and explore the possibilities together.</p>
                     </div>
                     
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
                             </div>
-                            <div class="contact-content-text">
-                                <h4>Email</h4>
-                                <p>hello@chloehayle.com</p>
+                            <div class="contact-text">
+                                <div class="contact-label">Studio Location</div>
+                                <div class="contact-value">London, United Kingdom</div>
                             </div>
                         </div>
                         
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.59531 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5865 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
                                 </svg>
                             </div>
-                            <div class="contact-content-text">
-                                <h4>Phone</h4>
-                                <p>+44 (0) 20 7123 4567</p>
+                            <div class="contact-text">
+                                <div class="contact-label">Email</div>
+                                <div class="contact-value">hello@chloehayle.com</div>
                             </div>
                         </div>
                         
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                                 </svg>
                             </div>
-                            <div class="contact-content-text">
-                                <h4>Studio</h4>
-                                <p>London & New York</p>
+                            <div class="contact-text">
+                                <div class="contact-label">Phone</div>
+                                <div class="contact-value">+44 20 7123 4567</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="social-links">
-                        <a href="#" aria-label="Instagram" class="social-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
-                                                              <path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7615 8.09207 10.9099 8.47033 10.1584C8.84859 9.40685 9.45418 8.79433 10.1978 8.40381C10.9414 8.01329 11.7901 7.86261 12.63 7.97C13.4789 8.0794 14.2649 8.44692 14.8717 9.02195C15.4785 9.59698 15.8771 10.3503 16 11.37Z" stroke="currentColor" stroke-width="2"/>
-                                <path d="M17.5 6.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                         </a>
-                        <a href="#" aria-label="LinkedIn" class="social-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8V8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
                             </svg>
                         </a>
-                        <a href="#" aria-label="Pinterest" class="social-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                                <path d="M8.5 14.5C9.24 15.36 10.38 16 12 16C15.31 16 18 13.31 18 10C18 6.69 15.31 4 12 4C8.69 4 6 6.69 6 10C6 11.66 6.83 13.11 8.13 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M12 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M10 9L12 7L14 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <a href="#" class="social-link" aria-label="Pinterest">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="12" y1="2" x2="12" y2="22"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                             </svg>
                         </a>
                     </div>
                 </div>
                 
-                <form class="contact-form" id="contact-form" novalidate>
-                    <div class="form-header">
-                        <h3>Start Your Project</h3>
-                        <p>Tell us about your vision and we'll bring it to life</p>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName" class="form-label">First Name</label>
-                            <input type="text" id="firstName" name="firstName" class="form-input" required>
-                            <div class="form-error"></div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name</label>
+                                                               <input type="text" 
+                                       id="firstName" 
+                                       name="firstName" 
+                                       class="form-input" 
+                                       placeholder="Your first name" 
+                                       required 
+                                       autocomplete="given-name">
+                                <div class="form-error" id="firstName-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" 
+                                       id="lastName" 
+                                       name="lastName" 
+                                       class="form-input" 
+                                       placeholder="Your last name" 
+                                       required 
+                                       autocomplete="family-name">
+                                <div class="form-error" id="lastName-error"></div>
+                            </div>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text" id="lastName" name="lastName" class="form-input" required>
-                            <div class="form-error"></div>
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" 
+                                   id="email" 
+                                   name="email" 
+                                   class="form-input" 
+                                   placeholder="your.email@example.com" 
+                                   required 
+                                   autocomplete="email">
+                            <div class="form-error" id="email-error"></div>
                         </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email Address</label>
-                        <input type="email" id="email" name="email" class="form-input" required>
-                        <div class="form-error"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone" class="form-label">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" class="form-input">
-                        <div class="form-error"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="projectType" class="form-label">Project Type</label>
-                        <select id="projectType" name="projectType" class="form-select" required>
-                            <option value="">Select a service</option>
-                            <option value="interior-design">Interior Design</option>
-                            <option value="branding">Brand Identity</option>
-                            <option value="digital-design">Digital Design</option>
-                            <option value="consulting">Design Consulting</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <div class="form-error"></div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="budget" class="form-label">Project Budget</label>
-                        <select id="budget" name="budget" class="form-select">
-                            <option value="">Select budget range</option>
-                            <option value="10k-25k">£10,000 - £25,000</option>
-                            <option value="25k-50k">£25,000 - £50,000</option>
-                            <option value="50k-100k">£50,000 - £100,000</option>
-                            <option value="100k+">£100,000+</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message" class="form-label">Project Details</label>
-                        <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Tell us about your vision, timeline, and any specific requirements..." required></textarea>
-                        <div class="form-error"></div>
-                    </div>
-                    
-                    <div class="form-group checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox">
-                            <span class="checkmark"></span>
-                            <span class="checkbox-text">Subscribe to our newsletter for design insights and updates</span>
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn" id="submit-btn">
-                        <span class="btn-text">Send Message</span>
-                        <span class="btn-loading">
-                            <svg class="spinner" width="20" height="20" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="31.416" stroke-dashoffset="31.416">
-                                    <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
-                                    <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
-                                </circle>
-                            </svg>
-                        </span>
-                        <div class="button-shine"></div>
-                    </button>
-                    
-                    <div class="form-success" id="form-success">
-                        <div class="success-icon">✓</div>
-                        <h4>Message Sent Successfully!</h4>
-                        <p>Thank you for your interest. We'll get back to you within 24 hours.</p>
-                    </div>
-                </form>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number (Optional)</label>
+                            <input type="tel" 
+                                   id="phone" 
+                                   name="phone" 
+                                   class="form-input" 
+                                   placeholder="+44 20 1234 5678" 
+                                   autocomplete="tel">
+                            <div class="form-error" id="phone-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectType" class="form-label">Project Type</label>
+                            <select id="projectType" name="projectType" class="form-select" required>
+                                <option value="">Select a project type</option>
+                                <option value="interior-design">Interior Design</option>
+                                <option value="brand-identity">Brand Identity</option>
+                                <option value="digital-design">Digital Design</option>
+                                <option value="consulting">Design Consulting</option>
+                                <option value="fashion">Fashion Design</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="form-error" id="projectType-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget" class="form-label">Project Budget</label>
+                            <select id="budget" name="budget" class="form-select">
+                                <option value="">Select budget range</option>
+                                <option value="under-10k">Under £10,000</option>
+                                <option value="10k-25k">£10,000 - £25,000</option>
+                                <option value="25k-50k">£25,000 - £50,000</option>
+                                <option value="50k-100k">£50,000 - £100,000</option>
+                                <option value="over-100k">Over £100,000</option>
+                                <option value="discuss">Prefer to discuss</option>
+                            </select>
+                            <div class="form-error" id="budget-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline" class="form-label">Project Timeline</label>
+                            <select id="timeline" name="timeline" class="form-select">
+                                <option value="">Select timeline</option>
+                                <option value="asap">As soon as possible</option>
+                                <option value="1-3-months">1-3 months</option>
+                                <option value="3-6-months">3-6 months</option>
+                                <option value="6-12-months">6-12 months</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                            <div class="form-error" id="timeline-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Project Details</label>
+                            <textarea id="message" 
+                                      name="message" 
+                                      class="form-textarea" 
+                                      placeholder="Tell us about your project, vision, and any specific requirements..." 
+                                      rows="6" 
+                                      required></textarea>
+                            <div class="form-error" id="message-error"></div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" 
+                                       id="newsletter" 
+                                       name="newsletter" 
+                                       class="form-checkbox">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Subscribe to our newsletter for design insights and updates</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" 
+                                       id="privacy" 
+                                       name="privacy" 
+                                       class="form-checkbox" 
+                                       required>
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">I agree to the <a href="#privacy-policy" class="form-link">Privacy Policy</a> and <a href="#terms" class="form-link">Terms of Service</a></span>
+                            </label>
+                            <div class="form-error" id="privacy-error"></div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading">
+                                <svg class="loading-spinner" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="31.416" stroke-dashoffset="31.416">
+                                        <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
+                                        <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+                                    </circle>
+                                </svg>
+                                Sending...
+                            </span>
+                            <div class="button-shine"></div>
+                        </button>
+                        
+                        <div class="form-success" id="form-success">
+                            <div class="success-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20,6 9,17 4,12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="success-text">
+                                <h3>Thank you for your message!</h3>
+                                <p>We'll get back to you within 24 hours to discuss your project.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -652,32 +718,35 @@
                 <div class="footer-main">
                     <div class="footer-brand">
                         <div class="footer-logo">
-                            <img src="images/chloe-hayle-logo.png" alt="Chloe Hayle" class="footer-logo-image">
+                            <img src="images/chloe-hayle-logo-white.png" alt="Chloe Hayle" class="footer-logo-image">
                         </div>
                         <p class="footer-description">
-                            Creating extraordinary luxury experiences through sophisticated design and meticulous attention to detail.
+                            Creating extraordinary luxury experiences through sophisticated design and unparalleled attention to detail.
                         </p>
                         <div class="footer-social">
-                            <a href="#" aria-label="Instagram" class="footer-social-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
-                                    <path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7615 8.09207 10.9099 8.47033 10.1584C8.84859 9.40685 9.45418 8.79433 10.1978 8.40381C10.9414 8.01329 11.7901 7.86261 12.63 7.97C13.4789 8.0794 14.2649 8.44692 14.8717 9.02195C15.4785 9.59698 15.8771 10.3503 16 11.37Z" stroke="currentColor" stroke-width="2"/>
-                                    <path d="M17.5 6.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                                 </svg>
                             </a>
-                            <a href="#" aria-label="LinkedIn" class="footer-social-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8V8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
-                                    <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
                                 </svg>
                             </a>
-                            <a href="#" aria-label="Pinterest" class="footer-social-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                                    <path d="M8.5 14.5C9.24 15.36 10.38 16 12 16C15.31 16 18 13.31 18 10C18 6.69 15.31 4 12 4C8.69 4 6 6.69 6 10C6 11.66 6.83 13.11 8.13 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M12 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M10 9L12 7L14 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <a href="#" class="social-link" aria-label="Pinterest">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <line x1="12" y1="2" x2="12" y2="22"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Behance">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M3 8h6v1H3zM14 7h6v1h-6zM3 12h6v4H3zM14 11h6v6h-6z"/>
                                 </svg>
                             </a>
                         </div>
@@ -685,23 +754,98 @@
                     
                     <div class="footer-links">
                         <div class="footer-column">
-                            <h4>Services</h4>
-                            <ul>
+                            <h4 class="footer-title">Services</h4>
+                            <ul class="footer-menu">
                                 <li><a href="#interior">Interior Design</a></li>
                                 <li><a href="#branding">Brand Identity</a></li>
                                 <li><a href="#digital">Digital Design</a></li>
-                                <li><a href="#consulting">Consulting</a></li>
+                                <li><a href="#consulting">Design Consulting</a></li>
+                                <li><a href="#fashion">Fashion Design</a></li>
                             </ul>
                         </div>
                         
                         <div class="footer-column">
-                            <h4>Projects</h4>
-                            <ul>
+                            <h4 class="footer-title">Projects</h4>
+                            <ul class="footer-menu">
                                 <li><a href="#residential">Residential</a></li>
                                 <li><a href="#commercial">Commercial</a></li>
                                 <li><a href="#hospitality">Hospitality</a></li>
-                                <li><a href="#fashion">Fashion</a></li>
+                                <li><a href="#retail">Retail</a></li>
+                                <li><a href="#portfolio">View All</a></li>
                             </ul>
                         </div>
                         
-                        <div class
+                        <div class="footer-column">
+                            <h4 class="footer-title">Company</h4>
+                            <ul class="footer-menu">
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#process">Our Process</a></li>
+                                <li><a href="#team">Team</a></li>
+                                <li><a href="#careers">Careers</a></li>
+                                <li><a href="#press">Press</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4 class="footer-title">Contact</h4>
+                            <ul class="footer-menu">
+                                <li><a href="#contact">Get in Touch</a></li>
+                                <li><a href="tel:+442071234567">+44 20 7123 4567</a></li>
+                                <li><a href="mailto:hello@chloehayle.com">hello@chloehayle.com</a></li>
+                                <li>London, United Kingdom</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <div class="newsletter-content">
+                        <h4 class="newsletter-title">Stay Inspired</h4>
+                        <p class="newsletter-description">Subscribe to receive design insights, project updates, and exclusive content.</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="newsletter-input-group">
+                            <input type="email" 
+                                   class="newsletter-input" 
+                                   placeholder="Enter your email address" 
+                                   required 
+                                   autocomplete="email">
+                            <button type="submit" class="newsletter-btn">
+                                <span>Subscribe</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="newsletter-privacy">
+                            <small>By subscribing, you agree to our <a href="#privacy">Privacy Policy</a></small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>&copy; 2024 Chloe Hayle Design Studio. All rights reserved.</p>
+                    </div>
+                    <div class="footer-legal">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#cookies">Cookie Policy</a>
+                        <a href="#accessibility">Accessibility</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18,15 12,9 6,15"></polyline>
+        </svg>
+    </button>
+
+

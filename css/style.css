@@ -423,7 +423,6 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(223, 212, 203, 1);
 }
 
-/* Add this new rule for left-aligned title */
 .about .section-title {
     text-align: left;
 }
@@ -446,7 +445,8 @@ h1, h2, h3, h4, h5, h6 {
     color: #666;
 }
 
-.about-image img {
+/* Replace the image rule with video rule */
+.about-video video {
     width: 100%;
     height: 500px;
     object-fit: cover;

@@ -236,11 +236,32 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     font-size: 0.8rem;
     transition: all 0.3s ease;
+    position: relative; /* Add this for positioning the heart */
+}
+
+.dropdown-menu a::after {
+    content: '';
+    position: absolute;
+    right: 1rem; /* Position on the right side */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px; /* Adjust size as needed */
+    height: 16px; /* Adjust size as needed */
+    background-image: url('../images/sub-menu-select.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth fade transition */
 }
 
 .dropdown-menu a:hover {
     background: rgba(218, 207, 202, 0.1);
     color: #333222;
+}
+
+.dropdown-menu a:hover::after {
+    opacity: 1; /* Show heart on hover with fade effect */
 }
 
 /* Dropdown menu text color when navbar is scrolled */
@@ -252,6 +273,7 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(218, 207, 202, 0.1);
     color: #333222;
 }
+
 
 
 

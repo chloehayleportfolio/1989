@@ -278,3 +278,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('✨ Luxury Portfolio Website Initialized Successfully');
 });
+

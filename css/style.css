@@ -14,6 +14,12 @@ body {
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+body.loaded {
+    opacity: 1;
 }
 
 .container {
@@ -22,48 +28,103 @@ body {
     padding: 0 20px;
 }
 
-/* Typography */
+/* Enhanced Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     color: #333222;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
     position: relative;
+    font-weight: 300;
+    letter-spacing: -0.01em;
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
-    height: 2px;
-    background: rgb(218, 207, 202);
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgb(218, 207, 202), transparent);
 }
 
-/* Navigation */
+/* Enhanced Hero Typography */
+.hero-title {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    color: #333222;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    color: #666;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+
+/* Enhanced Navigation */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     z-index: 1000;
-    transition: all 0.3s ease;
-    padding: 1rem 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(218, 207, 202, 0.2);
+}
+
+.nav-link {
+    color: #333222;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: rgb(218, 207, 202);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: rgb(218, 207, 202);
 }
 
 .nav-container {
@@ -91,23 +152,11 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 999;
 }
 
-
 .nav-item {
     position: relative;
 }
 
-.nav-link {
-    color: #333222;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    padding: 0.5rem 0;
-}
 
-.nav-link:hover {
-    color: rgb(218, 207, 202);
-}
 
 /* Dropdown Menus */
 .dropdown-menu {
@@ -167,19 +216,20 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.3s;
 }
 
-/* Hero Section */
+/* Enhanced Hero Section */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
-    min-height: 600px; /* ADD this line to your existing .hero rule */
+    min-height: 700px;
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -187,31 +237,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-text {
-    max-width: 600px;
-}
-
-.hero-title {
-    font-size: 4.5rem;
-    color: #333222;
-    margin-bottom: 1.5rem;
-    font-weight: 300;
-    line-height: 1.1;
-}
-
-.hero-subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 2.5rem;
-    font-weight: 300;
+    max-width: 650px;
+    padding: 2rem 0;
 }
 
 .hero-image {
     position: absolute;
     top: 0;
     right: 0;
-    width: 60%;
+    width: 55%;
     height: 100%;
     z-index: 1;
+}
+
+.hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(250, 250, 250, 0.3) 0%, transparent 50%);
+    z-index: 2;
 }
 
 .hero-image img {
@@ -219,21 +266,26 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    filter: brightness(0.9) contrast(1.1);
 }
 
-/* Buttons */
+
+/* Enhanced Buttons */
 .cta-button, .secondary-button, .submit-button {
     display: inline-block;
     padding: 1rem 2.5rem;
     text-decoration: none;
     border-radius: 0;
-    transition: all 0.3s ease;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
     border: none;
     cursor: pointer;
     font-size: 0.95rem;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cta-button {
@@ -245,6 +297,8 @@ h1, h2, h3, h4, h5, h6 {
 .cta-button:hover {
     background: transparent;
     color: #333222;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(51, 50, 34, 0.15);
 }
 
 .secondary-button {
@@ -257,6 +311,8 @@ h1, h2, h3, h4, h5, h6 {
     background: #333222;
     color: white;
     border-color: #333222;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(51, 50, 34, 0.15);
 }
 
 .submit-button {
@@ -269,6 +325,8 @@ h1, h2, h3, h4, h5, h6 {
 .submit-button:hover {
     background: transparent;
     color: #333222;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(51, 50, 34, 0.15);
 }
 
 /* About Section */
@@ -302,33 +360,36 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 4px;
 }
 
-/* Projects Section */
+/* Enhanced Projects Section */
 .projects {
-    padding: 8rem 0;
+    padding: 10rem 0;
+    background: #fff;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
 }
 
 .project-card {
     position: relative;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .project-image {
     position: relative;
-    height: 400px;
+    height: 450px;
     overflow: hidden;
 }
 
@@ -336,11 +397,11 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .project-overlay {
@@ -348,11 +409,11 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    color: rgb(218, 207, 202);
-    padding: 2rem;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    color: white;
+    padding: 3rem 2rem 2rem;
+    transform: translateY(70%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card:hover .project-overlay {
@@ -360,14 +421,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-overlay h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
-    color: rgb(218, 207, 202);
+    color: white;
+    font-weight: 400;
 }
 
 .project-overlay p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     opacity: 0.9;
+    letter-spacing: 0.5px;
 }
 
 /* Services Section */
@@ -551,17 +614,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
 }
 
-/* Animations */
-.fade-in-element {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
-}
 
-.fade-in-element.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 .parallax-element {
     transition: transform 0.1s ease-out;
@@ -1014,6 +1067,74 @@ select:focus {
 
 .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Add these to your existing styles.css file */
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(51, 50, 34, 0.1);
+    z-index: 9999;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #333222, rgb(218, 207, 202));
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+/* Enhanced Animation Classes */
+.fade-in-element,
+.project-card,
+.service-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-element.visible,
+.project-card.visible,
+.service-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Form Validation Styles */
+.form-group input.error,
+.form-group textarea.error,
+.form-group select.error {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+/* Enhanced Button Hover Effects */
+.cta-button,
+.secondary-button,
+.submit-button {
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button:hover,
+.secondary-button:hover,
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(51, 50, 34, 0.15);
 }
 
 

@@ -3,70 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chloe Hayle | Luxury Design Portfolio</title>
+    <title>Chloe Hayle - Interior Designer Portfolio</title>
+    <meta name="description" content="Professional interior design services by Chloe Hayle. Creating beautiful, functional spaces that reflect your unique style.">
     
-    <!-- Preload critical fonts -->
+    <!-- Fixed: Single CSS reference -->
+    <link rel="stylesheet" href="styles.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Meta tags for SEO -->
-    <meta name="description" content="Luxury design portfolio showcasing sophisticated interior design, branding, and digital experiences by Chloe Hayle.">
-    <meta name="keywords" content="luxury design, interior design, branding, web design, portfolio">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav id="navbar" class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#home">Chloe Hayle</a>
             </div>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About Me</a>
-                </li>
-                
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item dropdown">
-                    <a href="#projects" class="nav-link dropdown-toggle">All Projects</a>
+                    <a href="#services" class="nav-link dropdown-toggle">Services</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#interior">Interior</a></li>
-                        <li><a href="#sm-london">SM-London</a></li>
-                        <li><a href="#cerisse">Cerisse Interiors</a></li>
-                        <li><a href="#fashion">Fashion</a></li>
-                        <li><a href="#baby-nursery">Baby and Nursery</a></li>
-                        <li><a href="#academic">Academic Design</a></li>
+                        <li><a href="#residential" class="dropdown-link">Residential Design</a></li>
+                        <li><a href="#commercial" class="dropdown-link">Commercial Design</a></li>
+                        <li><a href="#consultation" class="dropdown-link">Design Consultation</a></li>
                     </ul>
                 </li>
-                
-                <li class="nav-item dropdown">
-                    <a href="#services" class="nav-link dropdown-toggle">Profile</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#consulting">Consulting</a></li>
-                        <li><a href="#branding">Branding</a></li>
-                        <li><a href="#web-design">Web Design</a></li>
-                        <li><a href="#storytelling">Storytelling</a></li>
-                        <li><a href="#package-design">Package Design</a></li>
-                    </ul>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -74,447 +52,403 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Sophisticated Design</h1>
-                <h2 class="hero-subtitle">Where Luxury Meets Creativity</h2>
-                <p class="hero-description">Creating timeless, elegant experiences through thoughtful design and meticulous attention to detail. Each project is a journey into refined aesthetics and sophisticated living.</p>
-                <a href="#about" class="cta-button">Discover My Work</a>
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-image parallax-element">
+                <img src="hero-bg.jpg" alt="Beautiful interior design showcase" data-src="hero-bg.jpg">
             </div>
-            
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
-                     alt="Luxury Interior Design" 
-                     class="parallax-element"
-                     loading="eager">
+            <div class="hero-content">
+                <div class="hero-text fade-in-element">
+                    <h1 class="hero-title">Creating Beautiful Spaces</h1>
+                    <p class="hero-subtitle">Transform your home with professional interior design that reflects your unique style and personality.</p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                        <a href="#contact" class="btn btn-secondary">Get Started</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title fade-in-element">About Me</h2>
-                    <div class="luxury-divider"></div>
-                    
-                    <p class="about-description fade-in-element">With over eight years of experience in luxury design, I specialize in creating sophisticated environments that tell a story. My approach combines classical elegance with contemporary innovation, ensuring each project reflects both timeless beauty and modern functionality.</p>
-                    
-                    <p class="about-description fade-in-element">From <span class="text-highlight">bespoke interior spaces</span> to comprehensive <span class="text-highlight">brand identities</span>, I believe that exceptional design should elevate the everyday and create lasting emotional connections.</p>
-                    
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text fade-in-element">
+                        <h2 class="section-title">About Chloe</h2>
+                        <p class="about-description">With over 8 years of experience in interior design, I specialize in creating spaces that are both beautiful and functional. My approach combines timeless elegance with modern sensibilities to deliver designs that truly reflect my clients' personalities.</p>
+                        <p>From residential homes to commercial spaces, I believe that great design has the power to transform not just spaces, but lives. Every project is a collaboration, and I work closely with my clients to bring their vision to life.</p>
+                    </div>
                     <div class="about-stats fade-in-element">
                         <div class="stat">
-                            <h3>75+</h3>
-                            <p>Luxury Projects</p>
+                            <h3>150</h3>
+                            <p>Projects Completed</p>
                         </div>
                         <div class="stat">
-                            <h3>8+</h3>
+                            <h3>8</h3>
                             <p>Years Experience</p>
                         </div>
                         <div class="stat">
-                            <h3>40+</h3>
-                            <p>Satisfied Clients</p>
+                            <h3>98</h3>
+                            <p>Happy Clients</p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="about-image fade-in-element">
-                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                         alt="Chloe Hayle - Designer Portrait" 
-                         loading="lazy">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Featured Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title fade-in-element">Featured Projects</h2>
-            <div class="luxury-divider"></div>
-            
-            <div class="projects-grid">
-                <!-- Interior Project -->
-                <div class="project-card fade-in-element" data-category="interior">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Luxury Residential Interior" 
-                             loading="lazy">
-                        <div class="project-overlay">
-                            <h3>Mayfair Residence</h3>
-                            <p>Luxury Interior Design</p>
-                            <div class="project-details">
-                                <span>2024</span> • <span>London</span>
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2 class="section-title fade-in-element">Services</h2>
+                <div class="services-grid">
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Residential Design</h3>
+                        <p>Complete home makeovers, room redesigns, and space planning for residential properties.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3H21V21H3V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 9H15V15H9V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Commercial Design</h3>
+                        <p>Professional office spaces, retail environments, and hospitality design solutions.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Design Consultation</h3>
+                        <p>Expert advice on color schemes, furniture selection, and space optimization.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <h2 class="section-title fade-in-element">Portfolio</h2>
+                <!-- Project Filters -->
+                <div class="project-filters fade-in-element">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="residential">Residential</button>
+                    <button class="filter-btn" data-filter="commercial">Commercial</button>
+                    <button class="filter-btn" data-filter="renovation">Renovation</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="residential" data-project-id="interior-1">
+                        <div class="project-image">
+                            <img src="project1.jpg" alt="Luxury Penthouse Design" data-src="project1.jpg">
+                            <div class="project-overlay">
+                                <h3>Luxury Penthouse</h3>
+                                <p>Modern luxury design with timeless elegance</p>
+                                <button class="view-project-btn">View Details</button>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- SM-London Project -->
-                <div class="project-card fade-in-element" data-category="sm-london">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="SM-London Project" 
-                             loading="lazy">
-                        <div class="project-overlay">
-                            <h3>SM-London Collection</h3>
-                            <p>Boutique Interior Design</p>
-                            <div class="project-details">
-                                <span>2024</span> • <span>Commercial</span>
+                    <div class="project-card" data-category="commercial" data-project-id="interior-2">
+                        <div class="project-image">
+                            <img src="project2.jpg" alt="Modern Office Space" data-src="project2.jpg">
+                            <div class="project-overlay">
+                                <h3>Modern Office</h3>
+                                <p>Productive workspace with contemporary design</p>
+                                <button class="view-project-btn">View Details</button>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Fashion Project -->
-                <div class="project-card fade-in-element" data-category="fashion">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Fashion Design Project" 
-                             loading="lazy">
-                        <div class="project-overlay">
-                            <h3>Atelier Collection</h3>
-                            <p>Fashion & Styling</p>
-                            <div class="project-details">
-                                <span>2023</span> • <span>Couture</span>
+                    <div class="project-card" data-category="residential" data-project-id="interior-3">
+                        <div class="project-image">
+                            <img src="project3.jpg" alt="Cozy Living Room" data-src="project3.jpg">
+                            <div class="project-overlay">
+                                <h3>Cozy Living Room</h3>
+                                <p>Warm and inviting family space</p>
+                                <button class="view-project-btn">View Details</button>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Cerisse Interiors -->
-                <div class="project-card fade-in-element" data-category="cerisse">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Cerisse Interiors Project" 
-                             loading="lazy">
-                        <div class="project-overlay">
-                            <h3>Cerisse Interiors</h3>
-                            <p>Residential Design</p>
-                            <div class="project-details">
-                                <span>2023</span> • <span>Private Client</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Baby & Nursery -->
-                <div class="project-card fade-in-element" data-category="nursery">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Luxury Nursery Design" 
-                             loading="lazy">
-                        <div class="project-overlay">
-                            <h3>Enchanted Nursery</h3>
-                            <p>Baby & Nursery Design</p>
-                            <div class="project-details">
-                                <span>2024</span> • <span>Residential</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Academic Design -->
-                <div class="project-card fade-in-element" data-category="academic">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Academic Design Project" 
-                             loading="lazy">
-                        <div class="project-overlay">
-                            <h3>Design Research</h3>
-                            <p>Academic Design</p>
-                            <div class="project-details">
-                                <span>2023</span> • <span>Research</span>
+                    <div class="project-card" data-category="renovation" data-project-id="interior-4">
+                        <div class="project-image">
+                            <img src="project4.jpg" alt="Kitchen Renovation" data-src="project4.jpg">
+                            <div class="project-overlay">
+                                <h3>Kitchen Renovation</h3>
+                                <p>Complete kitchen transformation</p>
+                                <button class="view-project-btn">View Details</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title fade-in-element">Services</h2>
-            <div class="luxury-divider"></div>
-            
-            <div class="services-grid">
-                <!-- Consulting -->
-                <div class="service-card fade-in-element" id="consulting">
-                    <div class="service-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="9" cy="7" r="4" stroke="#333222" stroke-width="2"/>
-                            <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title fade-in-element">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info fade-in-element">
+                        <h3>Let's Create Something Beautiful Together</h3>
+                        <p>Ready to transform your space? I'd love to hear about your project and discuss how we can bring your vision to life.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong>Email:</strong>
+                                <a href="mailto:hello@chloehayle.com">hello@chloehayle.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Phone:</strong>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Location:</strong>
+                                <span>New York, NY</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Consulting</h3>
-                    <p>Strategic design guidance and expert consultation to elevate your vision and bring sophisticated solutions to life.</p>
-                </div>
-
-                <!-- Branding -->
-                <div class="service-card fade-in-element" id="branding">
-                    <div class="service-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Branding</h3>
-                                        <p>Comprehensive brand identity development that communicates elegance and sophistication across all touchpoints.</p>
-                </div>
-
-                <!-- Web Design -->
-                <div class="service-card fade-in-element" id="web-design">
-                    <div class="service-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="#333222" stroke-width="2"/>
-                            <line x1="8" y1="21" x2="16" y2="21" stroke="#333222" stroke-width="2"/>
-                            <line x1="12" y1="17" x2="12" y2="21" stroke="#333222" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3>Web Design</h3>
-                    <p>Crafting beautiful digital experiences that seamlessly blend functionality with aesthetic excellence and luxury appeal.</p>
-                </div>
-
-                <!-- Storytelling -->
-                <div class="service-card fade-in-element" id="storytelling">
-                    <div class="service-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <polyline points="14,2 14,8 20,8" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="16" y1="13" x2="8" y2="13" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="16" y1="17" x2="8" y2="17" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <polyline points="10,9 9,9 8,9" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Storytelling</h3>
-                    <p>Creating compelling narratives through visual design that connect emotionally and communicate your unique story.</p>
-                </div>
-
-                <!-- Package Design -->
-                <div class="service-card fade-in-element" id="package-design">
-                    <div class="service-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V18C3 19.1046 3.89543 20 5 20H19C20.1046 20 21 19.1046 21 18V8Z" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M3 10H21" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M7 6V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H15C15.5304 2 16.0391 2.21071 16.4142 2.58579C16.7893 2.96086 17 3.46957 17 4V6" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Package Design</h3>
-                    <p>Luxury packaging solutions that create memorable unboxing experiences and reflect premium brand values.</p>
-                </div>
-
-                <!-- Interior Design -->
-                <div class="service-card fade-in-element">
-                    <div class="service-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <polyline points="9,22 9,12 15,12 15,22" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Interior Design</h3>
-                    <p>Creating sophisticated living spaces that reflect personal style and elevate everyday experiences with timeless elegance.</p>
+                    <form id="contact-form" class="contact-form fade-in-element">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="project-type">Project Type *</label>
+                            <select id="project-type" name="project-type" required>
+                                <option value="">Select a project type</option>
+                                <option value="residential">Residential Design</option>
+                                <option value="commercial">Commercial Design</option>
+                                <option value="consultation">Design Consultation</option>
+                                <option value="renovation">Renovation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-10k">Under $10,000</option>
+                                <option value="10k-25k">$10,000 - $25,000</option>
+                                <option value="25k-50k">$25,000 - $50,000</option>
+                                <option value="50k-plus">$50,000+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, timeline, and any specific requirements..." required></textarea>
+                        </div>
+                        
+                        <!-- Fixed: Media Upload Section with proper file input -->
+                        <div class="media-upload-section">
+                            <h4>Share Your Inspiration (Optional)</h4>
+                            <input type="file" id="media-upload" name="media-upload" multiple accept="image/*,video/mp4,application/pdf" style="display: none;">
+                            <div class="media-grid">
+                                <div class="media-item" onclick="document.getElementById('media-upload').click()" style="cursor: pointer;">
+                                    <div class="media-placeholder">
+                                                                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                                            <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <p>Images<br><small>JPG, PNG up to 10MB</small></p>
+                                    </div>
+                                </div>
+                                <div class="media-item" onclick="document.getElementById('media-upload').click()" style="cursor: pointer;">
+                                    <div class="media-placeholder">
+                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <polygon points="23 7 16 12 23 17 23 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        <p>Videos<br><small>MP4 up to 50MB</small></p>
+                                    </div>
+                                </div>
+                                <div class="media-item" onclick="document.getElementById('media-upload').click()" style="cursor: pointer;">
+                                    <div class="media-placeholder">
+                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <p>Documents<br><small>PDF up to 25MB</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn btn btn-primary">
+                            <span>Send Message</span>
+                        </button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Media Upload Section -->
-    <section class="media-upload elegant-spacing">
-        <div class="container">
-            <h2 class="section-title fade-in-element">Project Gallery</h2>
-            <div class="luxury-divider"></div>
-            
-            <div class="media-grid fade-in-element">
-                <!-- Image Upload Area -->
-                <div class="media-item">
-                    <div class="media-placeholder">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="#333222" stroke-width="2"/>
-                            <circle cx="8.5" cy="8.5" r="1.5" stroke="#333222" stroke-width="2"/>
-                            <polyline points="21,15 16,10 5,21" stroke="#333222" stroke-width="2"/>
-                        </svg>
-                        <p>High-Quality Images</p>
-                        <span>Upload project photos</span>
-                    </div>
-                </div>
-
-                <!-- Video Upload Area -->
-                <div class="media-item">
-                    <div class="media-placeholder">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <polygon points="23,12 8,22 8,2" stroke="#333222" stroke-width="2"/>
-                        </svg>
-                        <p>MP4 Videos</p>
-                        <span>Upload project videos</span>
-                    </div>
-                </div>
-
-                <!-- Document Upload Area -->
-                <div class="media-item">
-                    <div class="media-placeholder">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#333222" stroke-width="2"/>
-                            <polyline points="14,2 14,8 20,8" stroke="#333222" stroke-width="2"/>
-                        </svg>
-                        <p>PDF Documents</p>
-                        <span>Upload portfolios & docs</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2 class="section-title fade-in-element">Let's Create Something Beautiful</h2>
-                    <div class="luxury-divider"></div>
-                    
-                    <p class="contact-description fade-in-element">Ready to bring your vision to life? I'd love to discuss your project and explore how we can create something truly exceptional together. Whether you're looking for interior design, branding, or digital experiences, let's craft something extraordinary.</p>
-                    
-                    <div class="contact-details fade-in-element">
-                        <div class="contact-item">
-                            <h4>Email</h4>
-                            <p>hello@chloehayle.com</p>
-                        </div>
-                        <div class="contact-item">
-                            <h4>Phone</h4>
-                            <p>+44 (0) 20 7123 4567</p>
-                        </div>
-                        <div class="contact-item">
-                            <h4>Studio</h4>
-                            <p>London, United Kingdom</p>
-                        </div>
-                        <div class="contact-item">
-                            <h4>Availability</h4>
-                            <p>Currently accepting new projects</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <form class="contact-form fade-in-element" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your full name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+44 (0) 20 1234 5678">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="project-type">Project Type</label>
-                        <select id="project-type" name="project-type" required>
-                            <option value="">Select project type</option>
-                            <option value="interior">Interior Design</option>
-                            <option value="branding">Branding & Identity</option>
-                            <option value="web-design">Web Design</option>
-                            <option value="consulting">Design Consulting</option>
-                            <option value="package-design">Package Design</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="budget">Project Budget</label>
-                        <select id="budget" name="budget">
-                            <option value="">Select budget range</option>
-                            <option value="5k-15k">£5,000 - £15,000</option>
-                            <option value="15k-30k">£15,000 - £30,000</option>
-                            <option value="30k-50k">£30,000 - £50,000</option>
-                            <option value="50k+">£50,000+</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Project Details</label>
-                        <textarea id="message" name="message" placeholder="Tell me about your project vision, timeline, and any specific requirements..." rows="6" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">
-                        <span>Send Message</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2"/>
-                            <polygon points="22,2 15,22 11,13 2,9 22,2" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
+                <div class="footer-section">
                     <h3>Chloe Hayle</h3>
-                    <p>Luxury Design Studio</p>
+                    <p>Creating beautiful, functional spaces that reflect your unique style and personality.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" data-tooltip="Instagram" aria-label="Follow on Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" data-tooltip="Pinterest" aria-label="Follow on Pinterest">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 11.5c0-1.5 1-3 2.5-3s2.5 1.5 2.5 3-1 3-2.5 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.64 7.86 6.35 9.35-.09-.79-.17-2.01.04-2.87.19-.78 1.23-5.22 1.23-5.22s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.33.67 1.33 1.48 0 .9-.57 2.25-.87 3.5-.25 1.04.52 1.89 1.54 1.89 1.85 0 3.27-1.95 3.27-4.76 0-2.49-1.79-4.23-4.35-4.23-2.96 0-4.7 2.22-4.7 4.51 0 .89.34 1.85.77 2.37.08.1.09.19.07.29-.08.31-.25 1.02-.28 1.17-.04.19-.14.23-.33.14-1.29-.6-2.1-2.48-2.1-3.99 0-3.27 2.38-6.28 6.86-6.28 3.6 0 6.4 2.56 6.4 5.99 0 3.57-2.25 6.44-5.38 6.44-1.05 0-2.04-.55-2.38-1.21 0 0-.52 1.98-.65 2.47-.23.89-.86 2.01-1.28 2.69A10 10 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" data-tooltip="LinkedIn" aria-label="Connect on LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2"/>
+                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About Me</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#services">Services</a>
-                    <a href="#contact">Contact</a>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
-                
-                <div class="footer-social">
-                    <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z" stroke="currentColor" stroke-width="2"/>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </a>
-                                        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 8A6 6 0 0 1 22 14V21H18V14A2 2 0 0 0 14 14V21H10V9H14V11.5A6 6 0 0 1 16 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Pinterest" target="_blank" rel="noopener">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="2"/>
-                            <path d="M17 5H9.5C7.01472 5 5 7.01472 5 9.5V9.5C5 11.9853 7.01472 14 9.5 14H12" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </a>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#residential">Residential Design</a></li>
+                        <li><a href="#commercial">Commercial Design</a></li>
+                        <li><a href="#consultation">Design Consultation</a></li>
+                        <li><a href="#renovation">Renovation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><strong>Email:</strong><br><a href="mailto:hello@chloehayle.com">hello@chloehayle.com</a></p>
+                        <p><strong>Phone:</strong><br><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                        <p><strong>Location:</strong><br>New York, NY</p>
+                    </div>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2024 Chloe Hayle. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; <span class="current-year">2024</span> Chloe Hayle Interior Design. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loading-overlay">
-        <div class="loading-spinner">
-            <div class="spinner"></div>
-            <p>Loading...</p>
-        </div>
-    </div>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top" data-tooltip="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- Notification Container -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <!-- Screen Reader Announcements -->
+    <div id="screen-reader-announcements" aria-live="polite" aria-atomic="true" class="sr-only"></div>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Additional JavaScript for back to top functionality and media upload -->
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        if (backToTopButton) {
+            // Show/hide button based on scroll position
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+
+            // Smooth scroll to top
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Media upload functionality
+        const mediaUpload = document.getElementById('media-upload');
+        if (mediaUpload) {
+            mediaUpload.addEventListener('change', function(e) {
+                const files = e.target.files;
+                if (files.length > 0) {
+                    console.log(`${files.length} file(s) selected for upload`);
+                    // You can add file preview functionality here
+                    for (let i = 0; i < files.length; i++) {
+                        console.log(`File ${i + 1}: ${files[i].name} (${files[i].type})`);
+                    }
+                }
+            });
+        }
+
+        // Initialize notification icon function
+        function getNotificationIcon(type) {
+            const icons = {
+                success: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#28a745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="22,4 12,14.01 9,11.01" stroke="#28a745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>`,
+                error: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="#dc3545" stroke-width="2"/>
+                    <line x1="15" y1="9" x2="9" y2="15" stroke="#dc3545" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="9" y1="9" x2="15" y2="15" stroke="#dc3545" stroke-width="2" stroke-linecap="round"/>
+                </svg>`,
+                warning: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="12" y1="9" x2="12" y2="13" stroke="#ffc107" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17" stroke="#ffc107" stroke-width="2" stroke-linecap="round"/>
+                </svg>`,
+                info: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="#333222" stroke-width="2"/>
+                    <path d="M12 16v-4" stroke="#333222" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M12 8h.01" stroke="#333222" stroke-width="2" stroke-linecap="round"/>
+                </svg>`
+            };
+            return icons[type] || icons.info;
+        }
+    </script>
 </body>
 </html>

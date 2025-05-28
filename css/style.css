@@ -236,14 +236,23 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     font-size: 0.8rem;
     transition: all 0.3s ease;
-    font-style: normal; /* Ensure normal state is explicit */
 }
 
 .dropdown-menu a:hover {
     background: rgba(218, 207, 202, 0.1);
     color: #333222;
-    font-style: italic; /* Add italic on hover */
 }
+
+/* Dropdown menu text color when navbar is scrolled */
+.navbar.scrolled .dropdown-menu a {
+    color: #6c625a;
+}
+
+.navbar.scrolled .dropdown-menu a:hover {
+    background: rgba(218, 207, 202, 0.1);
+    color: #333222;
+}
+
 
 
 /* Mobile Menu */

@@ -112,10 +112,11 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
 }
+
 
 .nav-logo a {
     font-family: 'Playfair Display', serif;
@@ -182,6 +183,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link:hover {
     color: rgb(218, 207, 202);
+}
+
+.nav-logo {
+    justify-self: start;
+}
+
+.nav-menu {
+    justify-self: center;
+}
+
+.hamburger {
+    justify-self: end;
 }
 
 

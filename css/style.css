@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+/* Add these lines to ensure no gaps */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -16,11 +23,15 @@ body {
     overflow-x: hidden;
     opacity: 0;
     transition: opacity 0.5s ease;
+    /* Add this to ensure body starts at top */
+    padding-top: 0;
+    margin-top: 0;
 }
 
 body.loaded {
     opacity: 1;
 }
+
 
 .container {
     max-width: 1200px;
@@ -232,7 +243,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.3s;
 }
 
-/* Enhanced Hero Section */
+/* Force hero to start at absolute top */
 .hero {
     height: 100vh;
     display: flex;
@@ -241,6 +252,18 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     min-height: 700px;
     background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+    /* Force positioning */
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Also ensure the hero section is the first element */
+#home {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 .hero-content {

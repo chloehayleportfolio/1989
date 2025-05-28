@@ -97,6 +97,53 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333222;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* ADD THIS NEW CODE FOR THE LOGO IMAGE */
+.nav-logo .logo-image {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.nav-logo .logo-image:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .nav-logo .logo-image {
+        height: 35px;
+    }
+}
+/* END OF NEW LOGO CODE */
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    z-index: 999;
+}
+
+.nav-item {
+    position: relative;
+}
+
 .nav-link {
     color: #333222;
     text-decoration: none;
@@ -125,36 +172,6 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link:hover {
     color: rgb(218, 207, 202);
 }
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo a {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #333222;
-    text-decoration: none;
-    letter-spacing: 2px;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    z-index: 999;
-}
-
-.nav-item {
-    position: relative;
-}
-
 
 
 /* Dropdown Menus */

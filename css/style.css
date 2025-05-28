@@ -88,7 +88,9 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     list-style: none;
     gap: 2rem;
+    z-index: 999;
 }
+
 
 .nav-item {
     position: relative;
@@ -172,6 +174,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     position: relative;
     overflow: hidden;
+    min-height: 600px; /* ADD this line to your existing .hero rule */
 }
 
 .hero-content {
@@ -801,8 +804,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Section Reveal Animations */
 section {
-    opacity: 0;
-    transform: translateY(50px);
+    opacity: 1;
+    transform: translateY(0);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -810,6 +813,7 @@ section.section-visible {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 /* Enhanced Project Filter Buttons */
 .filter-container {
@@ -999,3 +1003,19 @@ select:focus {
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
+/* Fix mobile hamburger animation */
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+

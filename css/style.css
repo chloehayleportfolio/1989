@@ -377,14 +377,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-button {
-    background: #333222;
+    background:rgba(113, 101, 90, 1)2;
     color: white;
-    border: 2px solid #333222;
+    border: 2px solid rgba(113, 101, 90, 1);
 }
 
 .cta-button:hover {
-    background: transparent;
-    color: #333222;
+    background: rgba(113, 101, 90, 1);
+    color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(51, 50, 34, 0.15);
 }
@@ -396,9 +396,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .secondary-button:hover {
-    background: #333222;
+    background: #81686a;
     color: white;
-    border-color: #333222;
+    border-color: #81686a;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(51, 50, 34, 0.15);
 }

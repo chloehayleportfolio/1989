@@ -1,26 +1,81 @@
-// Navbar scroll effect
-window.addEventListener('scroll', function() {
+// Performance optimization: Throttle scroll events
+function throttle(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Active navigation highlighting based on scroll position
+function updateActiveNavigation() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    
+    let currentSection = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        
+        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Apply throttling to scroll events
+const throttledScrollHandler = throttle(() => {
     const navbar = document.getElementById('navbar');
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-});
+
+    // Parallax effect
+    const scrolled = window.pageYOffset;
+    const parallaxElement = document.querySelector('.parallax-element');
+    if (parallaxElement) {
+        const speed = scrolled * 0.5;
+        parallaxElement.style.transform = `translateY(${speed}px)`;
+    }
+    
+    // Update active navigation
+    updateActiveNavigation();
+}, 16); // ~60fps
+
+// Replace the original scroll event listener
+window.addEventListener('scroll', throttledScrollHandler);
 
 // Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', function() {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
+    if (hamburger && navMenu) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
 }));
 
 // Smooth scrolling for anchor links
@@ -38,13 +93,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Parallax effect for hero image
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const parallaxElement = document.querySelector('.parallax-element');
-    if (parallaxElement) {
-        const speed = scrolled * 0.5;
-        parallaxElement.style.transform = `translateY(${speed}px)`;
+// Enhanced dropdown functionality for desktop hover
+document.querySelectorAll('.dropdown').forEach(dropdown => {
+    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+    
+    if (dropdownMenu) {
+        // Desktop hover behavior
+        if (window.innerWidth > 768) {
+            dropdown.addEventListener('mouseenter', () => {
+                dropdownMenu.style.opacity = '1';
+                dropdownMenu.style.visibility = 'visible';
+                dropdownMenu.style.transform = 'translateY(0)';
+            });
+            
+            dropdown.addEventListener('mouseleave', () => {
+                dropdownMenu.style.opacity = '0';
+                dropdownMenu.style.visibility = 'hidden';
+                dropdownMenu.style.transform = 'translateY(-10px)';
+            });
+        }
     }
 });
 
@@ -67,14 +134,54 @@ document.querySelectorAll('.fade-in-element').forEach(el => {
     observer.observe(el);
 });
 
-// Project card hover effects
+// Enhanced project card hover effects
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
+        this.style.transform = 'translateY(-15px) scale(1.02)';
+        this.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.15)';
+        
+        // Show overlay
+        const overlay = this.querySelector('.project-overlay');
+        if (overlay) {
+            overlay.style.transform = 'translateY(0)';
+            overlay.style.opacity = '1';
+        }
     });
     
     card.addEventListener('mouseleave', function() {
         this.style.transform = 'translateY(0) scale(1)';
+        this.style.boxShadow = 'none';
+        
+        // Hide overlay
+        const overlay = this.querySelector('.project-overlay');
+        if (overlay) {
+            overlay.style.transform = 'translateY(100%)';
+            overlay.style.opacity = '0';
+        }
+    });
+});
+
+// Enhanced service card animations
+document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        const icon = this.querySelector('.service-icon svg');
+        if (icon) {
+            icon.style.transform = 'scale(1.1) rotate(5deg)';
+            icon.style.transition = 'transform 0.3s ease';
+        }
+        
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.1)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        const icon = this.querySelector('.service-icon svg');
+        if (icon) {
+            icon.style.transform = 'scale(1) rotate(0deg)';
+        }
+        
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = 'none';
     });
 });
 
@@ -123,7 +230,7 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
-// Notification system
+// Enhanced notification system
 function showNotification(message, type = 'info') {
     // Remove existing notifications
     const existingNotification = document.querySelector('.notification');
@@ -135,39 +242,44 @@ function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.innerHTML = `
-        <span>${message}</span>
-        <button class="notification-close">&times;</button>
+        <div class="notification-content">
+            <span class="notification-message">${message}</span>
+            <button class="notification-close">&times;</button>
+        </div>
     `;
     
-    // Add styles
+    // Enhanced styles
     notification.style.cssText = `
         position: fixed;
         top: 100px;
         right: 20px;
-        background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         z-index: 10000;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        transform: translateX(100%);
+        transform: translateX(400px);
         transition: transform 0.3s ease;
-        max-width: 300px;
+        max-width: 400px;
     `;
     
-    // Add close button styles
+    const content = notification.querySelector('.notification-content');
+    content.style.cssText = `
+        background: white;
+        border-radius: 8px;
+        padding: 1rem 1.5rem;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        border-left: 4px solid ${type === 'success' ? '#28a745' : type === 'error' ? '#dc3545' : '#333222'};
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    `;
+    
     const closeBtn = notification.querySelector('.notification-close');
     closeBtn.style.cssText = `
         background: none;
         border: none;
-        color: white;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        color: #999;
         cursor: pointer;
-        padding: 0;
-        margin-left: auto;
+        margin-left: 1rem;
+        transition: color 0.3s ease;
     `;
     
     document.body.appendChild(notification);
@@ -177,19 +289,13 @@ function showNotification(message, type = 'info') {
         notification.style.transform = 'translateX(0)';
     }, 100);
     
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        removeNotification(notification);
-    }, 5000);
-    
-    // Close button functionality
-    closeBtn.addEventListener('click', () => {
-        removeNotification(notification);
-    });
+    // Auto remove and close button functionality
+    setTimeout(() => removeNotification(notification), 5000);
+    closeBtn.addEventListener('click', () => removeNotification(notification));
 }
 
 function removeNotification(notification) {
-    notification.style.transform = 'translateX(100%)';
+    notification.style.transform = 'translateX(400px)';
     setTimeout(() => {
         if (notification.parentNode) {
             notification.parentNode.removeChild(notification);
@@ -246,6 +352,31 @@ document.addEventListener('click', function(e) {
     }
 });
 
+// Resize handler for responsive behavior
+window.addEventListener('resize', () => {
+    // Close mobile menu on resize
+    if (window.innerWidth > 768) {
+        const navMenu = document.querySelector('.nav-menu');
+        const hamburger = document.querySelector('.hamburger');
+        
+        if (navMenu && hamburger) {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+    }
+    
+    // Reinitialize dropdowns based on screen size
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        if (dropdownMenu && window.innerWidth <= 768) {
+            // Reset desktop styles for mobile
+            dropdownMenu.style.opacity = '';
+            dropdownMenu.style.visibility = '';
+            dropdownMenu.style.transform = '';
+        }
+    });
+});
+
 // Preloader (optional)
 window.addEventListener('load', function() {
     const preloader = document.querySelector('.preloader');
@@ -256,54 +387,6 @@ window.addEventListener('load', function() {
         }, 500);
     }
 });
-
-// Performance optimization: Throttle scroll events
-function throttle(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Performance optimization: Throttle scroll events
-function throttle(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Apply throttling to scroll events
-const throttledScrollHandler = throttle(() => {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-    
-    // Parallax effect
-    const scrolled = window.pageYOffset;
-    const parallaxElement = document.querySelector('.parallax-element');
-    if (parallaxElement) {
-        const speed = scrolled * 0.5;
-        parallaxElement.style.transform = `translateY(${speed}px)`;
-    }
-}, 16); // ~60fps
-
-// Replace the original scroll event listener
-window.addEventListener('scroll', throttledScrollHandler);
-
 
 // File upload functionality (for future use)
 function createFileUploader(containerId, acceptedTypes = ['image/*', 'video/mp4', 'application/pdf']) {
@@ -331,79 +414,19 @@ function createFileUploader(containerId, acceptedTypes = ['image/*', 'video/mp4'
     // Add styles
     const style = document.createElement('style');
     style.textContent = `
-        .file-uploader {
-            margin: 2rem 0;
-        }
-        .upload-area {
-            border: 2px dashed rgba(218, 207, 202, 0.5);
-            border-radius: 12px;
-            padding: 3rem;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        .upload-area:hover {
-            border-color: #333222;
-            background: rgba(218, 207, 202, 0.05);
-        }
-        .upload-area.dragover {
-            border-color: #333222;
-            background: rgba(218, 207, 202, 0.1);
-        }
-        .upload-icon {
-            margin-bottom: 1rem;
-        }
-        .upload-link {
-            color: #333222;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-        .upload-info {
-            font-size: 0.9rem;
-            color: #888;
-            margin-top: 0.5rem;
-        }
-        .file-input {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            cursor: pointer;
-        }
-        .file-list {
-            margin-top: 1rem;
-        }
-        .file-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem;
-            background: #fafafa;
-            border-radius: 8px;
-            margin-bottom: 0.5rem;
-            border: 1px solid rgba(218, 207, 202, 0.3);
-        }
-        .file-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .file-preview {
-            width: 40px;
-            height: 40px;
-            border-radius: 4px;
-            object-fit: cover;
-        }
-        .file-remove {
-            background: none;
-            border: none;
-            color: #f44336;
-            cursor: pointer;
-            font-size: 1.2rem;
-        }
+        .file-uploader {margin: 2rem 0;}
+        .upload-area {border: 2px dashed rgba(218, 207, 202, 0.5);border-radius: 12px;padding: 3rem;text-align: center;cursor: pointer;transition: all 0.3s ease;position: relative;}
+        .upload-area:hover {border-color: #333222;background: rgba(218, 207, 202, 0.05);}
+        .upload-area.dragover {border-color: #333222;background: rgba(218, 207, 202, 0.1);}
+        .upload-icon {margin-bottom: 1rem;}
+        .upload-link {color: #333222;text-decoration: underline;cursor: pointer;}
+        .upload-info {font-size: 0.9rem;color: #888;margin-top: 0.5rem;}
+        .file-input {position: absolute;top: 0;left: 0;width: 100%;height: 100%;opacity: 0;cursor: pointer;}
+        .file-list {margin-top: 1rem;}
+        .file-item {display: flex;align-items: center;justify-content: space-between;padding: 1rem;background: #fafafa;border-radius: 8px;margin-bottom: 0.5rem;border: 1px solid rgba(218, 207, 202, 0.3);}
+        .file-info {display: flex;align-items: center;gap: 1rem;}
+        .file-preview {width: 40px;height: 40px;border-radius: 4px;object-fit: cover;}
+        .file-remove {background: none;border: none;color: #f44336;cursor: pointer;font-size: 1.2rem;}
     `;
     document.head.appendChild(style);
     
@@ -446,11 +469,7 @@ function createFileUploader(containerId, acceptedTypes = ['image/*', 'video/mp4'
     }
     
     function isValidFile(file) {
-        const validTypes = [
-            'image/jpeg', 'image/png', 'image/gif', 'image/webp',
-            'video/mp4',
-            'application/pdf'
-        ];
+        const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp', 'video/mp4', 'application/pdf'];
         return validTypes.includes(file.type);
     }
     
@@ -510,6 +529,40 @@ function createFileUploader(containerId, acceptedTypes = ['image/*', 'video/mp4'
             fileList.innerHTML = '';
         }
     };
+}
+
+// Add staggered animations for project and service cards
+function addStaggeredAnimations() {
+    const projectCards = document.querySelectorAll('.project-card');
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    // Stagger project cards
+    projectCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        
+        setTimeout(() => {
+            if (card.getBoundingClientRect().top < window.innerHeight) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        }, index * 100);
+    });
+    
+    // Stagger service cards
+    serviceCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        
+        setTimeout(() => {
+            if (card.getBoundingClientRect().top < window.innerHeight) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        }, index * 150);
+    });
 }
 
 // Smooth reveal animations for sections
@@ -573,7 +626,7 @@ document.addEventListener('keydown', (e) => {
         // Close mobile menu
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
-        if (hamburger.classList.contains('active')) {
+        if (hamburger && navMenu && hamburger.classList.contains('active')) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
         }
@@ -612,12 +665,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize any tooltips or additional UI elements
     initializeTooltips();
+    
+    // Add staggered animations
+    addStaggeredAnimations();
 });
 
 // Tooltip functionality
 function initializeTooltips() {
     const tooltipElements = document.querySelectorAll('[data-tooltip]');
-    
     tooltipElements.forEach(element => {
         element.addEventListener('mouseenter', showTooltip);
         element.addEventListener('mouseleave', hideTooltip);

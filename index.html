@@ -3,28 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegant Portfolio</title>
+    <title>Chloe Hayle | Luxury Design Portfolio</title>
+    
+    <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Luxury design portfolio showcasing sophisticated interior design, branding, and digital experiences by Chloe Hayle.">
+    <meta name="keywords" content="luxury design, interior design, branding, web design, portfolio">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#home">Portfolio</a>
+                <a href="#home">Chloe Hayle</a>
             </div>
-            <ul class="nav-menu">
+            
+            <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
                     <a href="#home" class="nav-link">Home</a>
                 </li>
+                
                 <li class="nav-item">
                     <a href="#about" class="nav-link">About Me</a>
                 </li>
+                
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">All Projects</a>
+                    <a href="#projects" class="nav-link dropdown-toggle">All Projects</a>
                     <ul class="dropdown-menu">
                         <li><a href="#interior">Interior</a></li>
                         <li><a href="#sm-london">SM-London</a></li>
@@ -34,8 +49,9 @@
                         <li><a href="#academic">Academic Design</a></li>
                     </ul>
                 </li>
+                
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">Profile</a>
+                    <a href="#services" class="nav-link dropdown-toggle">Profile</a>
                     <ul class="dropdown-menu">
                         <li><a href="#consulting">Consulting</a></li>
                         <li><a href="#branding">Branding</a></li>
@@ -44,11 +60,13 @@
                         <li><a href="#package-design">Package Design</a></li>
                     </ul>
                 </li>
+                
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
-            <div class="hamburger">
+            
+            <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -60,14 +78,18 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Elegant Design</h1>
-                <h2 class="hero-subtitle">Crafting Sophisticated Experiences</h2>
-                <p class="hero-description">Where luxury meets creativity in every detail</p>
+                <h1 class="hero-title">Sophisticated Design</h1>
+                <h2 class="hero-subtitle">Where Luxury Meets Creativity</h2>
+                <p class="hero-description">Creating timeless, elegant experiences through thoughtful design and meticulous attention to detail. Each project is a journey into refined aesthetics and sophisticated living.</p>
                 <a href="#about" class="cta-button">Discover My Work</a>
             </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Elegant Interior" class="parallax-element">
+            
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+                     alt="Luxury Interior Design" 
+                     class="parallax-element"
+                     loading="eager">
+            </div>
         </div>
     </section>
 
@@ -76,73 +98,137 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2 class="section-title">About Me</h2>
-                    <p class="about-description">
-                        With a passion for creating sophisticated and luxurious experiences, I specialize in bringing elegance to every project. My approach combines timeless design principles with contemporary innovation.
-                    </p>
-                    <p class="about-description">
-                        From interior design to digital experiences, each project is crafted with meticulous attention to detail and a deep understanding of refined aesthetics.
-                    </p>
-                    <div class="about-stats">
+                    <h2 class="section-title fade-in-element">About Me</h2>
+                    <div class="luxury-divider"></div>
+                    
+                    <p class="about-description fade-in-element">With over eight years of experience in luxury design, I specialize in creating sophisticated environments that tell a story. My approach combines classical elegance with contemporary innovation, ensuring each project reflects both timeless beauty and modern functionality.</p>
+                    
+                    <p class="about-description fade-in-element">From <span class="text-highlight">bespoke interior spaces</span> to comprehensive <span class="text-highlight">brand identities</span>, I believe that exceptional design should elevate the everyday and create lasting emotional connections.</p>
+                    
+                    <div class="about-stats fade-in-element">
                         <div class="stat">
-                            <h3>50+</h3>
-                            <p>Projects Completed</p>
+                            <h3>75+</h3>
+                            <p>Luxury Projects</p>
                         </div>
                         <div class="stat">
                             <h3>8+</h3>
                             <p>Years Experience</p>
                         </div>
                         <div class="stat">
-                            <h3>25+</h3>
-                            <p>Happy Clients</p>
+                            <h3>40+</h3>
+                            <p>Satisfied Clients</p>
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Designer Portrait" class="fade-in-element">
+                
+                <div class="about-image fade-in-element">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Chloe Hayle - Designer Portrait" 
+                         loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Featured Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title fade-in-element">Featured Projects</h2>
+            <div class="luxury-divider"></div>
+            
             <div class="projects-grid">
-                <div class="project-card" data-category="interior">
+                <!-- Interior Project -->
+                <div class="project-card fade-in-element" data-category="interior">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Interior">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Luxury Residential Interior" 
+                             loading="lazy">
                         <div class="project-overlay">
-                            <h3>Luxury Residential</h3>
-                            <p>Interior Design</p>
+                            <h3>Mayfair Residence</h3>
+                            <p>Luxury Interior Design</p>
+                            <div class="project-details">
+                                <span>2024</span> • <span>London</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="fashion">
+
+                <!-- SM-London Project -->
+                <div class="project-card fade-in-element" data-category="sm-london">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fashion Design">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="SM-London Project" 
+                             loading="lazy">
                         <div class="project-overlay">
-                            <h3>Couture Collection</h3>
-                            <p>Fashion Design</p>
+                            <h3>SM-London Collection</h3>
+                            <p>Boutique Interior Design</p>
+                            <div class="project-details">
+                                <span>2024</span> • <span>Commercial</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="branding">
+
+                <!-- Fashion Project -->
+                <div class="project-card fade-in-element" data-category="fashion">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Brand Identity">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Fashion Design Project" 
+                             loading="lazy">
                         <div class="project-overlay">
-                            <h3>Brand Identity</h3>
-                            <p>Visual Branding</p>
+                            <h3>Atelier Collection</h3>
+                            <p>Fashion & Styling</p>
+                            <div class="project-details">
+                                <span>2023</span> • <span>Couture</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="nursery">
+
+                <!-- Cerisse Interiors -->
+                <div class="project-card fade-in-element" data-category="cerisse">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nursery Design">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Cerisse Interiors Project" 
+                             loading="lazy">
                         <div class="project-overlay">
-                            <h3>Elegant Nursery</h3>
-                            <p>Baby & Nursery</p>
+                            <h3>Cerisse Interiors</h3>
+                            <p>Residential Design</p>
+                            <div class="project-details">
+                                <span>2023</span> • <span>Private Client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baby & Nursery -->
+                <div class="project-card fade-in-element" data-category="nursery">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Luxury Nursery Design" 
+                             loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Enchanted Nursery</h3>
+                            <p>Baby & Nursery Design</p>
+                            <div class="project-details">
+                                <span>2024</span> • <span>Residential</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Design -->
+                <div class="project-card fade-in-element" data-category="academic">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Academic Design Project" 
+                             loading="lazy">
+                        <div class="project-overlay">
+                            <h3>Design Research</h3>
+                            <p>Academic Design</p>
+                            <div class="project-details">
+                                <span>2023</span> • <span>Research</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,18 +239,26 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Services</h2>
+            <h2 class="section-title fade-in-element">Services</h2>
+            <div class="luxury-divider"></div>
+            
             <div class="services-grid">
-                <div class="service-card">
+                <!-- Consulting -->
+                <div class="service-card fade-in-element" id="consulting">
                     <div class="service-icon">
                         <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="9" cy="7" r="4" stroke="#333222" stroke-width="2"/>
+                            <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3>Interior Design</h3>
-                    <p>Creating sophisticated living spaces that reflect your personal style and elevate your everyday experience.</p>
+                    <h3>Consulting</h3>
+                    <p>Strategic design guidance and expert consultation to elevate your vision and bring sophisticated solutions to life.</p>
                 </div>
-                <div class="service-card">
+
+                <!-- Branding -->
+                <div class="service-card fade-in-element" id="branding">
                     <div class="service-icon">
                         <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -172,10 +266,12 @@
                             <path d="M2 12L12 17L22 12" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3>Brand Identity</h3>
-                    <p>Developing cohesive brand experiences that communicate elegance and sophistication across all touchpoints.</p>
+                    <h3>Branding</h3>
+                                        <p>Comprehensive brand identity development that communicates elegance and sophistication across all touchpoints.</p>
                 </div>
-                <div class="service-card">
+
+                <!-- Web Design -->
+                <div class="service-card fade-in-element" id="web-design">
                     <div class="service-icon">
                         <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="#333222" stroke-width="2"/>
@@ -183,8 +279,94 @@
                             <line x1="12" y1="17" x2="12" y2="21" stroke="#333222" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Digital Design</h3>
-                    <p>Crafting beautiful digital experiences that seamlessly blend functionality with aesthetic excellence.</p>
+                    <h3>Web Design</h3>
+                    <p>Crafting beautiful digital experiences that seamlessly blend functionality with aesthetic excellence and luxury appeal.</p>
+                </div>
+
+                <!-- Storytelling -->
+                <div class="service-card fade-in-element" id="storytelling">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="14,2 14,8 20,8" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="16" y1="13" x2="8" y2="13" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="16" y1="17" x2="8" y2="17" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="10,9 9,9 8,9" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Storytelling</h3>
+                    <p>Creating compelling narratives through visual design that connect emotionally and communicate your unique story.</p>
+                </div>
+
+                <!-- Package Design -->
+                <div class="service-card fade-in-element" id="package-design">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V18C3 19.1046 3.89543 20 5 20H19C20.1046 20 21 19.1046 21 18V8Z" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 10H21" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 6V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H15C15.5304 2 16.0391 2.21071 16.4142 2.58579C16.7893 2.96086 17 3.46957 17 4V6" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Package Design</h3>
+                    <p>Luxury packaging solutions that create memorable unboxing experiences and reflect premium brand values.</p>
+                </div>
+
+                <!-- Interior Design -->
+                <div class="service-card fade-in-element">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="9,22 9,12 15,12 15,22" stroke="#333222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Interior Design</h3>
+                    <p>Creating sophisticated living spaces that reflect personal style and elevate everyday experiences with timeless elegance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Upload Section -->
+    <section class="media-upload elegant-spacing">
+        <div class="container">
+            <h2 class="section-title fade-in-element">Project Gallery</h2>
+            <div class="luxury-divider"></div>
+            
+            <div class="media-grid fade-in-element">
+                <!-- Image Upload Area -->
+                <div class="media-item">
+                    <div class="media-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="#333222" stroke-width="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5" stroke="#333222" stroke-width="2"/>
+                            <polyline points="21,15 16,10 5,21" stroke="#333222" stroke-width="2"/>
+                        </svg>
+                        <p>High-Quality Images</p>
+                        <span>Upload project photos</span>
+                    </div>
+                </div>
+
+                <!-- Video Upload Area -->
+                <div class="media-item">
+                    <div class="media-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="23,12 8,22 8,2" stroke="#333222" stroke-width="2"/>
+                        </svg>
+                        <p>MP4 Videos</p>
+                        <span>Upload project videos</span>
+                    </div>
+                </div>
+
+                <!-- Document Upload Area -->
+                <div class="media-item">
+                    <div class="media-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#333222" stroke-width="2"/>
+                            <polyline points="14,2 14,8 20,8" stroke="#333222" stroke-width="2"/>
+                        </svg>
+                        <p>PDF Documents</p>
+                        <span>Upload portfolios & docs</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -195,39 +377,83 @@
         <div class="container">
             <div class="contact-content">
                 <div class="contact-info">
-                    <h2 class="section-title">Let's Create Something Beautiful</h2>
-                    <p class="contact-description">
-                        Ready to bring your vision to life? I'd love to discuss your project and explore how we can create something truly exceptional together.
-                    </p>
-                    <div class="contact-details">
+                    <h2 class="section-title fade-in-element">Let's Create Something Beautiful</h2>
+                    <div class="luxury-divider"></div>
+                    
+                    <p class="contact-description fade-in-element">Ready to bring your vision to life? I'd love to discuss your project and explore how we can create something truly exceptional together. Whether you're looking for interior design, branding, or digital experiences, let's craft something extraordinary.</p>
+                    
+                    <div class="contact-details fade-in-element">
                         <div class="contact-item">
                             <h4>Email</h4>
-                            <p>hello@elegantportfolio.com</p>
+                            <p>hello@chloehayle.com</p>
                         </div>
                         <div class="contact-item">
                             <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
+                            <p>+44 (0) 20 7123 4567</p>
                         </div>
                         <div class="contact-item">
-                            <h4>Location</h4>
-                            <p>New York, NY</p>
+                            <h4>Studio</h4>
+                            <p>London, United Kingdom</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Availability</h4>
+                            <p>Currently accepting new projects</p>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
+                
+                <form class="contact-form fade-in-element" id="contact-form">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
                     </div>
+                    
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
                     </div>
+                    
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+44 (0) 20 1234 5678">
                     </div>
+                    
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+                        <label for="project-type">Project Type</label>
+                        <select id="project-type" name="project-type" required>
+                            <option value="">Select project type</option>
+                            <option value="interior">Interior Design</option>
+                            <option value="branding">Branding & Identity</option>
+                            <option value="web-design">Web Design</option>
+                            <option value="consulting">Design Consulting</option>
+                            <option value="package-design">Package Design</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    
+                    <div class="form-group">
+                        <label for="budget">Project Budget</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select budget range</option>
+                            <option value="5k-15k">£5,000 - £15,000</option>
+                            <option value="15k-30k">£15,000 - £30,000</option>
+                            <option value="30k-50k">£30,000 - £50,000</option>
+                            <option value="50k+">£50,000+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project vision, timeline, and any specific requirements..." rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2"/>
+                            <polygon points="22,2 15,22 11,13 2,9 22,2" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
                 </form>
             </div>
         </div>
@@ -238,37 +464,57 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h3>Elegant Portfolio</h3>
+                    <h3>Chloe Hayle</h3>
+                    <p>Luxury Design Studio</p>
                 </div>
+                
                 <div class="footer-links">
                     <a href="#home">Home</a>
-                    <a href="#about">About</a>
+                    <a href="#about">About Me</a>
                     <a href="#projects">Projects</a>
+                    <a href="#services">Services</a>
                     <a href="#contact">Contact</a>
                 </div>
+                
                 <div class="footer-social">
-                    <a href="#" aria-label="Instagram">
+                    <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
                             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z" stroke="currentColor" stroke-width="2"/>
                             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </a>
-                    <a href="#" aria-label="LinkedIn">
+                                        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16 8A6 6 0 0 1 22 14V21H18V14A2 2 0 0 0 14 14V21H10V9H14V11.5A6 6 0 0 1 16 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
                             <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </a>
+                    <a href="#" aria-label="Pinterest" target="_blank" rel="noopener">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="2"/>
+                            <path d="M17 5H9.5C7.01472 5 5 7.01472 5 9.5V9.5C5 11.9853 7.01472 14 9.5 14H12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 Elegant Portfolio. All rights reserved.</p>
+                <p>&copy; 2024 Chloe Hayle. All rights reserved. | Privacy Policy | Terms of Service</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navbar when scrolled - translucent white with blur */
 .navbar.scrolled {
-    background-color: rgba(223, 212, 203, 1);
+    background-color: rgba(223, 212, 203, 0.56);
     backdrop-filter: blur(2px);
     border-bottom: 0px solid rgba(255, 255, 255, 0.2);
 }

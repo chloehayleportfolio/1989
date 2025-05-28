@@ -245,8 +245,8 @@ h1, h2, h3, h4, h5, h6 {
     right: 1rem; /* Position on the right side */
     top: 50%;
     transform: translateY(-50%);
-    width: 16px; /* Adjust size as needed */
-    height: 16px; /* Adjust size as needed */
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
     background-image: url('../images/sub-menu-select.png');
     background-size: contain;
     background-repeat: no-repeat;

@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Enhanced Hero Typography */
 .hero-title {
     font-size: clamp(3rem, 8vw, 5.5rem);
-    color: #333222;
+    color: rgb(218, 207, 202);
     margin-bottom: 1.5rem;
     font-weight: 300;
     line-height: 1.1;
@@ -79,12 +79,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-subtitle {
-    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-    color: #666;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color:rgb(218, 207, 202);
     margin-bottom: 2.5rem;
-    font-weight: 300;
+    font-weight: 200;
     line-height: 1.6;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 

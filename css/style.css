@@ -160,11 +160,13 @@ h1, h2, h3, h4, h5, h6 {
     color: #f3f3f3;
     text-decoration: none;
     font-weight: 200;
-    font-size: 0.95rem;
+    font-size: 0.84rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 0.5rem 0;
     position: relative;
+    letter-spacing: 1px; /* Added letter spacing */
 }
+
 
 .nav-link::after {
     content: '';

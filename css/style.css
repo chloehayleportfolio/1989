@@ -390,9 +390,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .secondary-button {
-    background: transparent;
-    color: #333222;
-    border: 2px solid rgb(218, 207, 202);
+    background: rgba(150, 128, 118, 1);
+    color: #ffffff;
+    border: 2px solid rgba(150, 128, 118, 1);
 }
 
 .secondary-button:hover {

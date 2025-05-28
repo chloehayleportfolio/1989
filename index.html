@@ -3,450 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chloe Hayle - Interior Designer Portfolio</title>
-    <meta name="description" content="Professional interior design services by Chloe Hayle. Creating beautiful, functional spaces that reflect your unique style.">
-    <!-- Fixed: Single CSS reference -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Chloe Hayle - Luxury Design Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Updated Google Fonts to match CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Loading Overlay -->
-<div id="loading-overlay" class="loading-overlay">
-    <div class="loading-spinner"></div>
-    <p>Loading...</p>
-</div>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- Skip to main content for accessibility -->
-<a href="#main" class="skip-link">Skip to main content</a>
-
-<!-- Navigation -->
-<nav id="navbar" class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">
-            <a href="#home">Chloe Hayle</a>
-        </div>
-        <ul class="nav-menu">
-            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-            <li class="nav-item dropdown">
-                <a href="#services" class="nav-link dropdown-toggle">Services</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#residential" class="dropdown-link">Residential Design</a></li>
-                    <li><a href="#commercial" class="dropdown-link">Commercial Design</a></li>
-                    <li><a href="#consultation" class="dropdown-link">Design Consultation</a></li>
-                </ul>
-            </li>
-            <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p style="margin-top: 1rem; color: #333222; font-weight: 300;">Loading Portfolio...</p>
     </div>
-</nav>
 
-<!-- Main Content -->
-<main id="main">
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-image parallax-element">
-            <img src="hero-bg.jpg" alt="Beautiful interior design showcase" data-src="hero-bg.jpg">
-        </div>
-        <div class="hero-content">
-            <div class="hero-text fade-in-element">
-                <h1 class="hero-title">Creating Beautiful Spaces</h1>
-                <p class="hero-subtitle">Transform your home with professional interior design that reflects your unique style and personality.</p>
-                <div class="hero-buttons">
-                    <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
-                    <a href="#contact" class="btn btn-secondary">Get Started</a>
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Chloe Hayle</a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#projects" class="nav-link">All Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#interior">Interior</a></li>
+                        <li><a href="#sm-london">SM-London</a></li>
+                        <li><a href="#cerisse">Cerisse Interiors</a></li>
+                        <li><a href="#fashion">Fashion</a></li>
+                        <li><a href="#baby-nursery">Baby and Nursery</a></li>
+                        <li><a href="#academic">Academic Design</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#profile" class="nav-link">Profile</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#consulting">Consulting</a></li>
+                        <li><a href="#branding">Branding</a></li>
+                        <li><a href="#web-design">Web Design</a></li>
+                        <li><a href="#storytelling">Storytelling</a></li>
+                        <li><a href="#package-design">Package Design</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text fade-in-element">
-                    <h2 class="section-title">About Chloe</h2>
-                    <p class="about-description">With over 8 years of experience in interior design, I specialize in creating spaces that are both beautiful and functional. My approach combines timeless elegance with modern sensibilities to deliver designs that truly reflect my clients' personalities.</p>
-                    <p>From residential homes to commercial spaces, I believe that great design has the power to transform not just spaces, but lives. Every project is a collaboration, and I work closely with my clients to bring their vision to life.</p>
-                </div>
-                <div class="about-stats fade-in-element">
-                    <div class="stat">
-                        <h3>150</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="stat">
-                        <h3>8</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat">
-                        <h3>98</h3>
-                        <p>Happy Clients</p>
-                    </div>
-                </div>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Banner -->
+        <section id="home" class="header-banner">
+            <!-- Placeholder for hero image - replace with your image -->
+            <div class="hero-background"></div>
+            <div class="banner-content">
+                <h1 class="banner-title">Luxury Design</h1>
+                <h2 class="banner-subtitle">Crafted with Elegance</h2>
+                <p class="banner-description">Creating sophisticated spaces and experiences that embody timeless luxury and feminine grace.</p>
+                <a href="#projects" class="banner-cta">View Portfolio</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2 class="section-title fade-in-element">Services</h2>
-            <div class="services-grid">
-                <div class="service-card fade-in-element">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Residential Design</h3>
-                    <p>Complete home makeovers, room redesigns, and space planning for residential properties.</p>
-                </div>
-                <div class="service-card fade-in-element">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 3H21V21H3V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 9H15V15H9V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Commercial Design</h3>
-                    <p>Professional office spaces, retail environments, and hospitality design solutions.</p>
-                </div>
-                <div class="service-card fade-in-element">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Design Consultation</h3>
-                    <p>Expert advice on color schemes, furniture selection, and space optimization.</p>
-                </div>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section">
-        <div class="container">
-            <h2 class="section-title fade-in-element">Portfolio</h2>
-            <!-- Project Filters -->
-            <div class="project-filters fade-in-element">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="residential">Residential</button>
-                <button class="filter-btn" data-filter="commercial">Commercial</button>
-                <button class="filter-btn" data-filter="renovation">Renovation</button>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card" data-category="residential" data-project-id="interior-1">
-                    <div class="project-image">
-                        <img src="project1.jpg" alt="Luxury Penthouse Design" data-src="project1.jpg">
-                        <div class="project-overlay">
-                            <h3>Luxury Penthouse</h3>
-                            <p>Modern luxury design with timeless elegance</p>
-                            <button class="view-project-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="commercial" data-project-id="interior-2">
-                    <div class="project-image">
-                        <img src="project2.jpg" alt="Modern Office Space" data-src="project2.jpg">
-                        <div class="project-overlay">
-                            <h3>Modern Office</h3>
-                            <p>Productive workspace with contemporary design</p>
-                            <button class="view-project-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="residential" data-project-id="interior-3">
-                    <div class="project-image">
-                        <img src="project3.jpg" alt="Cozy Living Room" data-src="project3.jpg">
-                        <div class="project-overlay">
-                            <h3>Cozy Living Room</h3>
-                            <p>Warm and inviting family space</p>
-                            <button class="view-project-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="renovation" data-project-id="interior-4">
-                    <div class="project-image">
-                        <img src="project4.jpg" alt="Kitchen Renovation" data-src="project4.jpg">
-                        <div class="project-overlay">
-                            <h3>Kitchen Renovation</h3>
-                            <p>Complete kitchen transformation</p>
-                            <button class="view-project-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title fade-in-element">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info fade-in-element">
-                    <h3>Let's Create Something Beautiful Together</h3>
-                    <p>Ready to transform your space? I'd love to hear about your project and discuss how we can bring your vision to life.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <strong>Email:</strong>
-                            <a href="mailto:hello@chloehayle.com">hello@chloehayle.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Phone:</strong>
-                            <a href="tel:+1234567890">+1 (234) 567-890</a>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Location:</strong>
-                            <span>New York, NY</span>
-                        </div>
-                    </div>
-                </div>
-                <form id="contact-form" class="contact-form fade-in-element">
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="project-type">Project Type *</label>
-                        <select id="project-type" name="project-type" required>
-                            <option value="">Select a project type</option>
-                            <option value="residential">Residential Design</option>
-                            <option value="commercial">Commercial Design</option>
-                            <option value="consultation">Design Consultation</option>
-                            <option value="renovation">Renovation</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="budget">Budget Range</label>
-                        <select id="budget" name="budget">
-                            <option value="">Select budget range</option>
-                            <option value="under-10k">Under $10,000</option>
-                            <option value="10k-25k">$10,000 - $25,000</option>
-                            <option value="25k-50k">$25,000 - $50,000</option>
-                            <option value="50k-plus">$50,000+</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Project Details *</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, timeline, and any specific requirements..." required></textarea>
-                    </div>
-                    <!-- Fixed: Media Upload Section with proper file input -->
-                    <div class="media-upload-section">
-                        <h4>Share Your Inspiration (Optional)</h4>
-                        <input type="file" id="media-upload" name="media-upload" multiple accept="image/*,video/mp4,application/pdf" style="display: none;">
-                        <div class="media-grid">
-                            <div class="media-item" onclick="document.getElementById('media-upload').click()" style="cursor: pointer;">
-                                <div class="media-placeholder">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
-                                        <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="2"/>
-
-                                                                                <path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    <p>Images<br><small>JPG, PNG up to 10MB</small></p>
-                                </div>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title fade-in">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text slide-in-left">
+                        <p class="about-description">
+                            With a passion for creating luxurious, sophisticated spaces, I specialize in high-end interior design that seamlessly blends elegance with functionality. My approach centers on understanding each client's unique vision and translating it into timeless, beautiful environments.
+                        </p>
+                        <p class="about-description">
+                            From intimate residential spaces to commercial projects, every design tells a story of refined taste and attention to detail. I believe that luxury lies not just in expensive materials, but in the thoughtful curation of elements that create harmony and sophistication.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <h3>50+</h3>
+                                <p>Projects Completed</p>
                             </div>
-                            <div class="media-item" onclick="document.getElementById('media-upload').click()" style="cursor: pointer;">
-                                <div class="media-placeholder">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <polygon points="23 7 16 12 23 17 23 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
-                                    </svg>
-                                    <p>Videos<br><small>MP4 up to 50MB</small></p>
-                                </div>
+                            <div class="stat">
+                                <h3>8</h3>
+                                <p>Years Experience</p>
                             </div>
-                            <div class="media-item" onclick="document.getElementById('media-upload').click()" style="cursor: pointer;">
-                                <div class="media-placeholder">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    <p>Documents<br><small>PDF up to 25MB</small></p>
-                                </div>
+                            <div class="stat">
+                                <h3>25+</h3>
+                                <p>Happy Clients</p>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="submit-btn btn btn-primary">
-                        <span>Send Message</span>
-                    </button>
-                </form>
+                    <div class="about-image slide-in-right">
+                        <div class="image-placeholder">
+                            <p>Professional Portrait</p>
+                            <small>Upload your professional photo here</small>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-</main>
+        </section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Chloe Hayle</h3>
-                <p>Creating beautiful, functional spaces that reflect your unique style and personality.</p>
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title fade-in">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <p>Interior Design Project</p>
+                                <small>Luxury residential space</small>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>Luxury Residential</h3>
+                            <p>A sophisticated living space that combines modern elegance with timeless comfort, featuring custom furnishings and curated art pieces.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <p>SM-London Project</p>
+                                <small>Commercial design</small>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>SM-London</h3>
+                            <p>Contemporary commercial space design that reflects brand identity while creating an inviting atmosphere for clients and visitors.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <p>Cerisse Interiors</p>
+                                <small>Boutique interior design</small>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>Cerisse Interiors</h3>
+                            <p>Elegant boutique interior featuring soft textures, warm lighting, and carefully selected pieces that create an intimate shopping experience.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <p>Fashion Design</p>
+                                <small>Fashion & styling project</small>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>Fashion Design</h3>
+                            <p>Curated fashion pieces and styling concepts that embody feminine elegance and contemporary sophistication.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <p>Baby & Nursery</p>
+                                <small>Nursery design</small>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>Baby & Nursery</h3>
+                            <p>Gentle, nurturing spaces designed with safety and beauty in mind, creating the perfect environment for little ones to grow and thrive.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div class="image-placeholder">
+                                <p>Academic Design</p>
+                                <small>Educational space design</small>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>Academic Design</h3>
+                            <p>Thoughtfully designed educational environments that inspire learning and creativity while maintaining aesthetic excellence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="profile" class="services">
+            <div class="container">
+                <h2 class="section-title fade-in">Services</h2>
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">✨</div>
+                        <h3>Consulting</h3>
+                        <p>Expert design consultation to help you envision and plan your perfect space, from concept to completion.</p>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-icon">🎨</div>
+                        <h3>Branding</h3>
+                        <p>Comprehensive brand identity development that reflects your unique style and values through visual storytelling.</p>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-icon">💻</div>
+                        <h3>Web Design</h3>
+                        <p>Elegant, user-friendly websites that showcase your brand with sophistication and modern functionality.</p>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-icon">📖</div>
+                        <h3>Storytelling</h3>
+                        <p>Crafting compelling narratives that connect with your audience and communicate your brand's unique story.</p>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-icon">📦</div>
+                        <h3>Package Design</h3>
+                        <p>Beautiful, functional packaging solutions that enhance your product's appeal and brand recognition.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title fade-in">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info slide-in-left">
+                        <p class="contact-description">
+                            Ready to transform your space into something extraordinary? I'd love to hear about your vision and discuss how we can bring it to life together.
+                        </p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <h4>Email</h4>
+                                <p>hello@chloehayle.com</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>Phone</h4>
+                                <p>+44 (0) 20 7123 4567</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>Location</h4>
+                                <p>London, United Kingdom</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form slide-in-right">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="project">Project Type</label>
+                                <input type="text" id="project" name="project" placeholder="e.g., Interior Design, Branding">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Chloe Hayle</h3>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#profile">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
                 <div class="social-links">
-                    <a href="#" class="social-link" data-tooltip="Instagram" aria-label="Follow on Instagram">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link" data-tooltip="Pinterest" aria-label="Follow on Pinterest">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 11.5c0-1.5 1-3 2.5-3s2.5 1.5 2.5 3-1 3-2.5 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.64 7.86 6.35 9.35-.09-.79-.17-2.01.04-2.87.19-.78 1.23-5.22 1.23-5.22s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.33.67 1.33 1.48 0 .9-.57 2.25-.87 3.5-.25 1.04.52 1.89 1.54 1.89 1.85 0 3.27-1.95 3.27-4.76 0-2.49-1.79-4.23-4.35-4.23-2.96 0-4.7 2.22-4.7 4.51 0 .89.34 1.85.77 2.37.08.1.09.19.07.29-.08.31-.25 1.02-.28 1.17-.04.19-.14.23-.33.14-1.29-.6-2.1-2.48-2.1-3.99 0-3.27 2.38-6.28 6.86-6.28 3.6 0 6.4 2.56 6.4 5.99 0 3.57-2.25 6.44-5.38 6.44-1.05 0-2.04-.55-2.38-1.21 0 0-.52 1.98-.65 2.47-.23.89-.86 2.01-1.28 2.69A10 10 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link" data-tooltip="LinkedIn" aria-label="Connect on LinkedIn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2"/>
-                            <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="LinkedIn">💼</a>
+                    <a href="#" aria-label="Pinterest">📌</a>
                 </div>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Services</h4>
-                <ul class="footer-links">
-                    <li><a href="#residential">Residential Design</a></li>
-                    <li><a href="#commercial">Commercial Design</a></li>
-                    <li><a href="#consultation">Design Consultation</a></li>
-                    <li><a href="#renovation">Renovation</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Info</h4>
-                <div class="contact-info">
-                    <p><strong>Email:</strong><br><a href="mailto:hello@chloehayle.com">hello@chloehayle.com</a></p>
-                    <p><strong>Phone:</strong><br><a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                    <p><strong>Location:</strong><br>New York, NY</p>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chloe Hayle. All rights reserved.</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom-content">
-                <p>&copy; <span class="current-year">2024</span> Chloe Hayle Interior Design. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 
-<!-- Back to Top Button -->
-<button id="back-to-top" class="back-to-top" aria-label="Back to top" data-tooltip="Back to top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-</button>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
-<!-- Notification Container -->
-<div id="notification-container" class="notification-container"></div>
+    <!-- Notification Container -->
+    <div class="notification-container" id="notificationContainer"></div>
 
-<!-- Screen Reader Announcements -->
-<div id="screen-reader-announcements" aria-live="polite" aria-atomic="true" class="sr-only"></div>
-
-<!-- JavaScript -->
-<script src="script.js"></script>
-
-<!-- Additional JavaScript for back to top functionality and media upload -->
-<script>
-// Back to top button functionality
-const backToTopButton = document.getElementById('back-to-top');
-if (backToTopButton) {
-    // Show/hide button based on scroll position
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTopButton.classList.add('visible');
-        } else {
-            backToTopButton.classList.remove('visible');
-        }
-    });
-
-    // Smooth scroll to top
-    backToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
-
-// Media upload functionality
-const mediaUpload = document.getElementById('media-upload');
-if (mediaUpload) {
-    mediaUpload.addEventListener('change', function(e) {
-        const files = e.target.files;
-        if (files.length > 0) {
-            console.log(`${files.length} file(s) selected for upload`);
-            // You can add file preview functionality here
-            for (let i = 0; i < files.length; i++) {
-                console.log(`File ${i + 1}: ${files[i].name} (${files[i].type})`);
-            }
-        }
-    });
-}
-
-// Initialize notification icon function
-function getNotificationIcon(type) {
-    const icons = {
-        success: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#28a745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <polyline points="22,4 12,14.01 9,11.01" stroke="#28a745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>`,
-        error: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="#dc3545" stroke-width="2"/>
-            <line x1="15" y1="9" x2="9" y2="15" stroke="#dc3545" stroke-width="2" stroke-linecap="round"/>
-            <line x1="9" y1="9" x2="15" y2="15" stroke="#dc3545" stroke-width="2" stroke-linecap="round"/>
-        </svg>`,
-        warning: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <line x1="12" y1="9" x2="12" y2="13" stroke="#ffc107" stroke-width="2" stroke-linecap="round"/>
-            <line x1="12" y1="17" x2="12.01" y2="17" stroke="#ffc107" stroke-width="2" stroke-linecap="round"/>
-        </svg>`,
-        info: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="#333222" stroke-width="2"/>
-            <path d="M12 16v-4" stroke="#333222" stroke-width="2" stroke-linecap="round"/>
-            <path d="M12 8h.01" stroke="#333222" stroke-width="2" stroke-linecap="round"/>
-        </svg>`
-    };
-    return icons[type] || icons.info;
-}
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>

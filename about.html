@@ -4,9 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Chloe Hayle</title>
-    <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Inline styles to ensure it works */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Simple Navigation */
+        .navbar {
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333222;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            color: #333222;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: #8B7355;
+        }
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -60,6 +113,58 @@
             width: 100%;
             height: auto;
             border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Skills Section */
+        .about-skills {
+            padding: 80px 0;
+            background: #f9f7f4;
+        }
+        
+        .about-skills h2 {
+            font-size: 2rem;
+            color: #333222;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-item {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-item h3 {
+            font-size: 1.5rem;
+            color: #333222;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-item p {
+            color: #574232;
+            line-height: 1.6;
         }
         
         @media (max-width: 768px) {
@@ -67,19 +172,23 @@
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
+            
+            .about-hero h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html">Chloe Hayle</a>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">ABOUT ME</a></li>
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT ME</a></li>
             </ul>
         </div>
     </nav>
@@ -104,6 +213,30 @@
                 </div>
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1494790108755-2616c9c9b8d4?w=500&h=600&fit=crop&crop=face" alt="Chloe Hayle">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="about-skills">
+        <div class="container">
+            <h2>What I Do</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop" alt="Interior Design">
+                    <h3>Interior Design</h3>
+                    <p>Creating luxurious and functional spaces that reflect your lifestyle.</p>
+                </div>
+                <div class="skill-item">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop" alt="Brand Identity">
+                    <h3>Brand Identity</h3>
+                    <p>Developing comprehensive brand strategies and visual identities.</p>
+                </div>
+                <div class="skill-item">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop" alt="Creative Direction">
+                    <h3>Creative Direction</h3>
+                    <p>Guiding projects from concept to completion with artistic vision.</p>
                 </div>
             </div>
         </div>

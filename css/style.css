@@ -444,42 +444,40 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 8px 25px rgba(51, 50, 34, 0.15);
 }
 
-/* About Section */
-.about {
+/* About Section - Make specific to main page only */
+#about.about {
     padding: 0rem 0;
     background: rgb(33, 34, 19);
 }
 
-.about .section-title {
-    text-align: left;
-}
-
-.about-content {
+#about .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
 }
 
-.about-text {
+#about .about-text {
     padding-right: 2rem;
 }
 
-.about-description {
+#about .about-description {
     font-size: 0.8rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     color: rgb(162, 158, 150);
 }
 
-/* Replace the image rule with video rule */
-.about-video video {
+#about .about-video video {
     width: 100%;
     height: 700px;
     object-fit: cover;
     border-radius: 0px;
 }
 
+#about .section-title {
+    text-align: left;
+}
 
 /* Enhanced Featured Projects Section */
 .featured-projects {

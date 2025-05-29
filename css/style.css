@@ -80,13 +80,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-subtitle {
     font-size: clamp(1.1rem, 1vw, 1.3rem);
-    color:rgb(218, 207, 202);
+    color: rgb(218, 207, 202);
     margin-bottom: 2.5rem;
     font-weight: 200;
     line-height: 1.6;
     max-width: 700px;
-    text-align: center !important; 
+    text-align: center;
+    margin: 0 auto 2.5rem auto; /* This centers the element and keeps bottom margin */
 }
+
 
 
 /* Enhanced Navigation */

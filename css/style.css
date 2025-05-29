@@ -767,13 +767,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-logo h3 {
     color: rgb(218, 207, 202);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem; /* Updated: closer spacing */
     letter-spacing: 2px;
 }
 
 .footer-logo p {
     opacity: 0.8;
     font-size: 0.9rem;
+    margin-bottom: 2rem; /* Added: bigger gap before social links */
 }
 
 .footer-links {
@@ -796,6 +797,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-social {
     display: flex;
     gap: 1rem;
+    margin-top: 0; /* Added: reset any existing margin */
 }
 
 .footer-social a {
@@ -815,6 +817,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.6;
     font-size: 0.9rem;
 }
+
 
 
 

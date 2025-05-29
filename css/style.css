@@ -467,8 +467,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr); /* Changed to exactly 3 columns */
+    gap: 2.5rem; /* Slightly reduced gap for better fit */
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -481,7 +481,9 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     position: relative;
     cursor: pointer;
+    min-width: 0; /* Prevents cards from overflowing */
 }
+
 
 .project-card:hover {
     transform: translateY(-8px);
@@ -583,6 +585,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        gap: 2rem;
+    }
+}
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;

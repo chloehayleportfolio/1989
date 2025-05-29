@@ -199,6 +199,18 @@ h1, h2, h3, h4, h5, h6 {
     justify-self: end;
 }
 
+/* Navigation menu text color when navbar is scrolled */
+.navbar.scrolled .nav-link {
+    color: #574232;
+}
+
+.navbar.scrolled .nav-link:hover {
+    color: rgb(218, 207, 202);
+}
+
+.navbar.scrolled .nav-link:hover::after {
+    background: rgb(218, 207, 202);
+}
 
 /* Dropdown Menus */
 .dropdown-menu {

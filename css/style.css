@@ -426,10 +426,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .submit-button {
-    background: #333222;
+    background: #968f82;
     color: white;
     width: 100%;
-    border: 2px solid #333222;
+    border: 2px solid #968f82;
 }
 
 .submit-button:hover {

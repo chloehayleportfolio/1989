@@ -341,16 +341,23 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem 0;
 }
 
-.hero-image {
+.hero-video {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
 }
 
-.hero-image::before {
+.hero-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -361,13 +368,6 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
 }
 
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    filter: brightness(0.9) contrast(1.1);
-}
 
 
 /* Enhanced Buttons */

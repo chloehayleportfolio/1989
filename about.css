@@ -1,5 +1,11 @@
-/* About Page Styles */
+/* Container styles for about page */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
+/* About Page Styles */
 /* About Hero Section */
 .about-hero {
     background: linear-gradient(135deg, #f5f1eb 0%, #e8ddd4 100%);
@@ -36,6 +42,7 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .about-text h2 {
@@ -98,6 +105,7 @@
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .skill-item {

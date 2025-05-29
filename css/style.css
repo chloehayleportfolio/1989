@@ -212,6 +212,10 @@ h1, h2, h3, h4, h5, h6 {
     background: rgb(218, 207, 202);
 }
 
+/* Services SVG color on hover */
+.nav-link[href="#services"]:hover svg {
+    fill:  #846e72;
+}
 /* Dropdown Menus */
 .dropdown-menu {
     position: absolute;

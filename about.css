@@ -67,23 +67,6 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
-    }
-    
-    .about-hero {
-        padding: 100px 0 60px;
-    }
-    
-    .about-content {
-        padding: 60px 0;
-    }
-}
-
 /* About Skills Section */
 .about-skills {
     padding: 80px 0;
@@ -139,4 +122,21 @@
 .skill-item p {
     color: #574232;
     line-height: 1.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .about-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .about-content {
+        padding: 60px 0;
+    }
 }

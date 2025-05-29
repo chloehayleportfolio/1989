@@ -726,10 +726,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Contact Form */
 .contact-form {
-    background: #fafafa;
-    padding: 2.5rem;
+    background: rgba(223, 212, 203, 0.56);
+    padding: 1.5rem;
     border-radius: 4px;
-    border: 1px solid rgb(218, 207, 202);
+    border: 0px solid rgb(218, 207, 202);
 }
 
 .form-group {
@@ -1104,9 +1104,9 @@ section.section-visible {
 
 .filter-button:hover,
 .filter-button.active {
-    background: #333222;
+    background: #968f82;
     color: white;
-    border-color: #333222;
+    border-color: #968f82;
 }
 
 /* File Preview Styles */

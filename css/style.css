@@ -227,77 +227,87 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Dropdown Menus */
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background:rgba(255, 255, 255, 0);
-    backdrop-filter: blur(20px);
-    min-width: 200px;
-    list-style: none;
-    padding: 1rem 0;
-    border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    border: 0px solid rgb(218, 207, 202);
+position: absolute;
+top: 100%;
+left: 0;
+background: rgba(255, 255, 255, 0.1) !important; /* Very subtle background to help blur show */
+backdrop-filter: blur(20px) !important;
+-webkit-backdrop-filter: blur(20px) !important;
+min-width: 200px;
+list-style: none;
+padding: 1rem 0;
+border-radius: 8px;
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+opacity: 0;
+visibility: hidden;
+transform: translateY(-10px);
+transition: all 0.3s ease;
+border: 1px solid rgba(255, 255, 255, 0.2); /* Add subtle border */
 }
 
+
 .dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
 }
 
 .dropdown-menu li {
-    padding: 0;
+padding: 0;
 }
 
 .dropdown-menu a {
-    display: block;
-    padding: 0.75rem 1.5rem;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 0.8rem;
-    transition: all 0.3s ease;
-    position: relative; /* Add this for positioning the heart */
+display: block;
+padding: 0.75rem 1.5rem;
+color: #ffffff;
+text-decoration: none;
+font-size: 0.8rem;
+transition: all 0.3s ease;
+position: relative;
 }
 
 .dropdown-menu a::after {
-    content: '';
-    position: absolute;
-    right: 1rem; /* Position on the right side */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
-    background-image: url('../images/sub-menu-select.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s ease; /* Smooth fade transition */
+content: '';
+position: absolute;
+right: 1rem;
+top: 50%;
+transform: translateY(-50%);
+width: 30px;
+height: 30px;
+background-image: url('../images/sub-menu-select.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+opacity: 0;
+transition: opacity 0.3s ease;
 }
 
 .dropdown-menu a:hover {
-    background: rgba(201, 189, 179, 0.65);
-    color: #333222;
+background: rgba(201, 189, 179, 0.65);
+color: #333222;
 }
 
 .dropdown-menu a:hover::after {
-    opacity: 1; /* Show heart on hover with fade effect */
+opacity: 1;
 }
 
-/* Dropdown menu text color when navbar is scrolled */
+/* Ensure blur persists when scrolled */
+.navbar.scrolled .dropdown-menu {
+background: rgb(218 213 202 / 75%) !important;
+backdrop-filter: blur(50px) !important;
+-webkit-backdrop-filter: blur(50px) !important;
+}
+
+
 .navbar.scrolled .dropdown-menu a {
-    color: #6c625a;
+color: #6c625a;
 }
 
 .navbar.scrolled .dropdown-menu a:hover {
-    background: rgba(218, 207, 202, 0.1);
-    color: #333222;
+background: rgba(199, 186, 183, 0.696) !important;
+color: #ffffff;
 }
+
 
 
 
@@ -444,40 +454,42 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 8px 25px rgba(51, 50, 34, 0.15);
 }
 
-/* About Section - Make specific to main page only */
-#about.about {
+/* About Section */
+.about {
     padding: 0rem 0;
     background: rgb(33, 34, 19);
 }
 
-#about .about-content {
+.about .section-title {
+    text-align: left;
+}
+
+.about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
 }
 
-#about .about-text {
+.about-text {
     padding-right: 2rem;
 }
 
-#about .about-description {
+.about-description {
     font-size: 0.8rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     color: rgb(162, 158, 150);
 }
 
-#about .about-video video {
+/* Replace the image rule with video rule */
+.about-video video {
     width: 100%;
     height: 700px;
     object-fit: cover;
     border-radius: 0px;
 }
 
-#about .section-title {
-    text-align: left;
-}
 
 /* Enhanced Featured Projects Section */
 .featured-projects {

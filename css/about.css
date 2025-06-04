@@ -703,3 +703,27 @@ max-width: 30px;
 font-size: 0.6rem;
 }
 }
+/* ... all your existing contact.css styles ... */
+
+/* Form Validation Styles */
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.form-group .error-text {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+}
+
+/* Change dropdown menu text color - Contact page only */
+.nav-item.dropdown .dropdown-menu .dropdown-link {
+    color: #846e72 !important;
+}
+
+.nav-item.dropdown .dropdown-menu .dropdown-link:hover {
+    color: #846e72 !important;
+}

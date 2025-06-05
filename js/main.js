@@ -61,7 +61,6 @@ navMenu.classList.remove('active');
 
 // Enhanced dropdown functionality
 const dropdowns = document.querySelectorAll('.dropdown');
-
 dropdowns.forEach(dropdown => {
     const toggle = dropdown.querySelector('.dropdown-toggle');
     const menu = dropdown.querySelector('.dropdown-menu');
@@ -94,22 +93,21 @@ dropdowns.forEach(dropdown => {
         toggle.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
                 e.preventDefault();
-                
                 // Close other dropdowns
                 dropdowns.forEach(otherDropdown => {
                     if (otherDropdown !== dropdown) {
                         otherDropdown.classList.remove('active');
                     }
                 });
-                
                 // Toggle current dropdown
                 dropdown.classList.toggle('active');
             }
+            // On desktop, let the link work normally (don't prevent default)
         });
     }
 });
 
-// Close dropdowns when clicking outside
+// Close dropdowns when clicking outside (MOVED OUTSIDE THE LOOP)
 document.addEventListener('click', function(e) {
     if (!e.target.closest('.dropdown')) {
         dropdowns.forEach(dropdown => {
@@ -118,23 +116,6 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// Close mobile menu when clicking on dropdown links
-const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
-dropdownLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        const navMenu = document.querySelector('.nav-menu');
-        const hamburger = document.querySelector('.hamburger');
-        if (navMenu && hamburger) {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-        }
-        
-        // Close dropdown
-        dropdowns.forEach(dropdown => {
-            dropdown.classList.remove('active');
-        });
-    });
-});
 
 // Smooth scrolling for anchor links
 const anchorLinks = document.querySelectorAll('a[href^="#"]');

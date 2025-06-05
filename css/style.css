@@ -1395,3 +1395,17 @@ select:focus {
     transform: none !important;
 }
 
+/* Fix dropdown parent link clickability */
+@media (min-width: 769px) {
+    .dropdown > .dropdown-toggle {
+        pointer-events: auto !important;
+    }
+    
+    /* Ensure dropdown menu positioning */
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+}

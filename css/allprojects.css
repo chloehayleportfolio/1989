@@ -1,0 +1,497 @@
+/* All Projects Page Styles */
+
+/* Navigation with transparent background */
+.navbar {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Keep dropdown backgrounds solid */
+.navbar .dropdown-menu {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(150, 128, 118, 0.1) !important;
+}
+
+/* Hero Section with Video Background */
+.projects-hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg, 
+        rgba(248, 244, 240, 0.7) 0%, 
+        rgba(237, 229, 223, 0.8) 100%
+    );
+    z-index: 2;
+}
+
+
+.projects-hero .hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.projects-hero .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 300;
+    color: rgba(150, 128, 118, 1);
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projects-hero .hero-subtitle {
+    font-size: 1.1rem;
+    color: rgba(150, 128, 118, 0.9);
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Floating Elements */
+.hero-background,
+.floating-elements,
+.float-element {
+    display: none;
+}
+
+/* Filter Section */
+.filter-section {
+    padding: 4rem 0 2rem;
+    background: #fff;
+}
+
+.filter-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.75rem 2rem;
+    background: transparent;
+    border: 1px solid rgba(150, 128, 118, 0.3);
+    color: rgba(150, 128, 118, 1);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: rgba(150, 128, 118, 1);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(150, 128, 118, 0.3);
+}
+
+/* Projects Grid */
+.projects-grid-section {
+    padding: 2rem 0 6rem;
+    background: #fff;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(150, 128, 118, 0.8));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-info {
+    text-align: center;
+    color: white;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-info {
+    transform: translateY(0);
+}
+
+.project-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.project-category {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.project-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Filter Animation */
+.project-card.hide {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.4s ease;
+}
+
+.project-card.show {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.4s ease;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8f4f0 0%, #ede5df 100%);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    color: rgba(150, 128, 118, 1);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.cta-title em {
+    font-style: italic;
+    color: rgba(218, 207, 202, 1);
+}
+
+.cta-subtitle {
+    font-size: 1.1rem;
+    color: rgba(150, 128, 118, 0.8);
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: rgba(150, 128, 118, 1);
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background: rgba(218, 207, 202, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(150, 128, 118, 0.3);
+}
+
+/* Navigation Styles for All Projects Page */
+.navbar .nav-link {
+    color: rgba(150, 128, 118, 1) !important;
+    font-weight: 300;
+}
+
+.navbar .nav-link:hover {
+    color: rgba(218, 207, 202, 1) !important;
+}
+
+.navbar .nav-link.active {
+    color: rgba(150, 128, 118, 1) !important;
+    font-weight: 400;
+}
+
+.navbar.scrolled .nav-link {
+    color: rgba(150, 128, 118, 1) !important;
+}
+
+.navbar.scrolled .nav-link:hover {
+    color: rgba(218, 207, 202, 1) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .project-card {
+        max-width: 100%;
+    }
+    
+    .project-image {
+        height: 250px;
+    }
+    
+    .filter-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    .filter-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .projects-hero {
+        min-height: 60vh;
+    }
+    
+    .cta-section {
+        padding: 4rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        padding: 0 0.5rem;
+    }
+    
+    .project-image {
+        height: 200px;
+    }
+    
+    .project-title {
+        font-size: 1.25rem;
+    }
+    
+    .filter-section {
+        padding: 3rem 0 1rem;
+    }
+    
+    .projects-grid-section {
+        padding: 1rem 0 4rem;
+    }
+}
+/* Footer Styles - Add these at the end */
+.footer {
+    background: #333222 !important;
+    color: rgb(218, 207, 202) !important;
+    padding: 3rem 0 1rem !important;
+}
+
+.footer-content {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.footer-logo h3 {
+    color: rgb(218, 207, 202) !important;
+    margin-bottom: 0.3rem !important;
+    letter-spacing: 2px !important;
+}
+
+.footer-logo p {
+    opacity: 0.8 !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+}
+
+.footer-links a {
+    color: rgb(218, 207, 202) !important;
+    text-decoration: none !important;
+    opacity: 0.8 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+.footer-links a:hover {
+    opacity: 1 !important;
+}
+
+.footer-social {
+    display: flex !important;
+    gap: 1rem !important;
+    margin-top: 0 !important;
+}
+
+.footer-social a {
+    color: rgb(218, 207, 202) !important;
+    opacity: 0.8 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+.footer-social a:hover {
+    opacity: 1 !important;
+}
+
+.footer-bottom {
+    text-align: center !important;
+    padding-top: 2rem !important;
+    border-top: 1px solid rgba(218, 207, 202, 0.2) !important;
+    opacity: 0.6 !important;
+    font-size: 0.9rem !important;
+}
+
+/* Mobile Footer Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+    }
+    
+    .footer-links {
+        align-items: center !important;
+    }
+    
+    .footer-social {
+        justify-content: center !important;
+    }
+}
